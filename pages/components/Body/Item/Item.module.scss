@@ -1,0 +1,50 @@
+@import "../../../../public/scss/style.scss";
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.item_top {
+  font-size: 0;
+  line-height: 0;
+  @include view("pc") {
+    display: flex;
+  }
+  @include view("middle") {
+    display: flex;
+  }
+}
+
+.item_bottom {
+  font-size: 0;
+  line-height: 0;
+}
+
+.img_top {
+  height: 100vh;
+  max-width: 100%;
+  object-fit: cover;
+  @include view("mobile") {
+    height: 33.3vh;
+  }
+}
+
+.img_bottom {
+  height: 100vh;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.slide {
+    animation: slide 5s ease-in-out;
+}
+
+@keyframes slide {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
