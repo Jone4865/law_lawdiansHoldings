@@ -20,7 +20,7 @@ export default function Landing() {
 
   return (
     <div className={styles.landing} >
-        <Header setLocation={setLocation} modalSet={modalSet} modal={modal} />
+        <Header setLocation={setLocation} modalSet={modalSet} />
         <Body location={location} />
         <Side modal={modal} modalSet={modalSet} />
     </div>

@@ -1,4 +1,10 @@
-@import "../../../public/scss/style.scss";
+@import "public/scss/style.scss";
+
+.header_body {
+  display: flex;
+  width: 80vw;
+  margin: auto;
+}
 
 .header_white {
   background-color: white;

@@ -1,4 +1,4 @@
-import Side from "../Side/Side";
+import Footer from "./Footer/Footer";
 import Item from "./Item/Item";
 
 type Props = {
@@ -10,6 +10,7 @@ export default function Body({location}:Props) {
   return (
     <div>
       <Item location={location} />
+      <Footer />
     </div>
   );
 }

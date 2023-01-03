@@ -43,7 +43,7 @@ function Side({ modal, modalSet }: Props) {
   }, [modal]);
 
   return (
-    <div className={`${none ? styles.none : ""} ${styles.side}`} onClick={() => { modalSet(false) }}  >
+    <div className={`${none ? styles.none : ""} ${styles.side}`} onClick={() => { modalSet(false); setMore(""); }}  >
       <div
         className={`${modal ? styles.slidein : styles.slideout} ${
           styles.side_body
