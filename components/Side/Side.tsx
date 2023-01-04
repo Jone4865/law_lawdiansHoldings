@@ -16,7 +16,7 @@ function Side({ modal, modalSet, location, setLocation, positionSet }: Props) {
   if (!modal) {
     setTimeout(() => {
       setNone(true);
-    }, 500);
+    }, 100);
   } else {
     setTimeout(() => {
       setNone(false);

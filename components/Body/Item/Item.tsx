@@ -11,11 +11,16 @@ type Props = {
   positionSet: (position: boolean) => void;
 };
 
-export default function Item({ location, setLocation, position, positionSet }: Props) {
+export default function Item({
+  location,
+  setLocation,
+  position,
+  positionSet,
+}: Props) {
   const [scrollY, setScrollY] = useState(0);
-  const isPc = useMediaQuery ({
-    query : "(min-width : px) and (max-width :1920px)"
-    });
+  const isPc = useMediaQuery({
+    query: "(min-width : px) and (max-width :1920px)",
+  });
 
   const one = useRef<any>(null);
   const two = useRef<any>(null);
@@ -82,17 +87,23 @@ export default function Item({ location, setLocation, position, positionSet }: P
       <ul className={styles.item_body}>
         <li ref={one} className={styles.img_size}>
           <div
-            style={{ backgroundImage: isPc ? `url(/img/background/bg1.webp)` : `url(/img/background/bg1_m.webp)` }}
-            className={styles.img_right_top}
-          >
-            <Content
-              title="소액으로 시작하는"
-              subTitle="부동산 조각 투자"
-              contentLine1="투자를 시작하고 건물주가 되어보세요"
-              contentLine2=""
-            />
-            <div className={styles.item_img_top}>
-              <img src={`/img/body_img/body_img1.webp`} />
+            style={{
+              backgroundImage: isPc
+                ? `url(/img/background/bg1.webp)`
+                : `url(/img/background/bg1_m.webp)`,
+            }}
+            className={styles.img_top}
+          > 
+            <div className={styles.img_top_body}>
+              <Content
+                title="소액으로 시작하는"
+                subTitle="부동산 조각 투자"
+                contentLine1="투자를 시작하고 건물주가 되어보세요"
+                contentLine2=""
+              />
+              <div className={styles.item_img_top}>
+                <img src={`/img/body_img/body_img1.webp`} />
+              </div>
             </div>
           </div>
         </li>
@@ -100,18 +111,24 @@ export default function Item({ location, setLocation, position, positionSet }: P
           <li ref={Item[index]} key={index} className={styles.img_size}>
             <div
               style={{
-                backgroundImage: isPc ? `url(/img/background/bg${index + 2}.webp)` : `url(/img/background/bg${index + 2}_m.webp)`
+                backgroundImage: isPc
+                  ? `url(/img/background/bg${index + 2}.webp)`
+                  : `url(/img/background/bg${index + 2}_m.webp)`,
               }}
-              className={index % 2 === 0 ? styles.img_left : styles.img_right}
+              className={styles.img_background}
             >
-              <Content
-                title={title[index]}
-                subTitle={subTitle[index]}
-                contentLine1={contentLine1[index]}
-                contentLine2={contentLine2[index]}
-              />
-              <div className={styles.item_img}>
-                <img src={`/img/body_img/body_img${index + 2}.webp`} />
+              <div
+                className={index % 2 === 0 ? styles.img_left : styles.img_right}
+              >
+                <Content
+                  title={title[index]}
+                  subTitle={subTitle[index]}
+                  contentLine1={contentLine1[index]}
+                  contentLine2={contentLine2[index]}
+                />
+                <div className={styles.item_img}>
+                  <img src={`/img/body_img/body_img${index + 2}.webp`} />
+                </div>
               </div>
             </div>
           </li>

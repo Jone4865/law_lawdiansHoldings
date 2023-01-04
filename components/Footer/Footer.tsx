@@ -13,14 +13,17 @@ export default function Footer() {
         <div>
           <img
             src={"/img/logo/logo.webp"}
-            onClick={() => router.push("/Landing/Landing")}
+            onClick={() => router.push("/")}
           />
         </div>
         <div className={styles.footer_bottom_line2}>
           <span className={styles.bold}>
-            <Link href={"https://www.naver.com"} className={styles.link}>
+            {/* <Link href={"https://www.naver.com"} className={styles.link}>
               (주)리얼디비전{" "}
-            </Link>
+            </Link> */}
+            <span className={styles.link}>
+              (주)리얼디비전{" "}
+            </span>
             | 대표이사 김창섭 |
           </span>
           <span> 서울특별시 서초구 서초대로25길 55, 2층 202호(방배동) |</span>

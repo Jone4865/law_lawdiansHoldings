@@ -26,7 +26,7 @@ export default function Header({ setLocation, modalSet, positionSet }: Props) {
         <div className={styles.logo}>
           <img
             src={"/img/logo/logo.webp"}
-            onClick={() => router.push("/Landing/Landing")}
+            onClick={() => router.push("/")}
           />
         </div>
         <div className={styles.herder_right}>

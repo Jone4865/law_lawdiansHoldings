@@ -3,11 +3,10 @@
 .content {
   color: white;
   display: flex;
-  margin: 0 auto;
-  padding-top: 35vh; 
+  margin: 11vh 0 auto 0;
+
   @include view("mobile") {
-    padding-top: 0;
-    margin-bottom: 50px;
+    margin: auto auto 4vh auto;
   }
 }
 
@@ -20,7 +19,7 @@
   div {
     font-size: 2.7vw;
     color: #8252f5;
-    font-weight: 500;
+    font-weight: 800;
     margin-bottom: 7px;
   }
   span {
@@ -43,6 +42,7 @@
 .coming {
   font-size: 1.4vw !important;
   color: #916CEB !important;
+  font-weight: 800 !important;
   @include view("mobile") {
     font-size: 13px !important;
     margin-bottom: 0 !important;
