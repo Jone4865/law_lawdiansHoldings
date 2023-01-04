@@ -1,0 +1,100 @@
+@import "public/scss/style.scss";
+
+.footer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+}
+
+.footer_top {
+  display: flex;
+  margin: auto ;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-image: url("/img/background/bg6.webp");
+  width: 100vw;
+  height: 20vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  div{
+    font-size: 2.17vw;
+    font-weight: 300;
+  }
+
+  span {
+    font-size: 3.2vw;
+    color: #916CEB;
+    font-weight: bold;
+  }
+
+  @include view("mobile") {
+    background-image: url("/img/background/bg6_m.webp");
+    height: 47vw;
+    div {
+      font-size: 18px;
+    }
+    span {
+      font-size: 31px;
+    }
+  }
+}
+
+.footer_bottom {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  text-align: center;
+  width: 100vw;
+  height: 397px;
+  justify-content: center;
+  background-color: #101012;
+  color: #bbbbbb;
+
+  img {
+    width: 124.5px;
+    height: 34.9px;
+    margin: 0 auto 30px auto;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  div {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  @include view("mobile") {
+    height: 280px;
+    img {
+      width: 89.2px;
+      height: 25px;
+      margin: 0 auto;
+    }
+    div,span {
+      margin: 5px auto;
+      font-size: 12px;
+    }
+  }
+}
+
+.link {
+  font-weight: bolder;
+}
+
+.footer_bottom_line2 {
+  @include view("mobile") {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.bold {
+  @include view("mobile") {
+    font-weight: bold;
+  }
+}

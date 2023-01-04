@@ -1,13 +1,7 @@
 @mixin view ($breakpoint) {
     
     @if ($breakpoint == "pc") {
-        @media (min-width: 1430px) and (max-width: 1920px) {
-            
-            @content
-        }
-    };
-    @if ($breakpoint == "middle") {
-        @media (min-width: 760px) and (max-width: 1429px) {
+        @media (min-width: 760px) and (max-width: 1920px) {
             
             @content
         }
