@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import router from "next/router";
 
+import "animate.css";
+
 type Props = {
   setLocation: (location: number) => void;
   modalSet: (modal: boolean) => void;
@@ -22,26 +24,23 @@ export default function Header({ setLocation, modalSet, positionSet }: Props) {
 
   return (
     <div className={!scrollY ? styles.header_trans : styles.header_black}>
-      <div className={styles.header_body}>
+      <div className={`${styles.header_body}`}>
         <div className={styles.logo}>
-          <img
-            src={"/img/logo/logo.webp"}
-            onClick={() => router.push("/")}
-          />
+          <img src={"/img/logo/logo.png"} onClick={() => router.push("/")} />
         </div>
         <div className={styles.herder_right}>
           <div className={styles.header_menu}>
             {Buttons.map((button, index) => (
               <div
                 key={button}
-                className={styles.hover}
+                className={`${styles.headerhover}`}
                 onClick={() => {
                   setLocation(index);
                   modalSet(false);
                   positionSet(true);
                 }}
               >
-                {button}
+               <span>{button}</span>
               </div>
             ))}
           </div>

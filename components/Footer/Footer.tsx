@@ -1,26 +1,34 @@
 import styles from "./Footer.module.scss";
-import Link from "next/link";
 import router from "next/router";
+import { useState, useEffect } from "react";
 
 export default function Footer() {
+
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    (() => {
+      window.addEventListener("scroll", () => {
+        setScrollY(window.scrollY);
+      });
+    })();
+  }, []);
+
   return (
     <div className={styles.footer}>
       <div className={styles.footer_top}>
         <div>세상 모두가 건물주가 되는 날 까지</div>
-        <span>COMING SOON</span>
+        <span className={scrollY >= 4280 ? "animate__animated animate__bounceIn" : ""}>COMING SOON</span>
       </div>
       <div className={styles.footer_bottom}>
         <div>
           <img
-            src={"/img/logo/logo.webp"}
+            src={"/img/logo/logo.png"}
             onClick={() => router.push("/")}
           />
         </div>
         <div className={styles.footer_bottom_line2}>
           <span className={styles.bold}>
-            {/* <Link href={"https://www.naver.com"} className={styles.link}>
-              (주)리얼디비전{" "}
-            </Link> */}
             <span className={styles.link}>
               (주)리얼디비전{" "}
             </span>

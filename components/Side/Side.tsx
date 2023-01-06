@@ -63,6 +63,7 @@ function Side({ modal, modalSet, location, setLocation, positionSet }: Props) {
               modalSet(false);
               positionSet(true);
             }}
+            className={styles.side_hover}
           >
             {button}
           </div>

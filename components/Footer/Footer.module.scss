@@ -13,7 +13,7 @@
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  background-image: url("/img/background/bg6.webp");
+  background-image: url("/img/background/bg6.png");
   width: 100vw;
   height: 20vw;
   background-size: cover;
@@ -33,7 +33,7 @@
   }
 
   @include view("mobile") {
-    background-image: url("/img/background/bg6_m.webp");
+    background-image: url("/img/background/bg6_m.png");
     height: 47vw;
     div {
       font-size: 18px;
