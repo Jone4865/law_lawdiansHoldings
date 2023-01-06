@@ -8,18 +8,18 @@ import styles from "./Landing.module.scss";
 export default function Landing() {
   const [location, setLocation] = useState(0);
   const [position, setPosition] = useState(false);
+  const [modal, setModal] = useState(false);
 
   useEffect(() => {
     setLocation(location);
     setPosition(false);
   }, [position]);
 
-  const [modal, setModal] = useState(false);
-  const modalSet = (modal: boolean) => {
+  const setModalState = (modal: boolean) => {
     setModal(modal);
   };
 
-  const positionSet = (position: boolean) => {
+  const setContentClick = (position: boolean) => {
     setPosition(position);
   };
 
@@ -27,21 +27,19 @@ export default function Landing() {
     <div className={styles.landing}>
       <Header
         setLocation={setLocation}
-        modalSet={modalSet}
-        positionSet={positionSet}
+        setModalState={setModalState}
+        setContentClick={setContentClick}
       />
       <Body
         location={location}
         setLocation={setLocation}
         position={position}
-        positionSet={positionSet}
       />
       <Side
         modal={modal}
-        modalSet={modalSet}
-        location={location}
+        setModalState={setModalState}
         setLocation={setLocation}
-        positionSet={positionSet}
+        setContentClick={setContentClick}
       />
     </div>
   );

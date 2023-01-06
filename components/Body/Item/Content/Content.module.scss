@@ -1,21 +1,23 @@
 @import "/public/scss/style.scss";
 
-.content {
+.content_container {
   color: white;
   display: flex;
   align-items: center;
   z-index: 0;
-  @include view("mobile") {
-    justify-content: center;
-    padding: 11vw 0;
-  }
+  opacity: 0;
+
   @include view("very_small") {
     justify-content: center;
     padding: 4vw 0;
   }
+  @include view("mobile") {
+    justify-content: center;
+    padding: 11vw 0;
+  }
 }
 
-.content_body {
+.content_wrap {
   h2 {
     font-size: 50px;
     color: #f3f3f3;
@@ -32,15 +34,23 @@
     display: flex;
     color: #636363;
   }
-  @include view("mobile") {
-    text-align: center;
+
+  @include view("middle") {
     h2,
     div {
-      font-size: 23px;
+      font-size: 2.5vw;
     }
     span {
-      font-size: 14px;
-      justify-content: center;
+      font-size: 1.7vw;
+    }
+  }
+  @include view("small") {
+    h2,
+    div {
+      font-size: 3vw;
+    }
+    span {
+      font-size: 2.3vw;
     }
   }
   @include view("very_small") {
@@ -54,28 +64,20 @@
       justify-content: center;
     }
   }
-  @include view("middle") {
+  @include view("mobile") {
+    text-align: center;
     h2,
     div {
-      font-size: 2.5vw;
+      font-size: 23px;
     }
     span {
-      font-size: 1.7vw;
-    }
-  }
-
-  @include view("small") {
-    h2,
-    div {
-      font-size: 3vw;
-    }
-    span {
-      font-size: 2.3vw;
+      font-size: 14px;
+      justify-content: center;
     }
   }
 }
 
-.coming {
+.content_coming {
   font-size: 25px !important;
   color: #916ceb !important;
   font-weight: 800 !important;
@@ -89,12 +91,15 @@
   }
 }
 
+.content_opacity {
+  animation: content_opacity 1s forwards ease-in-out;
+}
 
-@keyframes fadein_one {
-  from {
-    opacity: 0.2;
-  }
-  to {
-    opacity: 1;
-  }
+@keyframes content_opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
 }

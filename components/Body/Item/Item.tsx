@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
-import Content from "./ItemText/Content";
+import Content from "./Content/Content";
 import styles from "./Item.module.scss";
 
 import "animate.css";
@@ -10,43 +10,27 @@ type Props = {
   location: number;
   setLocation: (location: number) => void;
   position: boolean;
-  positionSet: (position: boolean) => void;
 };
 
-export default function Item({
-  location,
-  setLocation,
-  position,
-  positionSet,
-}: Props) {
+export default function Item({ location, setLocation, position }: Props) {
   const [scrollY, setScrollY] = useState(0);
-
-  const [aniTop, setAniTop] = useState(true);
-  const [ani1, setAni1] = useState(false);
+  const [ani1, setAni1] = useState<boolean | string>(false);
   const [ani2, setAni2] = useState(false);
   const [ani3, setAni3] = useState(false);
   const [ani4, setAni4] = useState(false);
+  const [pc, setPc] = useState(true);
 
   const isPc = useMediaQuery({
     query: "(min-width : 760px) and (max-width :1920px)",
   });
-  const [pc, setPc] = useState(true);
-
-  useEffect(() => {
-    if (isPc) {
-      setPc(true);
-    } else {
-      false;
-    }
-  }, [isPc]);
 
   const one = useRef<any>(null);
   const two = useRef<any>(null);
   const three = useRef<any>(null);
   const four = useRef<any>(null);
   const five = useRef<any>(null);
-
   const Item = [two, three, four, five];
+
   const title = [
     "전문가가 엄선한",
     "건물주가 되는",
@@ -73,6 +57,14 @@ export default function Item({
   ];
 
   useEffect(() => {
+    if (isPc) {
+      setPc(true);
+    } else {
+      false;
+    }
+  }, [isPc]);
+
+  useEffect(() => {
     if (location) {
       Item[location - 1]?.current?.scrollIntoView({
         behavior: "smooth",
@@ -90,17 +82,16 @@ export default function Item({
     (() => {
       window.addEventListener("scroll", () => {
         setScrollY(window.scrollY);
-        setAniTop(window.pageYOffset >= 1 ? false : false)
         if (isPc) {
-          setAni1(window.pageYOffset >= 450 ? true : false);
-          setAni2(window.pageYOffset >= 1385 ? true : false);
-          setAni3(window.pageYOffset >= 2370 ? true : false);
-          setAni4(window.pageYOffset >= 3345 ? true : false);
+          window.pageYOffset >= screen.height*0.3 ? setAni1(true) : "";
+          window.pageYOffset >= screen.height*1.3-50 ? setAni2(true) : "";
+          window.pageYOffset >= screen.height*2.3-110 ? setAni3(true) : "";
+          window.pageYOffset >= screen.height*3.3-180 ? setAni4(true) : "";
         } else {
-          setAni1(window.pageYOffset >= 215 ? true : false);
-          setAni2(window.pageYOffset >= 1180 ? true : false);
-          setAni3(window.pageYOffset >= 2170 ? true : false);
-          setAni4(window.pageYOffset >= 3130 ? true : false);
+          window.pageYOffset >= screen.height*0.3 ? setAni1(true) : "";
+          window.pageYOffset >= screen.height*1.3-50 ? setAni2(true) : "";
+          window.pageYOffset >= screen.height*2.3-110 ? setAni3(true) : "";
+          window.pageYOffset >= screen.height*3.3-180 ? setAni4(true) : "";
         }
       });
     })();
@@ -113,21 +104,24 @@ export default function Item({
   }, [scrollY]);
 
   return (
-    <div className={styles.item}>
-      <ul className={styles.item_body}>
-        <li ref={one} className={styles.img_size}>
-          <div className={styles.img_top}>
-            <div className={styles.img_top_body}>
+    <div className={styles.item_container}>
+      <ul className={styles.item_wrap}>
+        <li ref={one} className={styles.item_body}>
+          <div
+            className={styles.item_top}
+            style={{ backgroundImage: "url(/img/background/bg1.png)" }}
+          >
+            <div className={styles.item_top_wrap}>
               <Content
                 title="소액으로 시작하는"
                 subTitle="부동산 조각 투자"
                 contentLine1="투자를 시작하고 건물주가 되어보세요"
                 contentLine2=""
-                name={""}
+                animation={true}
               />
               <div
-                className={`${styles.item_img_top} ${
-                  aniTop ? " animate__animated animate__fadeInRight animate__repeat-0" : ""
+                className={`${styles.item_top_img} 
+                    ${"animate__animated animate__fadeInRight"}
                 }`}
               >
                 <img src={`/img/body_img/body_img1.png`} />
@@ -136,24 +130,28 @@ export default function Item({
           </div>
         </li>
         {Item.map((item, index) => (
-          <li ref={Item[index]} key={index} className={styles.img_size}>
+          <li ref={Item[index]} key={index} className={styles.item_body}>
             <div
               style={{
                 backgroundImage: pc
                   ? `url(/img/background/bg${+index + 2}.png)`
                   : `url(/img/background/bg${+index + 2}_m.png)`,
               }}
-              className={styles.img_background}
+              className={styles.item_bottom}
             >
               <div
-                className={index % 2 === 0 ? styles.img_left : styles.img_right}
+                className={
+                  index % 2 === 0
+                    ? styles.item_bottom_left
+                    : styles.item_bottom_right
+                }
               >
                 <Content
                   title={title[index]}
                   subTitle={subTitle[index]}
                   contentLine1={contentLine1[index]}
                   contentLine2={contentLine2[index]}
-                  name={
+                  animation={
                     index == 0
                       ? ani1
                       : index == 1
@@ -165,10 +163,7 @@ export default function Item({
                       : ""
                   }
                 />
-                <div
-                  className={`${styles.item_img} 
-                  `}
-                >
+                <div className={styles.item_bottom_img}>
                   <img src={`/img/body_img/body_img${index + 2}.png`} />
                 </div>
               </div>

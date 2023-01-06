@@ -2,17 +2,20 @@ import { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import router from "next/router";
 
-import "animate.css";
-
 type Props = {
   setLocation: (location: number) => void;
-  modalSet: (modal: boolean) => void;
-  positionSet: (position: boolean) => void;
+  setModalState: (modal: boolean) => void;
+  setContentClick: (position: boolean) => void;
 };
 
-export default function Header({ setLocation, modalSet, positionSet }: Props) {
-  const Buttons = ["홈", "차별성", "청약하기", "마켓거래", "배당수입"];
+export default function Header({
+  setLocation,
+  setModalState,
+  setContentClick,
+}: Props) {
   const [scrollY, setScrollY] = useState(false);
+
+  const Buttons = ["홈", "차별성", "청약하기", "마켓거래", "배당수입"];
 
   useEffect(() => {
     (() => {
@@ -24,30 +27,30 @@ export default function Header({ setLocation, modalSet, positionSet }: Props) {
 
   return (
     <div className={!scrollY ? styles.header_trans : styles.header_black}>
-      <div className={`${styles.header_body}`}>
-        <div className={styles.logo}>
+      <div className={styles.header_container}>
+        <div className={styles.header_logo}>
           <img src={"/img/logo/logo.png"} onClick={() => router.push("/")} />
         </div>
-        <div className={styles.herder_right}>
-          <div className={styles.header_menu}>
+        <div>
+          <div className={styles.herder_buttons_wrap}>
             {Buttons.map((button, index) => (
               <div
                 key={button}
-                className={`${styles.headerhover}`}
+                className={styles.header_hover}
                 onClick={() => {
                   setLocation(index);
-                  modalSet(false);
-                  positionSet(true);
+                  setModalState(false);
+                  setContentClick(true);
                 }}
               >
-               <span>{button}</span>
+                <span>{button}</span>
               </div>
             ))}
           </div>
           <img
-            className={styles.menu_icon}
+            className={styles.header_icon}
             src={"/img/icon/menu_white.svg"}
-            onClick={() => modalSet(true)}
+            onClick={() => setModalState(true)}
           />
         </div>
       </div>

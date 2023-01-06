@@ -12,9 +12,6 @@
   @include view("mobile") {
     height: 70px;
   }
-
-  @include view("samll") {
-  }
 }
 
 .header_black {
@@ -32,26 +29,26 @@
   }
 }
 
-.header_body {
+.header_container {
   max-width: 1300px;
   display: flex;
   margin: auto;
   align-items: center;
   justify-content: space-between;
-
   width: 70vw;
-  @include view("mobile") {
-    width: 90vw;
-  }
+
   @include view("small") {
     width: 95vw;
   }
   @include view("very_small") {
     width: 95vw;
   }
+  @include view("mobile") {
+    width: 90vw;
+  }
 }
 
-.logo {
+.header_logo {
   width: 124.5px;
   height: 34.9px;
   img {
@@ -74,65 +71,55 @@
   margin: auto;
 }
 
-.header_menu {
+.herder_buttons_wrap {
   display: flex;
+
   @include view("mobile") {
     display: none;
   }
 }
 
-.menu_icon {
+.header_icon {
   height: 16px;
   width: 20px;
-  @include view("small") {
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include view("pc") {
     display: none;
   }
   @include view("middle") {
     display: none;
   }
+  @include view("small") {
+    display: none;
+  }
   @include view("very_small") {
     display: none;
   }
-  @include view("pc") {
-    display: none;
-  }
-  &:hover {
-    cursor: pointer;
-  }
 }
 
-@keyframes fadein_one {
-  from {
-    opacity: 0.9;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadein_two {
-  from {
-    opacity: 0.9;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.headerhover {
+.header_hover {
   margin: auto 1vw;
   &:hover {
     cursor: pointer;
   }
 }
 
-.headerhover:hover {
-    -webkit-animation: shake 0.5s;
-    animation: shake 0.5s;
+.header_hover:hover {
+  -webkit-animation: shake 0.5s;
+  animation: shake 0.5s;
 }
 
 @keyframes shake {
-  0% { transform: none; }
-  50% { transform: scale(0.9); }
-  100% { transform: none; }
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: none;
+  }
 }

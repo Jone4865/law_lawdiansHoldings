@@ -5,7 +5,6 @@ export default {
   title: "Components|Basic/Content",
   component: Content,
   argTypes: {
-    location: { defaultValue: "" },
     title: { defaultValue: "정기 배당 수익을 통해" },
     subTitle: { defaultValue: "13번째 월급을 만들어봐요" },
     contentLine1: { defaultValue: "보유한 지분만큼 높은 수준의" },

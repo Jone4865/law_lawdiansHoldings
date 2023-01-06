@@ -3,13 +3,12 @@ import styles from "./Side.module.scss";
 
 type Props = {
   modal: boolean;
-  modalSet: (modal: boolean) => void;
-  location: number;
+  setModalState: (modal: boolean) => void;
   setLocation: (location: number) => void;
-  positionSet: (position:boolean) => void;
+  setContentClick: (position: boolean) => void;
 };
 
-function Side({ modal, modalSet, location, setLocation, positionSet }: Props) {
+function Side({ modal, setModalState, setLocation, setContentClick }: Props) {
   const [none, setNone] = useState(true);
   const Buttons = ["홈", "차별성", "청약하기", "마켓거래", "배당수입"];
 
@@ -38,30 +37,30 @@ function Side({ modal, modalSet, location, setLocation, positionSet }: Props) {
 
   return (
     <div
-      className={`${none ? styles.none : ""} ${styles.side}`}
+      className={`${none ? styles.side_none : ""} ${styles.side_contain}`}
       onClick={() => {
-        modalSet(false);
+        setModalState(false);
       }}
     >
       <div
-        className={`${modal ? styles.slidein : styles.slideout} ${
-          styles.side_body
-        } ${none ? "none" : ""}`}
+        className={`${modal ? styles.side_slidein : styles.side_slideout} ${
+          styles.side_wrap
+        }`}
         onClick={(event) => {
           event.stopPropagation();
         }}
       >
         <h1>
           <img />
-          <span onClick={() => modalSet(false)}>X</span>
+          <span onClick={() => setModalState(false)}>X</span>
         </h1>
         {Buttons.map((button, index) => (
           <div
             key={button}
             onClick={() => {
               setLocation(index);
-              modalSet(false);
-              positionSet(true);
+              setModalState(false);
+              setContentClick(true);
             }}
             className={styles.side_hover}
           >

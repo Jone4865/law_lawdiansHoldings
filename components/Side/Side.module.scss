@@ -1,6 +1,6 @@
 @import "../../public/scss/style.scss";
 
-.side {
+.side_contain {
   position: fixed;
   z-index: 4;
   background-color: rgba(0, 0, 0, 0.472);
@@ -11,6 +11,7 @@
   display: flex;
   justify-content: right;
   animation: none !important;
+
   @include view("pc") {
     display: none;
   }
@@ -19,7 +20,7 @@
   }
 }
 
-.side_body {
+.side_wrap {
   position: fixed;
   z-index: 4;
   width: 40%;
@@ -48,6 +49,15 @@
   }
 }
 
+.side_none {
+  display: none;
+}
+
+.side_hover:hover {
+  -webkit-animation: shake 0.5s;
+  animation: shake 0.5s;
+}
+
 .slidein {
   animation: slidein 0.5s;
 }
@@ -64,7 +74,6 @@
     opacity: 1;
   }
 }
-
 @keyframes slideout {
   from {
     opacity: 1;
@@ -73,16 +82,6 @@
     opacity: 0;
   }
 }
-
-.none {
-  display: none;
-}
-
-.side_hover:hover {
-  -webkit-animation: shake 0.5s;
-  animation: shake 0.5s;
-}
-
 @keyframes shake {
   0% { transform: none; }
   50% { transform: scale(0.9); }
