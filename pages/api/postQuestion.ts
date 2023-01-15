@@ -4,7 +4,7 @@ type Data = {
   status: string;
 };
 
-export default function question(
+export default function postQuestion(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {

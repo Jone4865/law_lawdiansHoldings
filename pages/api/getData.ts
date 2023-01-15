@@ -31,10 +31,8 @@ const parsing = async () => {
   );
 
   var num;
-  for (num = 0; num <= 96; num++) {
-    if (num > 3) {
-      dataArr.push(tableData.find(`tr:nth-of-type(${num})`).text());
-    }
+  for (num = 3; num <= 96; num++) {
+    dataArr.push(tableData.find(`tr:nth-of-type(${num})`).text());
   }
 };
 
