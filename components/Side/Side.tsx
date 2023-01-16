@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Side.module.scss";
+import { Link } from "react-scroll";
 
 type Props = {
   modal: boolean;
@@ -9,18 +10,17 @@ type Props = {
 };
 
 function Side({ modal, setModalState, setLocation, setContentClick }: Props) {
-  const [none, setNone] = useState(true);
-  const Buttons = ["홈", "차별성", "청약하기", "마켓거래", "배당수입"];
-
-  if (!modal) {
-    setTimeout(() => {
-      setNone(true);
-    }, 100);
-  } else {
-    setTimeout(() => {
-      setNone(false);
-    }, 0);
-  }
+  const Buttons = [
+    "홈",
+    "역량",
+    "블로그",
+    "인스타",
+    "페이스북",
+    "유튜브",
+    "IMC마케팅",
+    "진행절차",
+    "문의하기",
+  ];
 
   useEffect(() => {
     const htmlEle = document?.getElementsByTagName("html").item(0);
@@ -37,15 +37,13 @@ function Side({ modal, setModalState, setLocation, setContentClick }: Props) {
 
   return (
     <div
-      className={`${none ? styles.side_none : ""} ${styles.side_contain}`}
+      className={`${!modal ? styles.side_none : ""} ${styles.side_contain}`}
       onClick={() => {
         setModalState(false);
       }}
     >
       <div
-        className={`${modal ? styles.side_slidein : styles.side_slideout} ${
-          styles.side_wrap
-        }`}
+        className={`${styles.side_slideout} ${styles.side_wrap}`}
         onClick={(event) => {
           event.stopPropagation();
         }}
@@ -55,16 +53,18 @@ function Side({ modal, setModalState, setLocation, setContentClick }: Props) {
           <span onClick={() => setModalState(false)}>X</span>
         </h1>
         {Buttons.map((button, index) => (
-          <div
-            key={button}
-            onClick={() => {
-              setLocation(index);
-              setModalState(false);
-              setContentClick(true);
-            }}
-            className={styles.side_hover}
-          >
-            {button}
+          <div key={button} className={styles.side_hover}>
+            <Link
+              to={button}
+              spy={true}
+              smooth={true}
+              offset={button === "역량" ? -55 : 0}
+              onClick={() => {
+                setModalState(false);
+              }}
+            >
+              <span>{button}</span>
+            </Link>
           </div>
         ))}
       </div>

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "GyeonggiBatang";
+  src: url("Batang_Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "GyeonggiBatang";
+  src: url("Batang_Regular.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "GyeonggiBatang";
+  src: url("GyeonggiBatang_Regular.otf") format("otf");
+  font-weight: normal;
+}

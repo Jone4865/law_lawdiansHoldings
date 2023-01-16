@@ -4,6 +4,7 @@ import Body from "../Body/Body";
 import Side from "../Side/Side";
 
 import styles from "./Landing.module.scss";
+import Footer from "../Footer/Footer";
 
 export default function Landing() {
   const [location, setLocation] = useState(0);
@@ -30,17 +31,14 @@ export default function Landing() {
         setModalState={setModalState}
         setContentClick={setContentClick}
       />
-      <Body
-        location={location}
-        setLocation={setLocation}
-        position={position}
-      />
+      <Body location={location} setLocation={setLocation} position={position} />
       <Side
         modal={modal}
         setModalState={setModalState}
         setLocation={setLocation}
         setContentClick={setContentClick}
       />
+      <Footer />
     </div>
   );
 }

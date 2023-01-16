@@ -1,11 +1,15 @@
 import { useEffect, useRef, useState } from "react";
-import { useMediaQuery } from "react-responsive";
 
 import Content from "./Content/Content";
 import styles from "./Item.module.scss";
 
 import "animate.css";
+import classNames from "classnames/bind";
+import Item_Top from "./Item_Top/Item_Top";
+import usePc from "../../../public/hooks/usePc/usePc";
+import Item_Two from "./Item_Two/Item_Two";
 
+const cx = classNames.bind(styles);
 type Props = {
   location: number;
   setLocation: (location: number) => void;
@@ -20,9 +24,13 @@ export default function Item({ location, setLocation, position }: Props) {
   const [ani4, setAni4] = useState(false);
   const [pc, setPc] = useState(true);
 
-  const isPc = useMediaQuery({
-    query: "(min-width : 760px) and (max-width :1920px)",
-  });
+  let isPc = false;
+
+  if (usePc()) {
+    isPc = true;
+  } else {
+    isPc = false;
+  }
 
   const one = useRef<any>(null);
   const two = useRef<any>(null);
@@ -65,33 +73,19 @@ export default function Item({ location, setLocation, position }: Props) {
   }, [isPc]);
 
   useEffect(() => {
-    if (location) {
-      Item[location - 1]?.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    } else {
-      one.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }
-  }, [position]);
-
-  useEffect(() => {
     (() => {
       window.addEventListener("scroll", () => {
         setScrollY(window.scrollY);
         if (isPc) {
-          window.pageYOffset >= screen.height*0.3 ? setAni1(true) : "";
-          window.pageYOffset >= screen.height*1.3-50 ? setAni2(true) : "";
-          window.pageYOffset >= screen.height*2.3-110 ? setAni3(true) : "";
-          window.pageYOffset >= screen.height*3.3-180 ? setAni4(true) : "";
+          window.pageYOffset >= screen.height * 0.3 ? setAni1(true) : "";
+          window.pageYOffset >= screen.height * 1.3 - 50 ? setAni2(true) : "";
+          window.pageYOffset >= screen.height * 2.3 - 110 ? setAni3(true) : "";
+          window.pageYOffset >= screen.height * 3.3 - 180 ? setAni4(true) : "";
         } else {
-          window.pageYOffset >= screen.height*0.3 ? setAni1(true) : "";
-          window.pageYOffset >= screen.height*1.3-50 ? setAni2(true) : "";
-          window.pageYOffset >= screen.height*2.3-110 ? setAni3(true) : "";
-          window.pageYOffset >= screen.height*3.3-180 ? setAni4(true) : "";
+          window.pageYOffset >= screen.height * 0.3 ? setAni1(true) : "";
+          window.pageYOffset >= screen.height * 1.3 - 50 ? setAni2(true) : "";
+          window.pageYOffset >= screen.height * 2.3 - 110 ? setAni3(true) : "";
+          window.pageYOffset >= screen.height * 3.3 - 180 ? setAni4(true) : "";
         }
       });
     })();
@@ -106,30 +100,12 @@ export default function Item({ location, setLocation, position }: Props) {
   return (
     <div className={styles.item_container}>
       <ul className={styles.item_wrap}>
-        <li ref={one} className={styles.item_body}>
-          <div
-            className={styles.item_top}
-            style={{ backgroundImage: "url(/img/background/bg1.png)" }}
-          >
-            <div className={styles.item_top_wrap}>
-              <Content
-                title="소액으로 시작하는"
-                subTitle="부동산 조각 투자"
-                contentLine1="투자를 시작하고 건물주가 되어보세요"
-                contentLine2=""
-                animation={true}
-              />
-              <div
-                className={`${styles.item_top_img} 
-                    ${"animate__animated animate__fadeInRight"}
-                }`}
-              >
-                <img src={`/img/body_img/body_img1.png`} />
-              </div>
-            </div>
-          </div>
-        </li>
-        {Item.map((item, index) => (
+        <div id="홈">
+          <Item_Top />
+        </div>
+        <div id="역량" />
+        <Item_Two />
+        {/* {Item.map((item, index) => (
           <li ref={Item[index]} key={index} className={styles.item_body}>
             <div
               style={{
@@ -169,7 +145,7 @@ export default function Item({ location, setLocation, position }: Props) {
               </div>
             </div>
           </li>
-        ))}
+        ))} */}
       </ul>
     </div>
   );

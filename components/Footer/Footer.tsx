@@ -1,55 +1,61 @@
 import styles from "./Footer.module.scss";
 import router from "next/router";
-import { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
+import className from "classNames/bind";
+import Image from "next/image";
+
+const cx = className.bind(styles);
 
 export default function Footer() {
-  const [scroll, setScroll] = useState(false);
-
-  const isPc = useMediaQuery({
-    query: "(min-width : 760px) and (max-width :1920px)",
-  });
-
-  useEffect(() => {
-    (() => {
-      window.addEventListener("scroll", () => {
-        if (isPc) {
-          window.pageYOffset >= screen.height*3.65 ? setScroll(true) : "";
-        } else {
-          window.pageYOffset >= screen.height*4 ? setScroll(true) : "";
-        }
-      });
-    })();
-  }, []);
-
   return (
-    <div className={styles.footer_container}>
-      <div
-        className={styles.footer_top}
-        style={{
-          backgroundImage: isPc
-            ? "url(/img/background/bg6.png"
-            : "url(/img/background/bg6_m.png",
-        }}
-      >
-        <div>세상 모두가 건물주가 되는 날 까지</div>
-        <span className={scroll ? "animate__animated animate__bounceIn" : ""}>
-          COMING SOON
-        </span>
-      </div>
-      <div className={styles.footer_bottom}>
-        <div>
-          <img src={"/img/logo/logo.png"} onClick={() => router.push("/")} />
+    <>
+      <div className={cx("container")}>
+        {/* <div className={cx("pointer")}></div> */}
+        <div className={cx("wrap")}>
+          <div className={cx("top_container")}>
+            <div className={cx("top_wrap")}>
+              <div className={cx("image")}>
+                <Image fill src="/img/logo/logo_on.png" alt="푸터 로고" />
+              </div>
+              <span className={cx("content")}>
+                10년 이상의 마케팅 전문가들이
+              </span>
+              <span className={cx("content")}>
+                마케팅 운용 및 운영을 대행해 고객님의
+              </span>
+              <span className={cx("content")}>시간을 절약해드립니다.</span>
+            </div>
+            <div className={cx("top_wrap")}>
+              <span className={cx("title")}>고객센터</span>
+              <span className={cx("content")}>전화 : 1833-8604</span>
+              <span className={cx("content")}>
+                이메일 : kamdongplan@naver.com
+              </span>
+            </div>
+            <div className={cx("top_wrap")}>
+              <span className={cx("title")}>약관</span>
+              <span className={cx("content")}>서비스 이용약관</span>
+            </div>
+          </div>
         </div>
-        <div className={styles.footer_bottom_line2}>
-          <span className={styles.footer_bold}>
-            <span className={styles.footer_link}>(주)리얼디비전 </span>|
-            대표이사 김창섭 |
+      </div>
+      <div className={cx("bottom_container")}>
+        <div className={cx("bottom_wrap")}>
+          <div className={cx("text_wrap")}>
+            <span className={cx("bottom_content")}>
+              (주)감동기획 | 대표이사 김창섭 |
+            </span>
+            <span className={cx("bottom_content")}>
+              서울특별시 서초구 서초대로25길 55, 2층 202호 |
+            </span>
+            <span className={cx("bottom_content")}>
+              사업자번호 670-87-02545
+            </span>
+          </div>
+          <span className={cx("reserved")}>
+            ⓒGAMDONGPLAN All rights reserved.
           </span>
-          <span> 서울특별시 서초구 서초대로25길 55, 2층 202호(방배동) |</span>
-          <span> 사업자등록번호 510-87-02262</span>
         </div>
       </div>
-    </div>
+    </>
   );
 }

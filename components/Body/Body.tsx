@@ -11,7 +11,7 @@ export default function Body({ location, setLocation, position }: Props) {
   return (
     <div>
       <Item location={location} setLocation={setLocation} position={position} />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
