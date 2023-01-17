@@ -31,7 +31,6 @@ export default function Footer() {
         ></div>
       </div>
       <div className={cx("container")}>
-        {/* <div className={cx("pointer")}></div> */}
         <div className={cx("wrap")}>
           <div className={cx("top_container")}>
             <div className={cx("top_wrap")}>
