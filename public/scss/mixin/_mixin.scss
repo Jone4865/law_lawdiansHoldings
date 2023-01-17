@@ -1,38 +1,31 @@
-@mixin view ($breakpoint) {
-    
-    @if ($breakpoint == "pc") {
-        @media (min-width: 1519px) and (max-width: 1920px) {
-            
-            @content
-        }
-    };
+@mixin view($breakpoint) {
+  @if ($breakpoint == "pc") {
+    @media (min-width: 1520px) and (max-width: 1920px) {
+      @content;
+    }
+  }
 
-    @if ($breakpoint == "middle") {
-        @media (min-width: 1300px) and (max-width: 1519px) {
-            
-            @content
-        }
-    };
+  @if ($breakpoint == "middle") {
+    @media (min-width: 1300px) and (max-width: 1519px) {
+      @content;
+    }
+  }
 
-    @if ($breakpoint == "small") {
-        @media (min-width: 955px) and (max-width: 1299px) {
-            
-            @content
-        }
-    };
+  @if ($breakpoint == "small") {
+    @media (min-width: 955px) and (max-width: 1299px) {
+      @content;
+    }
+  }
 
-    @if ($breakpoint == "very_small") {
-        @media (min-width: 760px) and (max-width: 954px) {
-            
-            @content
-        }
-    };
+  @if ($breakpoint == "very_small") {
+    @media (min-width: 760px) and (max-width: 954px) {
+      @content;
+    }
+  }
 
-    @if ($breakpoint == "mobile") {
-        @media (max-width: 759px){
-            
-            @content;
-        }
-    };
+  @if ($breakpoint == "mobile") {
+    @media (max-width: 759px) {
+      @content;
+    }
+  }
 }
-

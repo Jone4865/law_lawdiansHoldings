@@ -5,9 +5,7 @@ export default function Document() {
 
   return (
     <Html lang="en">
-      <Head>
-        <title>Real_Fi</title>
-      </Head>
+      <Head />
       <body>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script type="text/javascript" src={AppKey}></script>

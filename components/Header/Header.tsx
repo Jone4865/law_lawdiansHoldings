@@ -1,23 +1,17 @@
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import router from "next/router";
-import classNames from "classnames/bind";
+import className from "classNames/bind";
 import Image from "next/image";
 import { Link } from "react-scroll";
 
-const cx = classNames.bind(styles);
+const cx = className.bind(styles);
 
 type Props = {
-  setLocation: (location: number) => void;
   setModalState: (modal: boolean) => void;
-  setContentClick: (position: boolean) => void;
 };
 
-export default function Header({
-  setLocation,
-  setModalState,
-  setContentClick,
-}: Props) {
+export default function Header({ setModalState }: Props) {
   const [scrollY, setScrollY] = useState(false);
 
   const Buttons = [
@@ -67,7 +61,9 @@ export default function Header({
                   to={button}
                   spy={true}
                   smooth={true}
-                  offset={button === "역량" ? -55 : 0}
+                  offset={
+                    button === "역량" ? -55 : button === "문의하기" ? -100 : 0
+                  }
                 >
                   <span>{button}</span>
                 </Link>
@@ -76,7 +72,11 @@ export default function Header({
           </div>
           <Image
             className={styles.header_icon}
-            src={"/img/icon/menu_white.svg"}
+            src={
+              scrollY && scrollY
+                ? "/img/icon/menu_white.svg"
+                : "/img/icon/menu_brown.svg"
+            }
             onClick={() => setModalState(true)}
             width={20}
             height={16}

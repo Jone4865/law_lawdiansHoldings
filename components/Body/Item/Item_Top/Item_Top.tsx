@@ -1,9 +1,9 @@
 import styles from "./Item_Top.module.scss";
 
-import classNames from "classnames/bind";
+import className from "classNames/bind";
 import Image from "next/image";
 
-const cx = classNames.bind(styles);
+const cx = className.bind(styles);
 
 export default function Item_Top() {
   return (
@@ -19,8 +19,8 @@ export default function Item_Top() {
             <span className={cx("emphasis")}>감동기획</span>
           </div>
           <span className={cx("content")}>
-            10년 이상의 마케팅 전문가들이 마케팅 운용 및 운영을 대행해 고객님의
-            시간을 절약해드립니다.
+            10년 이상의 마케팅 전문가들이 마케팅 운용 및
+            <br /> 운영을 대행해 고객님의 시간을 절약해드립니다.
           </span>
           <div className={cx("icon_wrap")}>
             <div className={cx("icon")}>

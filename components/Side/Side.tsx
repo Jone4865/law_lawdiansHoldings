@@ -5,11 +5,9 @@ import { Link } from "react-scroll";
 type Props = {
   modal: boolean;
   setModalState: (modal: boolean) => void;
-  setLocation: (location: number) => void;
-  setContentClick: (position: boolean) => void;
 };
 
-function Side({ modal, setModalState, setLocation, setContentClick }: Props) {
+function Side({ modal, setModalState }: Props) {
   const Buttons = [
     "홈",
     "역량",
@@ -58,7 +56,9 @@ function Side({ modal, setModalState, setLocation, setContentClick }: Props) {
               to={button}
               spy={true}
               smooth={true}
-              offset={button === "역량" ? -55 : 0}
+              offset={
+                button === "역량" ? -55 : button === "문의하기" ? -100 : 0
+              }
               onClick={() => {
                 setModalState(false);
               }}

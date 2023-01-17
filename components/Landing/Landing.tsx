@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "../Header/Header";
-import Body from "../Body/Body";
 import Side from "../Side/Side";
-
+import Body from "../Body/Body";
 import styles from "./Landing.module.scss";
 import Footer from "../Footer/Footer";
 
@@ -26,18 +25,9 @@ export default function Landing() {
 
   return (
     <div className={styles.landing}>
-      <Header
-        setLocation={setLocation}
-        setModalState={setModalState}
-        setContentClick={setContentClick}
-      />
-      <Body location={location} setLocation={setLocation} position={position} />
-      <Side
-        modal={modal}
-        setModalState={setModalState}
-        setLocation={setLocation}
-        setContentClick={setContentClick}
-      />
+      <Header setModalState={setModalState} />
+      <Body />
+      <Side modal={modal} setModalState={setModalState} />
       <Footer />
     </div>
   );

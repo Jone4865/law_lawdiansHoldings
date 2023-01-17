@@ -1,5 +1,4 @@
 import styles from "./Footer.module.scss";
-import router from "next/router";
 import className from "classNames/bind";
 import Image from "next/image";
 
@@ -7,7 +6,7 @@ const cx = className.bind(styles);
 
 export default function Footer() {
   return (
-    <>
+    <div>
       <div className={cx("container")}>
         {/* <div className={cx("pointer")}></div> */}
         <div className={cx("wrap")}>
@@ -42,10 +41,10 @@ export default function Footer() {
         <div className={cx("bottom_wrap")}>
           <div className={cx("text_wrap")}>
             <span className={cx("bottom_content")}>
-              (주)감동기획 | 대표이사 김창섭 |
+              {"(주)감동기획 | 대표이사 김창섭 | "}
             </span>
             <span className={cx("bottom_content")}>
-              서울특별시 서초구 서초대로25길 55, 2층 202호 |
+              {"서울특별시 서초구 서초대로25길 55, 2층 202호 | "}
             </span>
             <span className={cx("bottom_content")}>
               사업자번호 670-87-02545
@@ -56,6 +55,6 @@ export default function Footer() {
           </span>
         </div>
       </div>
-    </>
+    </div>
   );
 }

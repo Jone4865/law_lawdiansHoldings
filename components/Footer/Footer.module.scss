@@ -2,12 +2,14 @@
 
 .container {
   background-color: #f9f9f9;
-  color: #888888;
+  color: #838080;
   font-size: 14px;
   min-height: 225px;
   border-bottom: solid 1px #dfdfdf;
   display: flex;
   align-items: center;
+  font-family: NotoSansCJKKR;
+  font-weight: 300;
   @include view("mobile") {
     padding-top: 50px;
     padding-bottom: 20px;
@@ -48,6 +50,7 @@
   font-size: 18px;
   color: #333333;
   margin: 9px 0;
+  font-weight: normal;
   @include view("mobile") {
     margin: 13px 0;
   }
@@ -55,7 +58,6 @@
 
 .content {
   margin: 10px 0;
-  font-weight: 500;
 }
 
 .image {
@@ -97,6 +99,7 @@
 
 .text_wrap {
   font-size: 14px;
+  font-weight: 100;
   @include view("mobile") {
     display: flex;
     flex-direction: column;
@@ -105,6 +108,7 @@
 
 .reserved {
   margin-top: 10px;
+  font-weight: 100;
   @include view("mobile") {
     margin: 0;
   }

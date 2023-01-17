@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import Item from "./Item";
+import Item from "./Body";
 import { useState } from "react";
 
 export default {
