@@ -7,6 +7,7 @@ import Item_Two from "./Item/Item_Two/Item_Two";
 import Items from "./Item/Items/Items";
 import PostQuestion from "./Item/PostQuestion/PostQuestion";
 import Step from "./Item/Step/Step";
+import Step_test from "./Item/Step_test/Step_test";
 
 const cx = className.bind(styles);
 
@@ -109,7 +110,8 @@ export default function Body() {
           </div>
         ))}
         <div id="진행절차">
-          <Step />
+          {/* <Step /> */}
+          <Step_test />
         </div>
         <div id="문의하기">
           <PostQuestion />

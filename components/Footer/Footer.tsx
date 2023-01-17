@@ -1,12 +1,35 @@
 import styles from "./Footer.module.scss";
 import className from "classNames/bind";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const cx = className.bind(styles);
 
 export default function Footer() {
+  const [modal, setModal] = useState(false);
+  useEffect(() => {
+    const htmlEle = document?.getElementsByTagName("html").item(0);
+    if (modal) {
+      if (htmlEle) {
+        htmlEle.style.overflow = "hidden";
+      }
+    } else {
+      if (htmlEle) {
+        htmlEle.style.overflow = "unset";
+      }
+    }
+  }, [modal]);
   return (
     <div>
+      <div
+        onClick={() => setModal(false)}
+        className={cx(modal ? "modal" : "none")}
+      >
+        <div
+          className={cx("modal_body")}
+          onClick={(e) => e.stopPropagation()}
+        ></div>
+      </div>
       <div className={cx("container")}>
         {/* <div className={cx("pointer")}></div> */}
         <div className={cx("wrap")}>
@@ -32,7 +55,14 @@ export default function Footer() {
             </div>
             <div className={cx("top_wrap")}>
               <span className={cx("title")}>약관</span>
-              <span className={cx("content")}>서비스 이용약관</span>
+              <span
+                onClick={() => {
+                  setModal(true);
+                }}
+                className={cx("content", "terms")}
+              >
+                서비스 이용약관
+              </span>
             </div>
           </div>
         </div>
