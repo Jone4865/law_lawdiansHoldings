@@ -9,6 +9,7 @@
   color: #f3f3f3;
   z-index: 4;
   letter-spacing: -1.25px;
+  font-family: "OneMobTitle";
 
   @include view("mobile") {
     height: 70px;

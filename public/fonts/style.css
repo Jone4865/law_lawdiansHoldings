@@ -1,35 +1,5 @@
 @font-face {
-  font-family: "GyeonggiBatang";
-  src: url("Batang_Bold.woff") format("woff");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "GyeonggiBatang";
-  src: url("Batang_Regular.woff") format("woff");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "GyeonggiBatang";
-  src: url("GyeonggiBatang_Regular.otf") format("otf");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans KR";
-  src: url("/font/NotoSansCJKkr-Bold.otf") format("otf");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Noto Sans KR";
-  src: url("/font/NotoSansCJKkr-Medium.otf") format("otf");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Noto Sans KR";
-  src: url("/font/NotoSansCJKkr-Regular.otf") format("otf");
+  font-family: "OneMobTitle";
+  src: url("OneMobTitle.otf") format("otf");
   font-weight: normal;
 }
