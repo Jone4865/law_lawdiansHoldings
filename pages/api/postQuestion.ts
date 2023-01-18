@@ -29,11 +29,13 @@ export default function postQuestion(
 
     transporter.sendMail(mailOptions, (err: any) => {
       if (err) {
-        return res.status(500).json({ status: "500" });
+        console.error(err);
+        res.status(500).json({ status: res.statusCode.toString() });
       } else {
-        return res.status(200).json({ status: "200" });
+        res.status(200).json({ status: res.statusCode.toString() });
       }
     });
   }
-  return res.status(200).json({ status: res.statusCode.toString() });
+
+  res.status(200).json({ status: res.statusCode.toString() });
 }

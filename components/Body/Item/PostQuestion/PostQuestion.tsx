@@ -46,6 +46,7 @@ export default function PostQuestion() {
         body: JSON.stringify(postData),
       })
     ).json();
+
     if (post.status == 200) {
       setEmail("");
       setContent("");
@@ -53,19 +54,19 @@ export default function PostQuestion() {
       toast.success("문의하기를 완료했습니다.", {
         position: "top-center",
       });
+      return;
     } else {
       toast.warning("알수 없는 오류가 발생했습니다.", {
         position: "top-center",
       });
+      return;
     }
-    console.log(post);
   };
 
   const onSubmitHandle = () => {
     postQuestion();
   };
 
-  console.log(email, content, cellPhone);
   return (
     <form
       onSubmit={(e) => {
