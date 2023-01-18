@@ -49,7 +49,7 @@ export default function Step() {
           </span>
           <span className={cx("text")}>브랜드 마케팅 목표 설정</span>
           <span className={cx("text")}>수립된 마케팅 시작</span>
-          <span className={cx("text_etc")}>
+          <span className={cx("text")}>
             매월 정기적인 컨설팅 진행
             <br />
             브랜드 마케팅 목표 재설정

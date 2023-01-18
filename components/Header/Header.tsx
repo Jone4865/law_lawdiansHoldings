@@ -62,7 +62,7 @@ export default function Header({ setModalState }: Props) {
                   spy={true}
                   smooth={true}
                   offset={
-                    button === "역량" ? -55 : button === "문의하기" ? -100 : 0
+                    button === "역량" ? -55 : button === "문의하기" ? -75 : -50
                   }
                 >
                   <span>{button}</span>
