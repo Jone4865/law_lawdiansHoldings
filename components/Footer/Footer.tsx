@@ -1,12 +1,14 @@
+import { useState, useEffect } from "react";
+import router from "next/router";
 import styles from "./Footer.module.scss";
 import className from "classNames/bind";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 
 const cx = className.bind(styles);
 
 export default function Footer() {
   const [modal, setModal] = useState(false);
+
   useEffect(() => {
     const htmlEle = document?.getElementsByTagName("html").item(0);
     if (modal) {
@@ -34,7 +36,7 @@ export default function Footer() {
         <div className={cx("wrap")}>
           <div className={cx("top_container")}>
             <div className={cx("top_wrap")}>
-              <div className={cx("image")}>
+              <div className={cx("image")} onClick={() => router.push("/")}>
                 <Image fill src="/img/logo/logo_on.png" alt="푸터 로고" />
               </div>
               <span className={cx("content")}>

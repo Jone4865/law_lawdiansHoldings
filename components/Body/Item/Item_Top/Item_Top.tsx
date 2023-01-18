@@ -1,5 +1,4 @@
 import styles from "./Item_Top.module.scss";
-
 import className from "classNames/bind";
 import Image from "next/image";
 

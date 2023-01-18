@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import styles from "./Side.module.scss";
+import { useEffect } from "react";
 import { Link } from "react-scroll";
+import styles from "./Side.module.scss";
 
 type Props = {
   modal: boolean;

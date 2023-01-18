@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import styles from "./Header.module.scss";
 import router from "next/router";
+import { Link } from "react-scroll";
+
+import styles from "./Header.module.scss";
 import className from "classNames/bind";
 import Image from "next/image";
-import { Link } from "react-scroll";
 
 const cx = className.bind(styles);
 

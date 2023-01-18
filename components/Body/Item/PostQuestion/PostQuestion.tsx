@@ -1,9 +1,10 @@
-import Image from "next/image";
 import { useEffect, useState } from "react";
-import styles from "./PostQuestion.module.scss";
-import className from "classNames/bind";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import styles from "./PostQuestion.module.scss";
+import className from "classNames/bind";
+import Image from "next/image";
 
 const cx = className.bind(styles);
 
@@ -12,9 +13,7 @@ export default function PostQuestion() {
   const [cellPhone, setCellPhone] = useState("");
   const [content, setContent] = useState("");
   const [disable, setDisable] = useState(true);
-
   const [phoneCheck, setPhoneCheck] = useState(false);
-
   const postData = { content, email, cellPhone };
 
   const emailRegex = new RegExp(

@@ -1,5 +1,6 @@
 import styles from "./Body.module.scss";
 import className from "classNames/bind";
+
 import Item_Top from "./Item/Item_Top/Item_Top";
 import Item_Two from "./Item/Item_Two/Item_Two";
 import Items from "./Item/Items/Items";
@@ -16,7 +17,7 @@ export default function Body() {
     "페이스북 관리",
     "유튜브 관리",
     "IMC 마케팅",
-  ]; //IMC에는 서브 텍스트 추가
+  ];
 
   const contents_top = [
     <p>
@@ -57,6 +58,7 @@ export default function Body() {
       불필요한 광고로 손해보신 분
     </p>,
   ];
+
   const contents_bottom = [
     <p>
       전문적인 관리를 통해 소비자들에게 입소문과

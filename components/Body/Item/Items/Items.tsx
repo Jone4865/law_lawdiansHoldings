@@ -1,9 +1,8 @@
-import { useEffect, useRef, useState } from "react";
-import styles from "./Items.module.scss";
-import "animate.css";
-import className from "classNames/bind";
-import Image from "next/image";
+import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import styles from "./Items.module.scss";
+import className from "classNames/bind";
+import CustomRatioImage from "../../../Elements/CustomRatioImage";
 
 const cx = className.bind(styles);
 
@@ -57,15 +56,14 @@ export default function Items({
           <span className={cx("content_bottom")}>{content_bottom}</span>
         </div>
         <div className={cx(`right${name}`)}>
-          <Image
+          <CustomRatioImage
             src={
               pc
                 ? `/img/bg/bg${index + 1}.png`
                 : `/img/bg/bg${index + 1}_m.webp`
             }
-            fill
-            alt="dadw"
-            quality={100}
+            ratio1={pc ? 321 : 125}
+            ratio2={pc ? 217 : 104}
           />
         </div>
       </div>

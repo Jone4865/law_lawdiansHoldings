@@ -64,6 +64,7 @@
   position: relative;
   width: 126px;
   height: 41px;
+  cursor: pointer;
   @include view("mobile") {
     width: 98px;
     height: 32px;

@@ -1,11 +1,24 @@
+import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import styles from "./Item_Two.module.scss";
-
 import className from "classNames/bind";
 import Image from "next/image";
-
+import CustomRatioImage from "../../../Elements/CustomRatioImage";
 const cx = className.bind(styles);
 
 export default function Item_Two() {
+  const [pc, setPc] = useState(false);
+  const isPc = useMediaQuery({
+    query: "(min-width: 760px) and (max-width: 1920px)",
+  });
+
+  useEffect(() => {
+    if (isPc) {
+      setPc(true);
+    } else {
+      setPc(false);
+    }
+  }, [isPc]);
   return (
     <div className={cx("container")}>
       <div>
@@ -27,8 +40,9 @@ export default function Item_Two() {
           <div className={cx("image")}>
             <Image
               fill
-              src="/img/Item_Two/left.png"
+              src={pc ? "/img/Item_Two/left.png" : "/img/Item_Two/left_m.png"}
               alt="아이템 두번째 왼쪽 이미지"
+              quality={100}
             />
           </div>
           <span className={cx("bottom_title_right")}>
@@ -44,8 +58,11 @@ export default function Item_Two() {
           <div className={cx("image")}>
             <Image
               fill
-              src="/img/Item_Two/center.png"
+              src={
+                pc ? "/img/Item_Two/center.png" : "/img/Item_Two/center_m.png"
+              }
               alt="아이템 두번째 왼쪽 이미지"
+              quality={100}
             />
           </div>
           <span className={cx("bottom_title_center")}>
@@ -61,7 +78,7 @@ export default function Item_Two() {
           <div className={cx("image")}>
             <Image
               fill
-              src="/img/Item_Two/right.png"
+              src={pc ? "/img/Item_Two/right.png" : "/img/Item_Two/right_m.png"}
               alt="아이템 두번째 왼쪽 이미지"
               quality={100}
             />
