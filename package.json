@@ -19,7 +19,6 @@
     "@types/react-responsive": "^8.0.5",
     "@types/react-scroll": "^1.8.6",
     "add": "^2.0.6",
-    "animate.css": "^4.1.1",
     "axios": "^1.2.2",
     "cheerio": "^1.0.0-rc.12",
     "eslint": "8.30.0",
