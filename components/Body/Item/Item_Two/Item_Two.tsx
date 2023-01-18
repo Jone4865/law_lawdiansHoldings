@@ -63,6 +63,7 @@ export default function Item_Two() {
               fill
               src="/img/Item_Two/right.png"
               alt="아이템 두번째 왼쪽 이미지"
+              quality={100}
             />
           </div>
           <span className={cx("bottom_title_left")}>CS 통계 데이터 제공</span>

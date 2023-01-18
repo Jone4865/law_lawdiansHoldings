@@ -47,6 +47,9 @@ export default function PostQuestion() {
       })
     ).json();
     if (post.status == 200) {
+      setEmail("");
+      setContent("");
+      setCellPhone("");
       toast.success("문의하기를 완료했습니다.", {
         position: "top-center",
       });
@@ -55,12 +58,14 @@ export default function PostQuestion() {
         position: "top-center",
       });
     }
+    console.log(post);
   };
 
   const onSubmitHandle = () => {
     postQuestion();
   };
 
+  console.log(email, content, cellPhone);
   return (
     <form
       onSubmit={(e) => {

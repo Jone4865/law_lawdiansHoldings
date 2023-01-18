@@ -59,10 +59,13 @@ export default function Items({
         <div className={cx(`right${name}`)}>
           <Image
             src={
-              pc ? `/img/bg/bg${index + 1}.png` : `/img/bg/bg${index + 1}_m.png`
+              pc
+                ? `/img/bg/bg${index + 1}.png`
+                : `/img/bg/bg${index + 1}_m.webp`
             }
             fill
             alt="dadw"
+            quality={100}
           />
         </div>
       </div>

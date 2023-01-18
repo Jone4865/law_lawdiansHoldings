@@ -26,6 +26,7 @@
   max-width: 1300px;
   width: 70vw;
   flex-direction: column;
+  justify-content: center;
   @include view("pc") {
     flex-direction: row;
   }
@@ -34,7 +35,7 @@
   }
   @include view("small") {
     flex-direction: row;
-    width: 100vw; //
+    width: 100vw;
   }
   @include view("very_small") {
     align-items: center;
@@ -58,7 +59,7 @@
     margin: 30px 20px 0 20px;
   }
   @include view("small") {
-    width: 31vw;
+    width: 30vw;
     margin: 30px 10px 0 10px;
   }
   @include view("very_small") {
@@ -108,9 +109,14 @@
 .image {
   position: relative;
   width: 100%;
-  height: 270px;
+  height: 20vw;
   @include view("very_small") {
     margin-top: 30px;
+    height: 30vw;
+  }
+  @include view("mobile") {
+    min-height: 222px;
+    height: 30vh;
   }
 }
 
