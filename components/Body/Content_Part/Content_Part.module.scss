@@ -1,0 +1,34 @@
+@import "/public/scss/style.scss";
+
+.container {
+  width: 90vw;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  max-width: 1020px;
+}
+
+.logo {
+  position: relative;
+  width: 58px;
+  height: 34px;
+}
+
+.title {
+  font-size: 50px;
+  letter-spacing: -1px;
+  margin: 10px 0 20px 0;
+  display: flex;
+  flex-direction: row;
+  @include view("very_small") {
+    display: flex;
+    background-color: red;
+    flex-direction: column;
+  }
+}
+
+.content {
+  font-size: 18px;
+  opacity: 0.7;
+  line-height: 1.67;
+}

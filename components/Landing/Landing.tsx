@@ -17,8 +17,8 @@ export default function Landing() {
     <div className={styles.landing}>
       <Header setModalState={setModalState} />
       <Body />
-      <Side modal={modal} setModalState={setModalState} />
-      <Footer />
+      {/* <Side modal={modal} setModalState={setModalState} /> */}
+      {/* <Footer /> */}
     </div>
   );
 }
