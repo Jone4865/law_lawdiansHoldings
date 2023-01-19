@@ -1,0 +1,108 @@
+@import "/public/scss/style.scss";
+
+.container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 330px;
+  background-color: #ff7401;
+  justify-content: center;
+  @include view("very_small") {
+    height: 335px;
+  }
+}
+
+.wrap {
+  display: flex;
+  max-width: 1020px;
+  width: 70vw;
+  align-items: center;
+  position: relative;
+
+  @include view("small") {
+    width: 100vw;
+  }
+  @include view("very_small") {
+    width: 100vw;
+    flex-direction: column;
+  }
+  @include view("mobile") {
+    width: 100vw;
+    flex-direction: column;
+  }
+}
+
+.logo {
+  position: relative;
+  width: 260.6px;
+  height: 114px;
+  @include view("very_small") {
+    width: 192px;
+    height: 84px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+  @include view("mobile") {
+    width: 192px;
+    height: 84px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+}
+
+.app {
+  position: relative;
+  width: 222px;
+  height: 66px;
+  margin: 0 20px 0 40px;
+  @include view("very_small") {
+    width: 161px;
+    height: 48px;
+    margin: 0 13px 0 0;
+  }
+  @include view("mobile") {
+    width: 161px;
+    height: 48px;
+    margin: 0 13px 0 0;
+  }
+}
+
+.google {
+  position: relative;
+  width: 222px;
+  height: 66px;
+  @include view("very_small") {
+    width: 161px;
+    height: 48px;
+  }
+  @include view("mobile") {
+    width: 161px;
+    height: 48px;
+  }
+}
+
+.right {
+  display: flex;
+}
+
+.human_wrap {
+  display: flex;
+  max-width: 1020px;
+  width: 70vw;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+
+  @include view("small") {
+    width: 90vw;
+  }
+  @include view("very_small") {
+    width: 100vw;
+    flex-direction: column;
+  }
+  @include view("mobile") {
+    width: 100vw;
+    flex-direction: column;
+  }
+}

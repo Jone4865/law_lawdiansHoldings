@@ -5,6 +5,8 @@ import Item from "./Item/Item";
 import Solution from "./Solution/Solution";
 import { useMediaQuery } from "react-responsive";
 import PostQuestion from "./PostQuestion/PostQuestion";
+import Download_Part from "./Download_Part/Download_Part";
+import GetGiftCard from "./GetGiftCard/GetGiftCard";
 
 const cx = className.bind(styles);
 
@@ -24,11 +26,11 @@ export default function Body() {
 
   const [pc, setPc] = useState(true);
   const isPc = useMediaQuery({
-    query: "(min-width: 510px) and (max-width: 1920px)",
+    query: "(min-width: 759px) and (max-width: 1920px)",
   });
 
   useEffect(() => {
-    if (pc) {
+    if (isPc) {
       setPc(true);
     } else {
       setPc(false);
@@ -85,14 +87,21 @@ export default function Body() {
 
   return (
     <div className={cx("container")}>
-      <div className={cx("wrap")}>
+      <div className={cx("home_wrap")}>
         <div id="홈">
           <Item
             title={titles[0]}
             content={contents[0]}
             logo_color={"white"}
-            img_name={"bg1"}
+            img_name={pc && pc ? "bg1" : "bg1_m"}
             item_name="home"
+          />
+        </div>
+        <div id="상품권">
+          <GetGiftCard
+            title={titles[1]}
+            content={contents[1]}
+            logo_color={"orange"}
           />
         </div>
         <div id="컨설팅">
@@ -100,7 +109,7 @@ export default function Body() {
             title={titles[2]}
             content={contents[2]}
             logo_color={"white"}
-            img_name={pc ? "bg3" : "bg3_m"}
+            img_name={pc && pc ? "bg3" : "bg3_m"}
             item_name="consulting"
           />
         </div>
@@ -122,6 +131,9 @@ export default function Body() {
         </div>
         <div id="문의하기">
           <PostQuestion />
+        </div>
+        <div id="다운로드">
+          <Download_Part />
         </div>
       </div>
     </div>

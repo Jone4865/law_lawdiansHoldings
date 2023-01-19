@@ -10,14 +10,12 @@ type Props = {
 function Side({ modal, setModalState }: Props) {
   const Buttons = [
     "홈",
-    "역량",
-    "블로그",
-    "인스타",
-    "페이스북",
-    "유튜브",
-    "IMC마케팅",
-    "진행절차",
+    "상품권 시세",
+    "컨설팅",
+    "서비스",
+    "솔루션",
     "문의하기",
+    "다운로드",
   ];
 
   useEffect(() => {

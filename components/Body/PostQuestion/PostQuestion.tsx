@@ -82,7 +82,8 @@ export default function PostQuestion() {
         </div>
         <h1 className={cx("title")}>문의하기</h1>
         <p className={cx("sub_title")}>
-          기업상품권 판매대행에 대하여 궁금하신 점은 무엇이든 물어보세요.
+          <span>기업상품권 판매대행에 대하여 궁금하신 점은 </span>
+          <span> 무엇이든 물어보세요.</span>
         </p>
         <span className={cx("name")}>이메일</span>
         <input
