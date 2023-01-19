@@ -10,16 +10,16 @@ type Props = {
   title: React.ReactNode;
   content: React.ReactNode;
   img_name: string;
-  item_top?: boolean;
   logo_color?: "white" | "orange";
+  item_name?: string;
 };
 
 export default function Item({
   title,
   content,
   img_name,
-  item_top = false,
   logo_color = "white",
+  item_name,
 }: Props) {
   return (
     <div
@@ -30,7 +30,7 @@ export default function Item({
       <div className={cx("content_wrap")}>
         <Content_Part title={title} content={content} logo_color={logo_color} />
       </div>
-      <div className={cx(item_top ? "image_top" : "image")}>
+      <div className={cx(`image_${item_name}`)}>
         <Image src={`/img/body/${img_name}.png`} fill alt="바디 이미지" />
       </div>
     </div>

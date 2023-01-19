@@ -1,7 +1,6 @@
 import styles from "./Solution.module.scss";
 import className from "classnames/bind";
 import Content_Part from "../Item/Content_Part/Content_Part";
-import Image from "next/image";
 import React from "react";
 import Image_Part from "./Image_Part/Image_Part";
 
@@ -14,7 +13,6 @@ type Props = {
 };
 
 export default function Solution({ title, content, logo_color }: Props) {
-  const images = ["bg1", "bg2", "bg3", "bg4", "bg5", "bg6"];
   const titles = [
     "웹 로그분석",
     "리포트",
@@ -73,13 +71,15 @@ export default function Solution({ title, content, logo_color }: Props) {
             logo_color={logo_color}
           />
         </div>
-        <div className={cx("img_wrap")}>
+        <div className={cx("img_wraper")}>
           <Image_Part title={titles[0]} content={contents[0]} img_num="1" />
-          <Image_Part title={titles[1]} content={contents[1]} img_num="1" />
-          <Image_Part title={titles[2]} content={contents[2]} img_num="1" />
-          <Image_Part title={titles[3]} content={contents[3]} img_num="1" />
-          <Image_Part title={titles[4]} content={contents[4]} img_num="1" />
-          <Image_Part title={titles[5]} content={contents[5]} img_num="1" />
+          <Image_Part title={titles[1]} content={contents[1]} img_num="2" />
+          <Image_Part title={titles[2]} content={contents[2]} img_num="3" />
+        </div>
+        <div className={cx("img_wraper")}>
+          <Image_Part title={titles[3]} content={contents[3]} img_num="4" />
+          <Image_Part title={titles[4]} content={contents[4]} img_num="5" />
+          <Image_Part title={titles[5]} content={contents[5]} img_num="6" />
         </div>
       </div>
     </div>

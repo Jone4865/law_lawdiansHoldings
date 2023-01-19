@@ -1,11 +1,40 @@
+import { useState, useEffect } from "react";
 import styles from "./Body.module.scss";
 import className from "classnames/bind";
 import Item from "./Item/Item";
 import Solution from "./Solution/Solution";
+import { useMediaQuery } from "react-responsive";
+import PostQuestion from "./PostQuestion/PostQuestion";
 
 const cx = className.bind(styles);
 
 export default function Body() {
+  const [middle, setMiddle] = useState(false);
+  const isMiddle = useMediaQuery({
+    query: "(min-width: 1300px) and (max-width: 1920px)",
+  });
+
+  useEffect(() => {
+    if (isMiddle) {
+      setMiddle(true);
+    } else {
+      setMiddle(false);
+    }
+  }, [isMiddle]);
+
+  const [pc, setPc] = useState(true);
+  const isPc = useMediaQuery({
+    query: "(min-width: 510px) and (max-width: 1920px)",
+  });
+
+  useEffect(() => {
+    if (pc) {
+      setPc(true);
+    } else {
+      setPc(false);
+    }
+  }, [isPc]);
+
   const titles = [
     <>
       <p>기업 상품권 판매 / </p>
@@ -56,14 +85,14 @@ export default function Body() {
 
   return (
     <div className={cx("container")}>
-      <ul className={cx("wrap")}>
+      <div className={cx("wrap")}>
         <div id="홈">
           <Item
             title={titles[0]}
             content={contents[0]}
             logo_color={"white"}
             img_name={"bg1"}
-            item_top={true}
+            item_name="home"
           />
         </div>
         <div id="컨설팅">
@@ -71,25 +100,30 @@ export default function Body() {
             title={titles[2]}
             content={contents[2]}
             logo_color={"white"}
-            img_name={"bg3"}
+            img_name={pc ? "bg3" : "bg3_m"}
+            item_name="consulting"
           />
         </div>
         <div id="서비스">
           <Item
-            title={titles[4]}
-            content={contents[4]}
+            title={titles[3]}
+            content={contents[3]}
             logo_color={"orange"}
-            img_name={"bg4"}
+            img_name={middle ? "bg4" : "bg4_m"}
+            item_name="service"
           />
         </div>
         <div id="솔루션">
           <Solution
-            title={titles[5]}
-            content={contents[5]}
+            title={titles[4]}
+            content={contents[4]}
             logo_color={"orange"}
           />
         </div>
-      </ul>
+        <div id="문의하기">
+          <PostQuestion />
+        </div>
+      </div>
     </div>
   );
 }

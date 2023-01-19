@@ -3,8 +3,21 @@
 .image_wrap {
   position: relative;
   display: flex;
-  width: 335px;
-  height: 270px;
+  width: 320px;
+  height: 277px;
+  margin: 15px 0;
+  @include view("small") {
+    width: 335px;
+    height: 270px;
+  }
+  @include view("very_small") {
+    width: 335px;
+    height: 270px;
+  }
+  @include view("mobile") {
+    width: 335px;
+    height: 270px;
+  }
 }
 
 .text_wrap {
