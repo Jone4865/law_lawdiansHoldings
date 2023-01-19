@@ -67,8 +67,19 @@ export default function Body() {
   return (
     <div className={cx("container")}>
       <ul className={cx("wrap")}>
-        <Item title={titles[0]} content={contents[0]} logo_color={"white"} />
-        <Item title={titles[1]} content={contents[1]} logo_color={"orange"} />
+        <Item
+          title={titles[0]}
+          content={contents[0]}
+          logo_color={"white"}
+          img_name={"bg1"}
+          item_top={true}
+        />
+        <Item
+          title={titles[3]}
+          content={contents[3]}
+          logo_color={"orange"}
+          img_name={"bg1"}
+        />
       </ul>
     </div>
   );
