@@ -5,15 +5,15 @@ import Image from "next/image";
 const cx = className.bind(styles);
 
 type Props = {
-  logo_color?: "white" | "orange";
   title: React.ReactNode;
   content: React.ReactNode;
+  logo_color: "white" | "orange";
 };
 
 export default function Content_Part({
-  logo_color = "white",
   title,
   content,
+  logo_color = "white",
 }: Props) {
   return (
     <div className={cx("container")}>
