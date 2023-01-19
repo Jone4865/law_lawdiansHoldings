@@ -22,32 +22,22 @@
   align-items: center;
 }
 
+.content_wrap {
+  border-radius: 100%;
+  max-width: 1020px;
+  width: 90vw;
+}
+
 .image_top {
   position: relative;
   width: 1020px;
   height: 484px;
   margin-top: 60px;
-  @include view("very_small") {
-    height: 400px;
-    margin-top: 30px;
-  }
-  @include view("mobile") {
-    height: 400px;
-    margin-top: 30px;
-  }
 }
 
 .image {
   position: relative;
   width: 1020px;
-  height: 484px;
+  height: 584px;
   margin-top: 60px;
-  @include view("very_small") {
-    height: 400px;
-    margin-top: 30px;
-  }
-  @include view("mobile") {
-    height: 400px;
-    margin-top: 30px;
-  }
 }

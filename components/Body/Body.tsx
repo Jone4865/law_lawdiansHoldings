@@ -1,20 +1,11 @@
 import styles from "./Body.module.scss";
-import className from "classNames/bind";
+import className from "classnames/bind";
 import Item from "./Item/Item";
+import Solution from "./Solution/Solution";
 
 const cx = className.bind(styles);
 
 export default function Body() {
-  const btns = [
-    "홈",
-    "상품권 시세",
-    "컨설팅",
-    "서비스",
-    "솔루션",
-    "문의하기",
-    "다운로드",
-  ];
-
   const titles = [
     <>
       <p>기업 상품권 판매 / </p>
@@ -26,8 +17,7 @@ export default function Body() {
       <p>운영대행 컨설팅</p>
     </>,
     <>
-      <p>기업 상품권</p>
-      <p>운영대행 컨설팅</p>
+      <p>고객맞춤 서비스</p>
     </>,
     <>방배사 솔루션</>,
     <>문의하기</>,
@@ -67,19 +57,38 @@ export default function Body() {
   return (
     <div className={cx("container")}>
       <ul className={cx("wrap")}>
-        <Item
-          title={titles[0]}
-          content={contents[0]}
-          logo_color={"white"}
-          img_name={"bg1"}
-          item_top={true}
-        />
-        <Item
-          title={titles[3]}
-          content={contents[3]}
-          logo_color={"orange"}
-          img_name={"bg1"}
-        />
+        <div id="홈">
+          <Item
+            title={titles[0]}
+            content={contents[0]}
+            logo_color={"white"}
+            img_name={"bg1"}
+            item_top={true}
+          />
+        </div>
+        <div id="컨설팅">
+          <Item
+            title={titles[3]}
+            content={contents[3]}
+            logo_color={"orange"}
+            img_name={"bg3"}
+          />
+        </div>
+        <div id="서비스">
+          <Item
+            title={titles[4]}
+            content={contents[4]}
+            logo_color={"orange"}
+            img_name={"bg4"}
+          />
+        </div>
+        <div id="솔루션">
+          <Solution
+            title={titles[5]}
+            content={contents[5]}
+            logo_color={"orange"}
+          />
+        </div>
       </ul>
     </div>
   );
