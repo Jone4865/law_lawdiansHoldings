@@ -68,9 +68,9 @@ export default function Body() {
         </div>
         <div id="컨설팅">
           <Item
-            title={titles[3]}
-            content={contents[3]}
-            logo_color={"orange"}
+            title={titles[2]}
+            content={contents[2]}
+            logo_color={"white"}
             img_name={"bg3"}
           />
         </div>
