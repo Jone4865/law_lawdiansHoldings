@@ -97,7 +97,7 @@ export default function Body() {
             item_name="home"
           />
         </div>
-        <div id="상품권">
+        <div id="상품권 시세">
           <GetGiftCard
             title={titles[1]}
             content={contents[1]}

@@ -54,15 +54,7 @@ function Side({ modal, setModalState }: Props) {
               to={button}
               spy={true}
               smooth={true}
-              offset={
-                button === "역량"
-                  ? -55
-                  : button === "문의하기"
-                  ? -70
-                  : button === "진행절차"
-                  ? -60
-                  : 50
-              }
+              offset={-20}
               onClick={() => {
                 setModalState(false);
               }}
