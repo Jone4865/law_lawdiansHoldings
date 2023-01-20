@@ -13,13 +13,13 @@
   max-width: 1030px;
   padding: 100px 0;
   @include view("small") {
-    width: 335px;
+    width: 345px;
   }
   @include view("very_small") {
-    width: 335px;
+    width: 345px;
   }
   @include view("mobile") {
-    width: 335px;
+    width: 345px;
   }
 }
 
