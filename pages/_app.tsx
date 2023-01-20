@@ -19,9 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
           property="og:article:author"
           content="방배사, 기쁨을 선물하세요."
         />
-        {/* <meta property="og:image" content="/img/meta_img.png" /> */}
-        {/* <meta property="og:image:width" content="450" /> */}
-        {/* <meta property="og:image:height" content="260" /> */}
+        <meta property="og:image" content="/img/meta_img.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="500" />
 
         <script type="text/javascript" src={AppKey}></script>
       </Head>
