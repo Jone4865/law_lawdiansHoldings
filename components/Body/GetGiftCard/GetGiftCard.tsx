@@ -68,7 +68,7 @@ export default function GetGiftCard({ title, content, logo_color }: Props) {
       });
       setData(newData);
     })();
-  }, [data]);
+  }, []);
 
   return (
     <div className={cx("container")}>

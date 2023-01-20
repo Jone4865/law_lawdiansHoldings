@@ -28,7 +28,7 @@ export default function Header({ setModalState }: Props) {
   useEffect(() => {
     (() => {
       window.addEventListener("scroll", () => {
-        setScrollY(window.pageYOffset <= 50 ? false : true);
+        setScrollY(window.pageYOffset <= 20 ? false : true);
       });
     })();
   }, []);

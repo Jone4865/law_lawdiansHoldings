@@ -107,6 +107,7 @@
   overflow-y: scroll;
   @include view("mobile") {
     font-size: 10px;
+    height: 330px;
   }
 }
 
