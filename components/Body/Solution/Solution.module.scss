@@ -25,8 +25,13 @@
 
 .img_wraper {
   display: flex;
-  min-width: 1020px;
   justify-content: space-between;
+  @include view("pc") {
+    min-width: 1020px;
+  }
+  @include view("middle") {
+    min-width: 1020px;
+  }
   @include view("small") {
     flex-direction: column;
     margin-top: 30px;

@@ -19,7 +19,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "public/hooks/useMoveScrool.js"
+    "public/hooks 10-47-17-443/useMoveScrool.js"
   ],
   "exclude": ["node_modules"]
 }

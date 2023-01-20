@@ -2,7 +2,7 @@
 
 .header_trans {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   display: flex;
   border-bottom: solid 1px rgba(255, 255, 255, 0.285);
   color: #fff;
@@ -24,7 +24,7 @@
 
 .header_black {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   display: flex;
   border-bottom: solid 1px rgba(255, 255, 255, 0.285);
   color: black;

@@ -3,6 +3,7 @@ import styles from "./GetGiftCard.module.scss";
 import className from "classnames/bind";
 import Content_Part from "../Item/Content_Part/Content_Part";
 import Image from "next/image";
+import useInterval from "../../../public/hooks 10-47-17-443/useInterval/useInterval";
 
 const cx = className.bind(styles);
 
@@ -22,6 +23,8 @@ type Data = {
 
 export default function GetGiftCard({ title, content, logo_color }: Props) {
   const [data, setData] = useState<Data[]>();
+  const [getData, setGetData] = useState(false);
+  useInterval(() => setGetData(!getData), 72000);
 
   //get 요청
   useEffect(() => {
@@ -68,7 +71,7 @@ export default function GetGiftCard({ title, content, logo_color }: Props) {
       });
       setData(newData);
     })();
-  }, []);
+  }, [getData]);
 
   return (
     <div className={cx("container")}>
@@ -92,7 +95,7 @@ export default function GetGiftCard({ title, content, logo_color }: Props) {
         <div className={cx("card_container")}>
           <div className={cx("card_title")}>
             <span className={cx("name")}>상품권 명</span>
-            <span className={cx("buy")}>매입사</span>
+            <span className={cx("buy")}>매입가</span>
             <span className={cx("sell")}>판매가</span>
           </div>
           <div className={cx("map")}>
