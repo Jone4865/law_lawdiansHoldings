@@ -12,13 +12,13 @@
   }
 
   @if ($breakpoint == "small") {
-    @media (min-width: 955px) and (max-width: 1299px) {
+    @media (min-width: 1030px) and (max-width: 1299px) {
       @content;
     }
   }
 
   @if ($breakpoint == "very_small") {
-    @media (min-width: 760px) and (max-width: 954px) {
+    @media (min-width: 760px) and (max-width: 1029px) {
       @content;
     }
   }

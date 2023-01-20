@@ -1,0 +1,47 @@
+@import "/public/scss/style.scss";
+
+.container {
+  background-color: #fff;
+  color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.wrap {
+  max-width: 1030px;
+  padding: 100px 0;
+  @include view("small") {
+    width: 335px;
+  }
+  @include view("very_small") {
+    width: 335px;
+  }
+  @include view("mobile") {
+    width: 335px;
+  }
+}
+
+.img_wraper {
+  display: flex;
+  justify-content: space-between;
+  @include view("pc") {
+    min-width: 1020px;
+  }
+  @include view("middle") {
+    min-width: 1020px;
+  }
+  @include view("small") {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  @include view("very_small") {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  @include view("mobile") {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+}
