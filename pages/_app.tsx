@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>방배사</title>
         <meta name="Keywords" content="bangbaesa" />
         <meta name="Keywords" content="bangbae" />
-        {/* <meta property="og:url" content="http://realfiex.com/" /> */}
+        <meta property="og:url" content={process.env.NEXT_PUBLIC_SURVICE_URL} />
         <meta property="og:title" content="방배사" />
         <meta property="og:description" content="방배사, 기쁨을 선물하세요." />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
