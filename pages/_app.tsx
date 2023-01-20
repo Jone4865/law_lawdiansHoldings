@@ -4,7 +4,6 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const AppKey = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_APP_KEY}`;
   return (
     <>
       <Head>
@@ -22,8 +21,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:image" content="/img/meta_img.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="500" />
-
-        <script type="text/javascript" src={AppKey}></script>
       </Head>
       <Component {...pageProps} />
     </>
