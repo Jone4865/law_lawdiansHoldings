@@ -28,7 +28,7 @@ export default function postQuestion(
       }</div><div>문의 내용 : ${JSON.parse(req.body).content}</div>
     <div>연락처 : ${JSON.parse(req.body).cellPhone}</div></p>`,
     };
-    console.log(`${JSON.parse(req.body).email}`);
+
     transporter.sendMail(mailOptions, (err: any) => {
       if (err) {
         console.error(err);
