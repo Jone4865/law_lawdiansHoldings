@@ -34,14 +34,15 @@
   }
   @include view("small") {
     flex-direction: column;
-    margin-top: 30px;
   }
   @include view("very_small") {
     flex-direction: column;
-    margin-top: 30px;
   }
   @include view("mobile") {
     flex-direction: column;
-    margin-top: 30px;
   }
+}
+
+.title_wrap {
+  margin-bottom: 30px;
 }
