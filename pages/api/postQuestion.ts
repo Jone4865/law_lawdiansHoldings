@@ -20,8 +20,8 @@ export default function postQuestion(
 
   if (req.body) {
     const mailOptions = {
-      from: `${JSON.parse(req.body).email}`,
-      to: process.env.NEXT_PUBLIC_SEND_ADDRESS,
+      from: process.env.NEXT_PUBLIC_SEND_ADDRESS,
+      to: process.env.NEXT_PUBLIC_RECEIVE_ADDRESS,
       subject: `${process.env.NEXT_PUBLIC_SURVICE_NAME} 문의 메일`,
       html: `<p><div>문의자 이메일 : ${
         JSON.parse(req.body).email
