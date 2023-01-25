@@ -1,0 +1,18 @@
+@import "/public/scss/style.scss";
+
+.container {
+  background-color: #fff;
+  color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.img_wraper {
+  background-color: red;
+  width: 1360px;
+  height: 300px;
+  display: flex;
+  overflow: hidden;
+  transition: 0.2s;
+}

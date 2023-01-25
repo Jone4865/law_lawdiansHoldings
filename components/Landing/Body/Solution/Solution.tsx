@@ -1,7 +1,7 @@
 import styles from "./Solution.module.scss";
 import className from "classnames/bind";
 import Content_Part from "../Item/Content_Part/Content_Part";
-import React from "react";
+import React, { useState } from "react";
 import Image_Part from "./Image_Part/Image_Part";
 
 const cx = className.bind(styles);
@@ -13,6 +13,13 @@ type Props = {
 };
 
 export default function Solution({ title, content, logo_color }: Props) {
+  const [translate, setTranslate] = useState(0);
+  const [page, setPage] = useState(0);
+  const onclickHandle = () => {
+    setTranslate((prev) => prev + 100);
+    setPage((prev) => prev + 1);
+  };
+
   const titles = [
     "웹 로그분석",
     "리포트",
@@ -61,6 +68,7 @@ export default function Solution({ title, content, logo_color }: Props) {
       리스크를 줄입니다.
     </>,
   ];
+
   return (
     <div className={cx("container")}>
       <div className={cx("wrap")}>
@@ -72,15 +80,27 @@ export default function Solution({ title, content, logo_color }: Props) {
           />
         </div>
         <div className={cx("img_wraper")}>
-          <Image_Part title={titles[0]} content={contents[0]} img_num="1" />
-          <Image_Part title={titles[1]} content={contents[1]} img_num="2" />
-          <Image_Part title={titles[2]} content={contents[2]} img_num="3" />
+          {titles.map((item, idx) => (
+            <div
+              key={idx}
+              style={{
+                transform: `translate(-${translate}%)`,
+                transition: "0.2s",
+              }}
+            >
+              <Image_Part
+                title={item}
+                content={contents[idx]}
+                img_num={(idx + 1).toString()}
+              />
+            </div>
+          ))}
         </div>
-        <div className={cx("img_wraper")}>
-          <Image_Part title={titles[3]} content={contents[3]} img_num="4" />
-          <Image_Part title={titles[4]} content={contents[4]} img_num="5" />
-          <Image_Part title={titles[5]} content={contents[5]} img_num="6" />
-        </div>
+        <button
+          onClick={() => (page + 5 <= titles.length ? onclickHandle() : "")}
+        >
+          다음
+        </button>
       </div>
     </div>
   );

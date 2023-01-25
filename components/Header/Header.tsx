@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 import styles from "./Header.module.scss";
 import className from "classnames/bind";
 import Image from "next/image";
+import { text } from "stream/consumers";
 
 const cx = className.bind(styles);
 
@@ -14,16 +15,9 @@ type Props = {
 
 export default function Header({ setModalState }: Props) {
   const [scrollY, setScrollY] = useState(false);
+  const [selectedIdx, setSelectedIdx] = useState(0);
 
-  const Buttons = [
-    "홈",
-    "상품권 시세",
-    "컨설팅",
-    "서비스",
-    "솔루션",
-    "문의하기",
-    "다운로드",
-  ];
+  const Buttons = ["홈", "COMPANY", "BUSINESS", "COMMUNITY"];
 
   useEffect(() => {
     (() => {
@@ -60,11 +54,14 @@ export default function Header({ setModalState }: Props) {
                   to={button}
                   spy={true}
                   smooth={true}
+                  onSetActive={() => setSelectedIdx(index)}
                   offset={
                     button === "역량" ? -55 : button === "문의하기" ? -75 : -50
                   }
                 >
-                  <span>{button}</span>
+                  <span className={selectedIdx === index ? "active" : ""}>
+                    {button}
+                  </span>
                 </Link>
               </div>
             ))}

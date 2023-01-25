@@ -14,12 +14,14 @@ type Props = {
 export default function Image_Part({ title, content, img_num }: Props) {
   return (
     <div className={cx("image_wrap")}>
-      <Image
-        src={`/img/solution/bg${img_num}.png`}
-        fill
-        alt="바디 이미지"
-        quality={100}
-      />
+      <div className={cx("image")}>
+        <Image
+          src={`/img/solution/bg${img_num}.png`}
+          fill
+          alt="바디 이미지"
+          quality={100}
+        />
+      </div>
       <div className={cx("text_wrap")}>
         <span className={cx("title")}>{title}</span>
         <span className={cx("content")}>{content}</span>

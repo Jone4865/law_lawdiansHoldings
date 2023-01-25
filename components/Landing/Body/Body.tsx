@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./Body.module.scss";
 import className from "classnames/bind";
 import Item from "./Item/Item";
@@ -6,7 +6,6 @@ import Solution from "./Solution/Solution";
 import { useMediaQuery } from "react-responsive";
 import PostQuestion from "./PostQuestion/PostQuestion";
 import Download_Part from "./Download_Part/Download_Part";
-import GetGiftCard from "./GetGiftCard/GetGiftCard";
 
 const cx = className.bind(styles);
 
@@ -95,13 +94,6 @@ export default function Body() {
             logo_color={"white"}
             img_name={pc && pc ? "bg1" : "bg1_m"}
             item_name="home"
-          />
-        </div>
-        <div id="상품권 시세">
-          <GetGiftCard
-            title={titles[1]}
-            content={contents[1]}
-            logo_color={"orange"}
           />
         </div>
         <div id="컨설팅">

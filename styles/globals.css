@@ -79,15 +79,6 @@
   margin: 0;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  font-family: "OneMobTitle";
-  letter-spacing: -0.36px;
-  font-weight: normal;
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -107,4 +98,28 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: "OneMobTitle";
+  letter-spacing: -0.36px;
+  font-weight: normal;
+}
+
+.marker_image {
+  width: 20px;
+  height: 20px;
+  background-image: url("/img/meta_img.png");
+}
+
+.layout {
+  width: 90vw;
+  max-width: 1800px;
+  background-color: transparent;
+  display: flex;
+  position: relative;
+  background-color: blue;
 }
