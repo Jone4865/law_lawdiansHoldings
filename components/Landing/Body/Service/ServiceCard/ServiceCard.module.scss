@@ -1,0 +1,109 @@
+@import "public/scss/style.scss";
+
+.img {
+  position: relative;
+  width: 321px;
+  height: 770px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  z-index: 0;
+  opacity: 0.8;
+  &:hover {
+    transition: 0.2s;
+    z-index: 1;
+    opacity: 1;
+  }
+  @include view("pc") {
+    width: 16.666vw;
+    &:hover {
+      transform: scale(1.03);
+      transition: 0.2s;
+      z-index: 1;
+      position: absolute;
+      opacity: 1;
+    }
+  }
+  @include view("mobile") {
+    width: 325px;
+    height: 355px;
+  }
+}
+
+.wrap {
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  &:hover {
+    transition: 0.2s;
+    z-index: 1;
+    position: absolute;
+    opacity: 1;
+  }
+  @include view("pc") {
+    &:hover {
+      transform: scale(1.03);
+      transition: 0.2s;
+      z-index: 1;
+      position: absolute;
+    }
+  }
+}
+
+.blockchain {
+  display: flex;
+  height: 45px;
+  justify-content: flex-end;
+}
+
+.title {
+  margin-top: 50px;
+  margin-bottom: 404px;
+  font-size: 34px;
+  font-weight: bold;
+  @include view("pc") {
+    font-size: 1.77vw;
+  }
+  @include view("mobile") {
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 132px;
+  }
+}
+
+.content_wrap {
+  font-size: 18px;
+  margin-bottom: 64px;
+  span {
+    font-weight: bold;
+  }
+  @include view("pc") {
+    font-size: 0.93vw;
+  }
+  @include view("mobile") {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+.btn {
+  width: 160px;
+  height: 49px;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 13px;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include view("mobile") {
+    width: 111px;
+    height: 34px;
+    font-size: 13px;
+  }
+}
+
+.homepage {
+  margin-right: 16.5px;
+}

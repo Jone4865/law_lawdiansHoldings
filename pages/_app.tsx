@@ -2,9 +2,10 @@ import "../public/fonts/style.css";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import Script from "next/script";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const AppKey = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_APP_KEY}`;
+  const AppKey = `http://dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_APP_KEY}`;
   return (
     <>
       <Head>
@@ -26,6 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="500" />
         <script type="text/javascript" src={AppKey}></script>
+        <script type="text/javascript"></script>
       </Head>
       <Component {...pageProps} />
     </>

@@ -5,7 +5,6 @@ import { Link } from "react-scroll";
 import styles from "./Header.module.scss";
 import className from "classnames/bind";
 import Image from "next/image";
-import { text } from "stream/consumers";
 
 const cx = className.bind(styles);
 
@@ -17,7 +16,7 @@ export default function Header({ setModalState }: Props) {
   const [scrollY, setScrollY] = useState(false);
   const [selectedIdx, setSelectedIdx] = useState(0);
 
-  const Buttons = ["홈", "COMPANY", "BUSINESS", "COMMUNITY"];
+  const Buttons = ["HOME", "COMPANY", "BUSINESS", "COMMUNITY"];
 
   useEffect(() => {
     (() => {
@@ -28,12 +27,12 @@ export default function Header({ setModalState }: Props) {
   }, []);
 
   return (
-    <div className={!scrollY ? styles.header_trans : styles.header_black}>
+    <div className={!scrollY ? styles.header_black : styles.header_white}>
       <div className={styles.header_container}>
         <div className={styles.header_logo}>
           <div className={cx("image_wrap")}>
             <Image
-              src={scrollY ? "/img/logo/logo_on.png" : "/img/logo/logo.png"}
+              src={"/img/logo/logo.png"}
               onClick={() => router.push("/")}
               alt="헤더 로고"
               fill
@@ -59,7 +58,7 @@ export default function Header({ setModalState }: Props) {
                     button === "역량" ? -55 : button === "문의하기" ? -75 : -50
                   }
                 >
-                  <span className={selectedIdx === index ? "active" : ""}>
+                  <span className={selectedIdx === index ? cx("active") : ""}>
                     {button}
                   </span>
                 </Link>

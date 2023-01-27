@@ -1,0 +1,80 @@
+@import "public/scss/style.scss";
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  font-size: 39px;
+  color: #fff;
+  flex-direction: column;
+  position: relative;
+  @include view("small") {
+    font-size: 18px;
+  }
+  @include view("very_small") {
+    font-size: 18px;
+  }
+  @include view("mobile") {
+    font-size: 18px;
+  }
+}
+
+.bg_wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/Body/bg1.png");
+  background-size: 100% 100%;
+  background-position: bottom;
+  @include view("very_small") {
+    background-image: url("/img/Body/bg1_m.png");
+  }
+  @include view("mobile") {
+    background-image: url("/img/Body/bg1_m.png");
+  }
+}
+
+.text_container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 9.35vw;
+  text-align: right;
+  align-items: center;
+  @include view("small") {
+    padding-right: 3vw;
+  }
+  @include view("very_small") {
+    padding-right: 3vw;
+  }
+  @include view("mobile") {
+    padding-right: 3.5vw;
+  }
+}
+
+.title {
+  font-size: 70px;
+  margin-bottom: 20px;
+  @include view("small") {
+    font-size: 35px;
+  }
+  @include view("very_small") {
+    font-size: 35px;
+  }
+  @include view("mobile") {
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.bold {
+  font-weight: 700;
+}

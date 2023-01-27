@@ -1,5 +1,11 @@
 @font-face {
-  font-family: "OneMobTitle";
-  src: url("OneMobTitle.otf") format("opentype");
+  font-family: "PretendardVariable";
+  src: url("PretendardVariable.ttf") format("opentype");
   font-weight: normal;
+}
+
+@font-face {
+  font-family: "PretendardVariable";
+  src: url("PretendardVariable.ttf") format("opentype");
+  font-weight: bold;
 }

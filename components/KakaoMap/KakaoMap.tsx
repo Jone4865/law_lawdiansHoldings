@@ -1,5 +1,3 @@
-import { contents } from "cheerio/lib/api/traversing";
-import Image from "next/image";
 import { useEffect } from "react";
 
 declare global {
@@ -33,5 +31,6 @@ export const KakaoMap = () => {
 
     customOverlay.setMap(map);
   }, []);
-  return <div id="map" style={{ width: "500px", height: "500px" }} />;
+
+  return <div id="map" style={{ width: "100%", height: "100%" }} />;
 };

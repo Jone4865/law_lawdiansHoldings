@@ -1,0 +1,148 @@
+@import "public/scss/style.scss";
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: #fff;
+  @include view("mobile") {
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+  }
+}
+
+.left {
+  width: 100%;
+  height: 100%;
+  background-color: #232323;
+  position: relative;
+  @include view("mobile") {
+    width: 100%;
+    height: 240px;
+  }
+}
+
+.map_wrap {
+  width: 100%;
+  height: 100%;
+  @include view("mobile") {
+    width: 100%;
+    height: 310px;
+  }
+}
+
+.log_wrap {
+  width: 50%;
+  height: 100%;
+}
+
+.logo {
+  width: 313px;
+  height: 313px;
+  position: absolute;
+  bottom: 65px;
+  right: 100px;
+  @include view("small") {
+    bottom: 30px;
+    right: 30px;
+  }
+  @include view("very_small") {
+    bottom: 30px;
+    right: 30px;
+  }
+  @include view("mobile") {
+    width: 155px;
+    height: 155px;
+    bottom: 20px;
+    right: 25px;
+  }
+}
+
+.content_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 65px;
+  width: 100%;
+  height: 100%;
+  @include view("mobile") {
+    padding-left: 25px;
+  }
+}
+
+.title {
+  font-size: 60px;
+  @include view("small") {
+    font-size: 5vw;
+  }
+  @include view("very_small") {
+    font-size: 5vw;
+  }
+  @include view("mobile") {
+    font-size: 25px;
+  }
+}
+
+.title_ment {
+  font-size: 30px;
+  color: #aaa;
+  margin: 15px 0 10px 0;
+  @include view("small") {
+    font-size: 2.5vw;
+  }
+  @include view("very_small") {
+    font-size: 2.5vw;
+  }
+  @include view("mobile") {
+    font-size: 12px;
+    margin: 0 auto 2.5px 0;
+  }
+}
+
+.line {
+  width: 33px;
+  border: 2.5px solid #aaa;
+  margin-bottom: 40vh;
+  @include view("mobile") {
+    margin-bottom: 21px;
+    width: 14px;
+    border: 1px solid #aaa;
+  }
+}
+
+.addres_wrap {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+}
+
+.adress_title {
+  font-size: 22px;
+  color: #aaa;
+  margin-bottom: 10px;
+  @include view("small") {
+    font-size: 1.8vw;
+  }
+  @include view("very_small") {
+    font-size: 1.8vw;
+  }
+  @include view("mobile") {
+    font-size: 14px;
+  }
+}
+
+.adress_content {
+  font-size: 20px;
+  color: #fff;
+  @include view("small") {
+    font-size: 1.6vw;
+  }
+  @include view("very_small") {
+    font-size: 1.6vw;
+  }
+  @include view("mobile") {
+    font-size: 14px;
+  }
+}
