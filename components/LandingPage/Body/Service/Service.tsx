@@ -79,7 +79,7 @@ export default function Service({ isPc }: Props) {
         {titles.map((title, idx) => (
           <div className={cx("hover")}>
             <ServiceCard
-              key={idx}
+              key={title}
               blockchain={idx < 4 ? true : false}
               title={title}
               content={content[idx]}

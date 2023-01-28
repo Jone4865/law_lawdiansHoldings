@@ -14,10 +14,18 @@ type Props = {
 
 export default function Header({ setModalState }: Props) {
   const [scrollY, setScrollY] = useState(false);
-  const [selectedIdx, setSelectedIdx] = useState(0);
+  const [companyView, setCompanyView] = useState(false);
+  const [communityView, setCommunityView] = useState(false);
 
   const Buttons = ["HOME", "COMPANY", "BUSINESS", "COMMUNITY"];
-
+  const companyDropDown = [
+    "인사말",
+    "회사소개",
+    "회사연혁",
+    "BI/CI",
+    "찾아오시는 길",
+  ];
+  const communityDropDown = ["언론보도", "문의"];
   useEffect(() => {
     (() => {
       window.addEventListener("scroll", () => {
@@ -41,27 +49,77 @@ export default function Header({ setModalState }: Props) {
         </div>
         <div>
           <div className={styles.herder_buttons_wrap}>
-            {Buttons.map((button, index) => (
-              <div
-                key={button}
-                className={styles.header_hover}
-                onClick={() => {
-                  setModalState(false);
-                }}
-              >
-                <Link
-                  to={button}
-                  spy={true}
-                  smooth={true}
-                  onSetActive={() => setSelectedIdx(index)}
-                  offset={
-                    button === "역량" ? -55 : button === "문의하기" ? -75 : -50
-                  }
+            {Buttons.map((button, idx) => (
+              <div key={idx} className={cx(`dropdown_wrap`)}>
+                <div
+                  key={button}
+                  className={styles.header_hover}
+                  onMouseEnter={() => {
+                    button === "COMPANY"
+                      ? setCompanyView(true)
+                      : button === "COMMUNITY"
+                      ? setCommunityView(true)
+                      : "";
+                  }}
+                  onClick={() => {
+                    setModalState(false);
+                  }}
                 >
-                  <span className={selectedIdx === index ? cx("active") : ""}>
+                  <p
+                    onClick={() =>
+                      button === "HOME"
+                        ? router.push("/")
+                        : button === "BUSINESS"
+                        ? router.push("/business")
+                        : ""
+                    }
+                    className={cx(
+                      `${
+                        companyView && button === "COMPANY"
+                          ? "bold"
+                          : communityView && button === "COMMUNITY"
+                          ? "bold"
+                          : ""
+                      }`
+                    )}
+                  >
                     {button}
-                  </span>
-                </Link>
+                  </p>
+                </div>
+                {button === "COMPANY" && companyView && (
+                  <div
+                    onMouseLeave={() => {
+                      setCompanyView(false);
+                    }}
+                    className={cx(`${button}_dropdown_container`)}
+                  >
+                    <div className={cx(`${button}_mask`)} />
+                    <div className={cx("dropdown_content_wrap")}>
+                      {companyDropDown.map((item, idx) => (
+                        <div key={idx} className={cx("active")}>
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {button === "COMMUNITY" && communityView && (
+                  <div
+                    onMouseLeave={() => {
+                      setCommunityView(false);
+                    }}
+                    className={cx(`${button}_dropdown_container`)}
+                  >
+                    <div className={cx(`${button}_mask`)} />
+                    <div className={cx("dropdown_content_wrap")}>
+                      {communityDropDown.map((item, idx) => (
+                        <div key={idx} className={cx("active")}>
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>

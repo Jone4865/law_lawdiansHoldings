@@ -1,11 +1,18 @@
-import "../public/fonts/style.css";
-import "../styles/globals.css";
+import { useState } from "react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import Script from "next/script";
+import Header from "../components/Header/Header";
+import "../public/fonts/style.css";
+import "../styles/globals.css";
+import Side from "../components/Side/Side";
 
 export default function App({ Component, pageProps }: AppProps) {
   const AppKey = `http://dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_APP_KEY}`;
+  const [modal, setModal] = useState(false);
+
+  const setModalState = (modal: boolean) => {
+    setModal(modal);
+  };
   return (
     <>
       <Head>
@@ -29,7 +36,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <script type="text/javascript" src={AppKey}></script>
         <script type="text/javascript"></script>
       </Head>
+      <Header setModalState={setModalState} />
       <Component {...pageProps} />
+      {/* <Side modal={modal} setModalState={setModalState} /> */}
     </>
   );
 }

@@ -58,7 +58,7 @@ export default function NewsPart({ isPc }: Props) {
       <div className={cx("news_container")}>
         {news?.map((item, idx) => (
           <Link target="_blank" href={item.url}>
-            <div key={idx} className={cx("news_wrap")}>
+            <div key={item.no} className={cx("news_wrap")}>
               <div
                 className={cx("news_image")}
                 style={{
