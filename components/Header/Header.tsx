@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import router from "next/router";
-import { Link } from "react-scroll";
-
 import styles from "./Header.module.scss";
 import className from "classnames/bind";
 import Image from "next/image";
@@ -18,6 +16,8 @@ export default function Header({ setModalState }: Props) {
   const [communityView, setCommunityView] = useState(false);
 
   const Buttons = ["HOME", "COMPANY", "BUSINESS", "COMMUNITY"];
+  const path = ["/", "/company/greetings", "/business", "/community/news"];
+
   const companyDropDown = [
     "인사말",
     "회사소개",
@@ -25,6 +25,9 @@ export default function Header({ setModalState }: Props) {
     "BI/CI",
     "찾아오시는 길",
   ];
+  const companyPath = ["greetings", "introduce", "history", "BICI", "location"];
+
+  const communityPath = ["news", "inquiry"];
   const communityDropDown = ["언론보도", "문의"];
   useEffect(() => {
     (() => {
@@ -50,7 +53,13 @@ export default function Header({ setModalState }: Props) {
         <div>
           <div className={styles.herder_buttons_wrap}>
             {Buttons.map((button, idx) => (
-              <div key={idx} className={cx(`dropdown_wrap`)}>
+              <div
+                key={button}
+                className={cx(`dropdown_wrap`)}
+                onClick={() => {
+                  setModalState(false);
+                }}
+              >
                 <div
                   key={button}
                   className={styles.header_hover}
@@ -61,25 +70,22 @@ export default function Header({ setModalState }: Props) {
                       ? setCommunityView(true)
                       : "";
                   }}
-                  onClick={() => {
-                    setModalState(false);
-                  }}
                 >
                   <p
-                    onClick={() =>
-                      button === "HOME"
-                        ? router.push("/")
-                        : button === "BUSINESS"
-                        ? router.push("/business")
-                        : ""
-                    }
+                    onClick={() => router.push(`${path[idx]}`)}
                     className={cx(
                       `${
-                        companyView && button === "COMPANY"
-                          ? "bold"
+                        !scrollY
+                          ? companyView && button === "COMPANY"
+                            ? "bold_white"
+                            : communityView && button === "COMMUNITY"
+                            ? "bold_white"
+                            : "hover_white"
+                          : companyView && button === "COMPANY"
+                          ? "bold_black"
                           : communityView && button === "COMMUNITY"
-                          ? "bold"
-                          : ""
+                          ? "bold_black"
+                          : "hover_black"
                       }`
                     )}
                   >
@@ -96,7 +102,13 @@ export default function Header({ setModalState }: Props) {
                     <div className={cx(`${button}_mask`)} />
                     <div className={cx("dropdown_content_wrap")}>
                       {companyDropDown.map((item, idx) => (
-                        <div key={idx} className={cx("active")}>
+                        <div
+                          key={idx}
+                          className={cx("active")}
+                          onClick={() =>
+                            router.push(`/company/${companyPath[idx]}`)
+                          }
+                        >
                           {item}
                         </div>
                       ))}
@@ -113,7 +125,13 @@ export default function Header({ setModalState }: Props) {
                     <div className={cx(`${button}_mask`)} />
                     <div className={cx("dropdown_content_wrap")}>
                       {communityDropDown.map((item, idx) => (
-                        <div key={idx} className={cx("active")}>
+                        <div
+                          key={idx}
+                          className={cx("active")}
+                          onClick={() =>
+                            router.push(`/community/${communityPath[idx]}`)
+                          }
+                        >
                           {item}
                         </div>
                       ))}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import router from "next/router";
 import className from "classnames/bind";
 import styles from "./NewsPart.module.scss";
 import axios from "axios";
@@ -52,11 +53,12 @@ export default function NewsPart({ isPc }: Props) {
             height={isPc ? 35 : 25}
             alt="버튼 검은색"
             src="/img/Body/btn_black.png"
+            onClick={() => router.push("/community/news")}
           />
         </div>
       </div>
       <div className={cx("news_container")}>
-        {news?.map((item, idx) => (
+        {news?.map((item) => (
           <Link target="_blank" href={item.url}>
             <div key={item.no} className={cx("news_wrap")}>
               <div

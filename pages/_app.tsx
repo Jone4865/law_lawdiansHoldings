@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>방배사</title>
+        <title>로디언즈 홀딩스</title>
         <meta name="Keywords" content="LawdiansHoldings" />
         <meta name="Keywords" content="LawdiansHoldings" />
         <meta property="og:url" content={process.env.NEXT_PUBLIC_SURVICE_URL} />

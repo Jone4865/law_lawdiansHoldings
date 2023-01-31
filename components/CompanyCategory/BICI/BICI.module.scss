@@ -1,0 +1,170 @@
+@import "public/scss/style.scss";
+
+.container {
+  background-color: #fff;
+}
+
+.wrap {
+  font-size: 27px;
+  color: #000;
+  font-weight: bold;
+  padding: 0 13.5vw;
+  padding-bottom: 150px;
+  @include view("mobile") {
+    padding: 0 25px;
+    padding-bottom: 36px;
+  }
+}
+
+.symbol_img {
+  width: 22vw;
+  height: 22vw;
+  background-image: url("/img/BICI/symbol.png");
+  background-size: 100% 100%;
+  margin-bottom: 100px;
+  @include view("mobile") {
+    width: 26.5vw;
+    height: 26.5vw;
+    margin-bottom: 28px;
+    margin-right: 3.5vw;
+  }
+}
+
+.wordmark_img {
+  width: 45.8vw;
+  height: 9.4vw;
+  background-image: url("/img/BICI/wordmark.png");
+  background-size: 100% 100%;
+  @include view("mobile") {
+    width: 52vw;
+    height: 10.5vw;
+    margin-bottom: 27.5px;
+  }
+}
+
+.wordmark_img_ko {
+  width: 45.8vw;
+  height: 9.4vw;
+  background-image: url("/img/BICI/wordmarkKo.png");
+  background-size: 100% 100%;
+  position: relative;
+  @include view("mobile") {
+    width: 52vw;
+    height: 10.5vw;
+  }
+}
+
+.color_img {
+  width: 28.5vw;
+  height: 16.5vw;
+  background-image: url("/img/BICI/color.png");
+  background-size: 100% 100%;
+  margin-bottom: 100px;
+  @include view("mobile") {
+    width: 84.5vw;
+    height: 11vw;
+    background-image: url("/img/BICI/color_m.png");
+    margin-bottom: 28px;
+  }
+}
+
+.font_img {
+  width: 35.2vw;
+  height: 16.5vw;
+  background-image: url("/img/BICI/font.png");
+  background-size: 100% 100%;
+  @include view("mobile") {
+    width: 67.8vw;
+    height: 31vw;
+    margin-bottom: 28px;
+  }
+}
+
+.horizon_img {
+  width: 72.9vw;
+  height: 7.5vw;
+  background-image: url("/img/BICI/horizon.png");
+  background-size: 100% 100%;
+  margin-bottom: 100px;
+  @include view("mobile") {
+    width: 84.5vw;
+    height: 8.5vw;
+    margin-bottom: 28px;
+  }
+}
+
+.vertical_img {
+  width: 72.9vw;
+  height: 18.3vw;
+  background-image: url("/img/BICI/vertical.png");
+  background-size: 100% 100%;
+  @include view("mobile") {
+    width: 84.5vw;
+    height: 20.5vw;
+  }
+}
+
+.title {
+  margin-bottom: 28px;
+  @include view("mobile") {
+    font-size: 2.5vw;
+    margin-bottom: 12px;
+  }
+}
+
+.sub {
+  width: 100%;
+  position: absolute;
+  font-size: 22px;
+  font-weight: normal;
+  text-align: right;
+  margin-top: -30px;
+  @include view("mobile") {
+    font-size: 10px;
+    margin-top: -14px;
+  }
+}
+
+.sub_ko {
+  width: 100%;
+  position: absolute;
+  font-size: 22px;
+  font-weight: normal;
+  text-align: right;
+  margin-top: -30px;
+  @include view("mobile") {
+    font-size: 10px;
+    margin-top: -14px;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  @include view("mobile") {
+    justify-content: flex-start;
+  }
+}
+
+.second {
+  display: flex;
+  justify-content: space-between;
+  @include view("mobile") {
+    flex-direction: column;
+  }
+}
+
+.word_mark {
+  position: relative;
+}
+
+.title_wrap {
+  position: relative;
+  height: 22vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include view("mobile") {
+    height: 26.5vw;
+  }
+}

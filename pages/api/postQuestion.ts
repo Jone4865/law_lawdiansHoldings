@@ -21,7 +21,7 @@ export default function postQuestion(
   if (req.body) {
     const mailOptions = {
       from: process.env.NEXT_PUBLIC_SEND_ADDRESS,
-      to: "bangbaesa@naver.com",
+      to: "lawdiholdings@naver.com",
       subject: `${process.env.NEXT_PUBLIC_SURVICE_NAME} 문의 메일`,
       html: `<p><div>문의자 이메일 : ${
         JSON.parse(req.body).email
@@ -38,6 +38,6 @@ export default function postQuestion(
       }
     });
   }
-
+  console.log(req.body);
   res.status(200).json({ status: res.statusCode.toString() });
 }

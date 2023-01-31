@@ -1,0 +1,31 @@
+@import "public/scss/style.scss";
+
+.container {
+  background-color: #fff;
+}
+
+.wrap {
+  padding: 0 13vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+  @include view("small") {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    padding: 0 50px;
+  }
+  @include view("very_small") {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    padding: 0 50px;
+  }
+  @include view("mobile") {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    padding: 0 25px;
+  }
+}

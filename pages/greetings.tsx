@@ -1,2 +1,2 @@
-import greetings from "../components/GreetingsPage/Greetings";
+import greetings from "../components/CompanyCategory/Greetings/Greetings";
 export default greetings;

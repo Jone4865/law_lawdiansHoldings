@@ -4,7 +4,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 import styles from "./PostQuestion.module.scss";
 import className from "classnames/bind";
-import Image from "next/image";
 
 const cx = className.bind(styles);
 
@@ -27,6 +26,8 @@ export default function PostQuestion() {
   useEffect(() => {
     if (phoneRegex.test(cellPhone) || cellPhoneRegex.test(cellPhone)) {
       setPhoneCheck(true);
+    } else {
+      setPhoneCheck(false);
     }
   }, [cellPhone]);
 
@@ -75,16 +76,6 @@ export default function PostQuestion() {
     >
       <ToastContainer />
       <div className={cx("wrap")}>
-        <div className={cx("image_wrap")}>
-          <div className={cx("image")}>
-            <Image fill src="/img/logo/logo_orange.png" alt="질문하기 로고" />
-          </div>
-        </div>
-        <h1 className={cx("title")}>문의하기</h1>
-        <p className={cx("sub_title")}>
-          <span>기업상품권 판매대행에 대하여 궁금하신 점은 </span>
-          <span> 무엇이든 물어보세요.</span>
-        </p>
         <span className={cx("name")}>이메일</span>
         <input
           placeholder="abc@gmail.com"
@@ -101,7 +92,7 @@ export default function PostQuestion() {
       <div className={cx("wrap")}>
         <span className={cx("name")}>연락처</span>
         <input
-          placeholder="01012341234"
+          placeholder="010 1234 5678"
           value={cellPhone}
           onChange={(e) => {
             setCellPhone(e.target.value);

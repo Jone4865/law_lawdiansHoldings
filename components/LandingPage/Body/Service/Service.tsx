@@ -2,6 +2,7 @@ import styles from "./Service.module.scss";
 import className from "classnames/bind";
 import Image from "next/image";
 import ServiceCard from "./ServiceCard/ServiceCard";
+import router from "next/router";
 
 const cx = className.bind(styles);
 
@@ -72,6 +73,7 @@ export default function Service({ isPc }: Props) {
             height={isPc ? 35 : 25}
             alt="버튼 흰색"
             src="/img/Body/btn_white.png"
+            onClick={() => router.push("/business")}
           />
         </div>
       </div>
