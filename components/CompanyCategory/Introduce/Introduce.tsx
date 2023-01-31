@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
 import styles from "./Introduce.module.scss";
 import className from "classnames/bind";
 import ComponentTop from "../../ComponentTop/ComponentTop";
@@ -16,11 +14,11 @@ export default function Introduce() {
     "청년친화강소기업 선정",
   ];
   const contents = [
-    <div className={cx("content")}>
+    <div key={1} className={cx("content")}>
       <div className={cx("mobile")}>2023</div>
       <span>청년친화 강소기업 선정</span>
     </div>,
-    <div className={cx("content")}>
+    <div key={2} className={cx("content")}>
       <div className={cx("mobile")}>2022</div>
       <span>
         기술혁신형 중소기업 (Inno-Biz) 취득
@@ -28,24 +26,23 @@ export default function Introduce() {
         산학연 협력 우수과제 표창
       </span>
     </div>,
-    <div className={cx("content")}>
+    <div key={3} className={cx("content")}>
       <div className={cx("mobile")}>2021</div>
       <span>정보보호관리체계(ISMS) 인증 취득</span>
     </div>,
-    <div className={cx("content")}>
+    <div key={4} className={cx("content")}>
       <div className={cx("mobile")}>2020</div>
-
       <span>
         산학연구개발 최우수 수상
         <br />
         청년혁신가 윤창기 대표 (국회 표창)
       </span>
     </div>,
-    <div className={cx("content")}>
+    <div key={5} className={cx("content")}>
       <div className={cx("mobile")}>2019</div>
       <span>중소기업 기술개발사업 (5억원)</span>
     </div>,
-    <div className={cx("content")}>
+    <div key={6} className={cx("content")}>
       <div className={cx("mobile")}>2018</div>
       <span>
         르호봇 세대융합 (약 9천만원)
@@ -53,7 +50,7 @@ export default function Introduce() {
         산학연 개발사업 (약 1억 2천만원)
       </span>
     </div>,
-    <div className={cx("content")}>
+    <div key={7} className={cx("content")}>
       <div className={cx("mobile")}>2017</div>
       <span>
         사회적기업가 육성사업 (2천만원)
@@ -61,7 +58,7 @@ export default function Introduce() {
         성균관대학교 창업대회 1등 (5백만원)
       </span>
     </div>,
-    <div className={cx("content")}>
+    <div key={8} className={cx("content")}>
       <div className={cx("mobile")}>2016</div>
       <span>
         대구대학교 (1천만원)

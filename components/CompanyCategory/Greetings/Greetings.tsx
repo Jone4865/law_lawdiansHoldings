@@ -32,14 +32,16 @@ export default function Greetings() {
                 <div className={cx("bold")}>로디언즈 홀딩스</div>는 2016년에
                 설립하여
                 <div className={cx("bold")}>
-                  '시스템 개발'및 '운영 관리 시스템'
+                  &apos;시스템 개발&apos;및 &apos;운영 관리 시스템&apos;
                 </div>
                 을 자체적으로 개발, 운영해왔으며,
                 <br />
               </div>
               <div className={cx("line_one")}>
-                <div className={cx("bold")}>'블록체인 R&D 2회 선정'</div>의
-                이력을 통해
+                <div className={cx("bold")}>
+                  &apos;블록체인 R&D 2회 선정&apos;
+                </div>
+                의 이력을 통해
                 <div className={cx("bold")}>
                   블록체인에 대한 이해도가 높은 기업
                 </div>

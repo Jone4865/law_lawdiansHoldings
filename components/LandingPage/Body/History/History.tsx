@@ -56,7 +56,7 @@ export default function History() {
       <span>성균관대학교 창업드림캠프 최우수상</span>
     </>,
     <>
-      <span>'의료사고 발생 전 변호사 선임 방법' 특허 획득</span>
+      <span>&apos;의료사고 발생 전 변호사 선임 방법&apos; 특허 획득</span>
       <span>사회적 기업가 육성 사업 선정</span>
     </>,
     <>

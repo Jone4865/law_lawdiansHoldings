@@ -45,13 +45,13 @@ export default function History() {
     "로디언즈의 시작",
   ];
   const contents = [
-    <div className={cx("small_right")}>
+    <div key={1} className={cx("small_right")}>
       <div className={cx("content_year")}>
         <div>2023.01</div>
       </div>
       <div className={cx("etc")}>청년친화 강소기업 선정</div>
     </div>,
-    <div className={cx("small_right")}>
+    <div key={2} className={cx("small_right")}>
       <div className={cx("content_year")}>
         <div>2022.02</div>
         <div>2022.11</div>
@@ -62,7 +62,7 @@ export default function History() {
         <div>산학연 협력 우수과제 표창</div>
       </div>
     </div>,
-    <div className={cx("small_right")}>
+    <div key={3} className={cx("small_right")}>
       <div className={cx("content_year")}>
         <div>2021.06</div>
         <div>2021.09</div>
@@ -73,7 +73,7 @@ export default function History() {
         <div>가상자산 사업자 신고 / 금융위원회</div>
       </div>
     </div>,
-    <div className={cx("small_right")}>
+    <div key={4} className={cx("small_right")}>
       <div className={cx("content_year")}>
         <div>2020.06</div>
         <div>2020.12</div>
@@ -83,13 +83,13 @@ export default function History() {
         <div>SBA 블록체인기술 사업화 지원사업 선정</div>
       </div>
     </div>,
-    <div className={cx("small_right")}>
+    <div key={5} className={cx("small_right")}>
       <div className={cx("content_year")}>
         <div>2019.12</div>
       </div>
       <div className={cx("etc")}>블록체인 국가R&D 선정</div>
     </div>,
-    <div className={cx("small_right")}>
+    <div key={6} className={cx("small_right")}>
       <div className={cx("content_year")}>
         <div>2018.07</div>
         <div>2018.12</div>
@@ -104,17 +104,17 @@ export default function History() {
         </div>
       </div>
     </div>,
-    <div className={cx("small_right")}>
+    <div key={7} className={cx("small_right")}>
       <div className={cx("content_year")}>
         <div>2017.01</div>
         <div>2017.03</div>
       </div>
       <div className={cx("etc")}>
-        <div>'의료사고 발생 전 변호서 선임 방법'특허 획득</div>
+        <div>&apos;의료사고 발생 전 변호서 선임 방법&apos;특허 획득</div>
         <div>사회적 기업가 육성 사업 선정</div>
       </div>
     </div>,
-    <div className={cx("small_right")}>
+    <div key={8} className={cx("small_right")}>
       <div className={cx("content_year")}>
         <div>2016.09</div>
         <div>2016.11</div>

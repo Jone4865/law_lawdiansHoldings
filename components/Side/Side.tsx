@@ -129,7 +129,7 @@ function Side({ modal, setModalState }: Props) {
                 </span>
               </div>
             )}
-            {button === "COMMUNITY" && (
+            {button === "COMMUNITY" && commuMore && (
               <div className={cx("community")}>
                 <span
                   onClick={() => {
