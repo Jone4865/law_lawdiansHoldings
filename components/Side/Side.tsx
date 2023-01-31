@@ -1,6 +1,9 @@
-import { useEffect } from "react";
-import { Link } from "react-scroll";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import styles from "./Side.module.scss";
+import className from "classnames/bind";
+
+const cx = className.bind(styles);
 
 type Props = {
   modal: boolean;
@@ -8,15 +11,11 @@ type Props = {
 };
 
 function Side({ modal, setModalState }: Props) {
-  const Buttons = [
-    "홈",
-    "상품권 시세",
-    "컨설팅",
-    "서비스",
-    "솔루션",
-    "문의하기",
-    "다운로드",
-  ];
+  const [companyMore, setCompanyMore] = useState(false);
+  const [commuMore, setCommuMore] = useState(false);
+
+  const router = useRouter();
+  const Buttons = ["HOME", "COMPANY", "BUSINESS", "COMMUNITY"];
 
   useEffect(() => {
     const htmlEle = document?.getElementsByTagName("html").item(0);
@@ -31,6 +30,19 @@ function Side({ modal, setModalState }: Props) {
     }
   }, [modal]);
 
+  const clickHandle = (button: string) => {
+    if (button === "HOME") {
+      router.push("/");
+      setModalState(false);
+    } else if (button === "COMPANY") {
+      setCompanyMore(!companyMore);
+    } else if (button === "BUSINESS") {
+      router.push("/business");
+      setModalState(false);
+    } else {
+      setCommuMore(!commuMore);
+    }
+  };
   return (
     <div
       className={`${!modal ? styles.side_none : ""} ${styles.side_contain}`}
@@ -44,25 +56,102 @@ function Side({ modal, setModalState }: Props) {
           event.stopPropagation();
         }}
       >
-        <h1>
-          <img />
-          <span onClick={() => setModalState(false)}>X</span>
-        </h1>
-        {Buttons.map((button, index) => (
-          <div key={button} className={styles.side_hover}>
-            <Link
-              to={button}
-              spy={true}
-              smooth={true}
-              offset={-20}
+        <div className={cx("exe_wrap")}>
+          <div className={cx("exe")} onClick={() => setModalState(false)} />
+        </div>
+        {Buttons.map((button) => (
+          <>
+            <div
               onClick={() => {
-                setModalState(false);
+                clickHandle(button);
               }}
+              key={button}
+              className={cx("side_hover")}
             >
               <span>{button}</span>
-            </Link>
-          </div>
+              {button === "COMPANY" ? (
+                companyMore ? (
+                  <div className={cx(`up`)} />
+                ) : (
+                  <div className={cx(`down`)} />
+                )
+              ) : button === "COMMUNITY" ? (
+                commuMore ? (
+                  <div className={cx(`up`)} />
+                ) : (
+                  <div className={cx(`down`)} />
+                )
+              ) : (
+                ""
+              )}
+            </div>
+            {button === "COMPANY" && companyMore && (
+              <div className={cx("company")}>
+                <span
+                  onClick={() => {
+                    setModalState(false);
+                    router.push("/company/greetings");
+                  }}
+                >
+                  인사말
+                </span>
+                <span
+                  onClick={() => {
+                    setModalState(false);
+                    router.push("/company/introduce");
+                  }}
+                >
+                  회사소개
+                </span>
+                <span
+                  onClick={() => {
+                    setModalState(false);
+                    router.push("/company/history");
+                  }}
+                >
+                  회사연혁
+                </span>
+                <span
+                  onClick={() => {
+                    setModalState(false);
+                    router.push("/company/BICI");
+                  }}
+                >
+                  BI/CI
+                </span>
+                <span
+                  onClick={() => {
+                    setModalState(false);
+                    router.push("/company/location");
+                  }}
+                >
+                  찾아오시는 길
+                </span>
+              </div>
+            )}
+            {button === "COMMUNITY" && (
+              <div className={cx("community")}>
+                <span
+                  onClick={() => {
+                    setModalState(false);
+                    router.push("/community/news");
+                  }}
+                >
+                  언론보도
+                </span>
+                <span
+                  onClick={() => {
+                    setModalState(false);
+                    router.push("/community/inquiry");
+                  }}
+                >
+                  문의
+                </span>
+              </div>
+            )}
+          </>
         ))}
+        <div className={cx("symboll")} />
       </div>
     </div>
   );

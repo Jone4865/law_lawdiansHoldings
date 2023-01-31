@@ -146,3 +146,10 @@
     font-size: 14px;
   }
 }
+
+.mobile {
+  display: none;
+  @include view("mobile") {
+    display: block;
+  }
+}

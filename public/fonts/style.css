@@ -1,11 +1,4 @@
 @font-face {
   font-family: "PretendardVariable";
   src: url("PretendardVariable.ttf") format("opentype");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "PretendardVariable";
-  src: url("PretendardVariable.ttf") format("opentype");
-  font-weight: bold;
 }

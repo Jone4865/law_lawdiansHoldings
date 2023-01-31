@@ -24,7 +24,8 @@ export default function Contect() {
             <span className={cx("adress_content")}>
               서울특별시 서초구 서초대로 25길 53,
               <br />
-              Seocho-daero 25-gil, Seocho-gu, Seoul, Republic of Korea
+              53, Seocho-daero 25-gil, Seocho-gu, Seoul,
+              <br className={cx("mobile")} /> Republic of Korea
             </span>
           </div>
         </div>

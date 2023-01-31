@@ -3,7 +3,7 @@
 .wrap {
   position: relative;
   width: 100%;
-  height: 135vw;
+  min-height: 135vw;
   background-image: url("/img/Introduce/bg.png");
   background-size: 100% 100%;
   background-color: #fff;
@@ -30,18 +30,33 @@
   @include view("very_small") {
     font-size: 15px;
     padding-right: 3vw;
+    padding-left: 4vw;
+  }
+  @include view("mobile") {
+    background-image: none;
+    font-size: 2.7vw;
+    padding: 0;
+    align-items: center;
   }
 }
 
 .top_wrap {
   width: 100%;
   display: flex;
+  @include view("mobile") {
+    padding: 0 25px;
+    width: 100%;
+  }
 }
 
 .top {
   display: flex;
   margin: 0 0 auto auto;
   flex-direction: column;
+  @include view("mobile") {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 .top_top {
@@ -49,6 +64,12 @@
   height: 32.3px;
   background-image: url("/img/Introduce/따옴표.png");
   background-size: 100% 100%;
+  @include view("very_small") {
+    display: none;
+  }
+  @include view("mobile") {
+    display: none;
+  }
 }
 
 .top_center {
@@ -57,6 +78,9 @@
   padding: 20px 0;
   padding-left: 65px;
   padding-right: 29px;
+  @include view("mobile") {
+    padding: 0;
+  }
 }
 
 .top_bottom {
@@ -67,6 +91,12 @@
   transform: rotate(180deg);
   display: flex;
   margin: 0 0 0 auto;
+  @include view("very_small") {
+    display: none;
+  }
+  @include view("mobile") {
+    display: none;
+  }
 }
 
 .line_one {
@@ -90,8 +120,23 @@
   color: #392dff;
 }
 
+.bottom_wrap {
+  @include view("mobile") {
+    display: flex;
+  }
+}
+
 .bottom {
   font-size: 20px;
+  @include view("small") {
+    font-size: 14px;
+  }
+  @include view("very_small") {
+    font-size: 14px;
+  }
+  @include view("mobile") {
+    font-size: 11px;
+  }
 }
 
 .content_container {
@@ -99,26 +144,198 @@
 }
 
 .line {
-  width: 15.6px;
-  height: 842.6px;
+  width: 0.8vw;
+  height: 44vw;
   background-image: url("/img/Introduce/line.png");
   background-size: 100% 100%;
-  margin-top: 7px;
+  margin: 6px 56px 0 43px;
+  @include view("very_small") {
+    margin: 6px 25px 0 10px;
+  }
+  @include view("mobile") {
+    display: none;
+  }
+}
+
+.year_content {
+  height: 2vw;
 }
 
 .year {
   font-size: 26px;
   font-weight: bold;
-  height: 857px;
+  height: 45vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include view("small") {
+    font-size: 20px;
+  }
+  @include view("very_small") {
+    font-size: 20px;
+  }
+  @include view("mobile") {
+    display: none;
+  }
 }
 
 .title {
   font-weight: bold;
   font-size: 30px;
+  margin-bottom: 63.5px;
+  @include view("small") {
+    font-size: 24px;
+  }
+  @include view("very_small") {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  @include view("mobile") {
+    font-size: 14px;
+    margin-bottom: 37px;
+    margin-top: 46px;
+  }
 }
 
-.year_content {
+.content_wrap {
+  height: 45.79vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1px;
+  @include view("mobile") {
+    margin-right: 15px;
+    height: 581px;
+  }
+}
+
+.content {
+  height: 2.65vw;
+  @include view("mobile") {
+    height: 68px;
+  }
+}
+
+.mobile {
+  display: none;
+  font-size: 14px;
+  font-weight: bold;
+  @include view("mobile") {
+    display: block;
+  }
+}
+
+.mobile_title {
+  display: none;
+  height: 0;
+  @include view("mobile") {
+    display: block;
+  }
+}
+
+.mobile_top_wrap {
+  display: none;
+  margin: 26px auto 33px auto;
+  width: 100%;
+  justify-content: center;
+  @include view("mobile") {
+    display: flex;
+  }
+}
+
+.mobile_top {
+  width: 63vw;
+  height: 95vw;
+  background-image: url("/img/Introduce/bg1_m.png");
+  background-size: 100% 100%;
+}
+
+.mobile_bottom {
+  width: 172px;
+  height: 775px;
+  background-image: url("/img/Introduce/bg2_m.png");
+  background-size: 100% 100%;
+  display: none;
+  @include view("mobile") {
+    display: block;
+  }
+}
+
+.testimonial_container {
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 117px 13.5vw;
+  @include view("mobile") {
+    padding: 0;
+    padding-top: 35px;
+  }
+}
+
+.testimonial_wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial_bottom {
+  width: 100vw;
+  overflow: scroll;
+  padding: 0 13.5vw;
+  display: flex;
+  @include view("mobile") {
+    padding: 0;
+  }
+}
+
+.testimonial_img {
+  width: 375px;
+  height: 500px;
+  background-size: 100% 100%;
+  @include view("mobile") {
+    width: 139px;
+    height: 183px;
+  }
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include view("mobile") {
+    flex-direction: column-reverse;
+  }
+}
+
+.testimonial_part_title {
+  font-size: 30px;
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 70px;
+  @include view("mobile") {
+    font-size: 14px;
+    justify-content: flex-start;
+    margin-bottom: 7px;
+    padding-left: 18px;
+  }
+}
+
+.testimonial_title {
+  font-size: 18px;
+  @include view("mobile") {
+    font-size: 12px;
+    margin-bottom: 70px;
+    white-space: pre;
+  }
+}
+
+.mobile {
+  display: none;
+  @include view("mobile") {
+    display: block;
+  }
 }

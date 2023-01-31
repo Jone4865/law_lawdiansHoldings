@@ -15,7 +15,7 @@
   }
   @include view("mobile") {
     flex-direction: column;
-    height: 214px;
+    height: 230px;
     font-size: 12px;
     padding-top: 25px;
   }
@@ -70,6 +70,8 @@
 .information {
   margin: 41px 0 10px 0;
   display: flex;
+  font-weight: 600;
+  color: #8b8b8b;
   @include view("middle") {
     flex-direction: column;
   }
@@ -89,6 +91,7 @@
 
 .reserved {
   color: #888;
+  font-weight: 600;
 }
 
 .right_container {
@@ -159,6 +162,7 @@
 }
 
 .address_box {
+  color: #888;
   &::before {
     content: "|";
     margin: 0 5px;

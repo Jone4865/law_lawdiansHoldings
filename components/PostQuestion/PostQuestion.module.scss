@@ -93,8 +93,9 @@
   padding: 10px 10px;
   margin-top: 30px;
   outline: none;
+  resize: none;
   @include view("mobile") {
-    height: 215px;
+    height: 143px;
     margin-top: 10px;
     font-size: 12px;
   }
@@ -121,7 +122,7 @@
   }
   @include view("mobile") {
     width: 112px;
-    margin: 0 auto;
+    margin-top: -10px;
   }
 }
 

@@ -92,10 +92,10 @@ export default function PostQuestion() {
       <div className={cx("wrap")}>
         <span className={cx("name")}>연락처</span>
         <input
-          placeholder="010 1234 5678"
-          value={cellPhone}
+          placeholder="010-1234-5678"
+          value={cellPhone.replace(/(\d{3})(\d{4})(\d{4})/, "$1-$2-$3")}
           onChange={(e) => {
-            setCellPhone(e.target.value);
+            setCellPhone(e.target.value.replace("-", ""));
           }}
           className={cx("inputs")}
         />

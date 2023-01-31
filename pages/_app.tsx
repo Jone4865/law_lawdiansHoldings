@@ -38,7 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <Header setModalState={setModalState} />
       <Component {...pageProps} />
-      {/* <Side modal={modal} setModalState={setModalState} /> */}
+      <Side modal={modal} setModalState={setModalState} />
     </>
   );
 }

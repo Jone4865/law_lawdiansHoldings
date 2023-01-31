@@ -68,6 +68,7 @@
   position: absolute;
   font-size: 120px;
   color: #d6d6d6;
+  font-weight: bold;
 }
 
 .line_img {
@@ -146,6 +147,7 @@
   @include view("mobile") {
     width: 44px;
     margin-right: 12px;
+    font-weight: 500;
   }
 }
 
@@ -216,4 +218,18 @@
   background-image: url("/img/History/symboll.png");
   background-size: 100% 100%;
   z-index: 2;
+}
+
+.pc {
+  display: none;
+  @include view("pc") {
+    display: block;
+  }
+}
+
+.mobile {
+  display: none;
+  @include view("mobile") {
+    display: block;
+  }
 }

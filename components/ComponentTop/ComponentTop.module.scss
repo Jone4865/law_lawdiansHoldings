@@ -14,6 +14,9 @@
   position: relative;
   width: 100%;
   height: 25vw;
+  @include view("mobile") {
+    height: 146px;
+  }
 }
 
 .center {
@@ -53,6 +56,10 @@
   display: flex;
   align-items: center;
   font-weight: normal;
+  @include view("mobile") {
+    font-size: 9px;
+    margin-left: 4px;
+  }
 }
 
 .line {
@@ -60,6 +67,9 @@
   height: 1px;
   background-color: #000;
   margin: 0 8.5px;
+  @include view("mobile") {
+    width: 35.7px;
+  }
 }
 
 .category {
@@ -143,4 +153,82 @@
 
 .none {
   display: none;
+}
+
+.bottom_greetings {
+  width: 100%;
+  height: 14.8vw;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  bottom: 79px;
+  font-weight: bold;
+  flex-direction: column;
+  align-items: center;
+  @include view("mobile") {
+    width: 100%;
+    height: 200px;
+    background-color: #232323;
+    color: #fff;
+    display: block;
+  }
+}
+
+.greetings_wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  font-weight: normal;
+  display: none;
+  line-height: 1.38;
+  @include view("mobile") {
+    display: block;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.flex {
+  display: flex;
+}
+
+.greetings_logo {
+  position: absolute;
+  width: 160px;
+  height: 143px;
+  background-image: url("/img/Greetings/logo.png");
+  background-size: 100% 100%;
+  right: 0;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.greetings_title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.up {
+  transform: rotate(180deg);
+}
+
+.greeting_title {
+  @include view("mobile") {
+    display: none;
+  }
 }

@@ -3,15 +3,15 @@
 .container {
   width: 100vw;
   height: 100vh;
-  background-color: #f3f3f3;
+  background-color: #efefef;
   word-break: keep-all;
   @include view("very_small") {
     height: auto;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
   }
   @include view("mobile") {
     height: auto;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
   }
 }
 
@@ -35,7 +35,7 @@
   @include view("mobile") {
     flex-direction: row;
     font-size: 25px;
-    height: 120px;
+    height: 90px;
     padding: 0 25px;
   }
 }

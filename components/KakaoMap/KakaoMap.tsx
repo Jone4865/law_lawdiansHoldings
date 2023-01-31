@@ -10,16 +10,13 @@ export const KakaoMap = () => {
   useEffect(() => {
     let container = document.getElementById("map");
     let options = {
-      center: new window.kakao.maps.LatLng(
-        37.49002452705099,
-        126.99288760887964
-      ),
+      center: new window.kakao.maps.LatLng(37.49002452705099, 126.99288769),
       level: 2,
     };
 
     let map = new window.kakao.maps.Map(container, options);
 
-    var markerPosition = new window.kakao.maps.LatLng(37.49011, 126.9928876087);
+    var markerPosition = new window.kakao.maps.LatLng(37.49007, 126.9928874);
 
     var content = `<div class="marker_image">
     </div>`;

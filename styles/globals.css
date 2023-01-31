@@ -104,13 +104,18 @@ html,
 body {
   max-width: 100vw;
   font-family: "PretendardVariable";
-  font-weight: normal;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .marker_image {
-  width: 20px;
-  height: 20px;
-  background-image: url("/img/meta_img.png");
+  width: 50px;
+  height: 50px;
+  background-image: url("/img/marker.png");
+  background-size: 100% 100%;
 }
 
 .layout {

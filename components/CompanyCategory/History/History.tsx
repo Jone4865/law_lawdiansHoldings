@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import styles from "./History.module.scss";
 import className from "classnames/bind";
-import ComponentTop from "../../../components/ComponentTop/ComponentTop";
+import ComponentTop from "../../ComponentTop/ComponentTop";
 import Footer from "../../Footer/Footer";
 
 const cx = className.bind(styles);
@@ -69,7 +69,7 @@ export default function History() {
       </div>
       <div className={cx("etc")}>
         <div>신진여성연구원 산업지원 선정</div>
-        <div>정보보호관리체계(ISMS) 인증 획득</div>
+        <div>정보보호관리체계(ISMS) 인증 획득 / 한국인터넷진흥원</div>
         <div>가상자산 사업자 신고 / 금융위원회</div>
       </div>
     </div>,
@@ -98,7 +98,9 @@ export default function History() {
         <div>세대융합 창업 캠퍼스 사업 선정</div>
         <div>블록체인 청년 혁신가 선정</div>
         <div>
-          도약기술개발사업 선정 (블록체인기술 개발 / 중소기업정보진흥원)
+          도약기술개발사업 선정
+          <br className={cx("mobile")} /> (블록체인기술 개발 /
+          중소기업정보진흥원)
         </div>
       </div>
     </div>,

@@ -41,14 +41,10 @@ export default function Header({ setModalState }: Props) {
     <div className={!scrollY ? styles.header_black : styles.header_white}>
       <div className={styles.header_container}>
         <div className={styles.header_logo}>
-          <div className={cx("image_wrap")}>
-            <Image
-              src={"/img/logo/logo.png"}
-              onClick={() => router.push("/")}
-              alt="헤더 로고"
-              fill
-            />
-          </div>
+          <div
+            className={cx("image_wrap")}
+            onClick={() => router.push("/")}
+          ></div>
         </div>
         <div>
           <div className={styles.herder_buttons_wrap}>
