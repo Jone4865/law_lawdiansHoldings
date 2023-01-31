@@ -7,8 +7,8 @@
 .wrap {
   padding: 0 13vw;
   padding-bottom: 70px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 35px;
   justify-content: center;
   @include view("small") {

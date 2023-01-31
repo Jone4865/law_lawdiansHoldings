@@ -31,6 +31,8 @@ function Side({ modal, setModalState }: Props) {
   }, [modal]);
 
   const clickHandle = (button: string) => {
+    setCommuMore(false);
+    setCompanyMore(false);
     if (button === "HOME") {
       router.push("/");
       setModalState(false);
@@ -91,6 +93,8 @@ function Side({ modal, setModalState }: Props) {
                   onClick={() => {
                     setModalState(false);
                     router.push("/company/greetings");
+                    setCommuMore(false);
+                    setCompanyMore(false);
                   }}
                 >
                   인사말
@@ -99,6 +103,8 @@ function Side({ modal, setModalState }: Props) {
                   onClick={() => {
                     setModalState(false);
                     router.push("/company/introduce");
+                    setCommuMore(false);
+                    setCompanyMore(false);
                   }}
                 >
                   회사소개
@@ -107,6 +113,8 @@ function Side({ modal, setModalState }: Props) {
                   onClick={() => {
                     setModalState(false);
                     router.push("/company/history");
+                    setCommuMore(false);
+                    setCompanyMore(false);
                   }}
                 >
                   회사연혁
@@ -115,6 +123,8 @@ function Side({ modal, setModalState }: Props) {
                   onClick={() => {
                     setModalState(false);
                     router.push("/company/BICI");
+                    setCommuMore(false);
+                    setCompanyMore(false);
                   }}
                 >
                   BI/CI
@@ -123,6 +133,8 @@ function Side({ modal, setModalState }: Props) {
                   onClick={() => {
                     setModalState(false);
                     router.push("/company/location");
+                    setCommuMore(false);
+                    setCompanyMore(false);
                   }}
                 >
                   찾아오시는 길
@@ -135,6 +147,8 @@ function Side({ modal, setModalState }: Props) {
                   onClick={() => {
                     setModalState(false);
                     router.push("/community/news");
+                    setCommuMore(false);
+                    setCompanyMore(false);
                   }}
                 >
                   언론보도
@@ -143,6 +157,8 @@ function Side({ modal, setModalState }: Props) {
                   onClick={() => {
                     setModalState(false);
                     router.push("/community/inquiry");
+                    setCommuMore(false);
+                    setCompanyMore(false);
                   }}
                 >
                   문의

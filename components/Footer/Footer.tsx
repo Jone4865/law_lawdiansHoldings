@@ -11,7 +11,12 @@ export default function Footer() {
       <div className={cx("left_container")}>
         <div className={cx("left_wrap")}>
           <div className={cx("logo_wrap")}>
-            <Image fill alt="푸터 로고" src="/img/logo/logo.png" />
+            <Image
+              fill
+              alt="푸터 로고"
+              src="/img/logo/logo.png"
+              onClick={() => router.push("/")}
+            />
           </div>
           <div className={cx("information")}>
             <p>(주)로디언즈 홀딩스 | 대표이사 윤창기 </p>
