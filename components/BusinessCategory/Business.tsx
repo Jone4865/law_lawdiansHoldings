@@ -54,14 +54,21 @@ export default function Business() {
   const imgname = ["lawdians", "miapet", "gru", "durian", "mirinae", "jjinbu"];
   const blockchane = [true, true, true, true, false, false];
   const btncolor = ["white", "black", "white", "white", "black", "white"];
-  const kakao = ["pf.kakao.com/_xmbekxl", "", "", "", "", ""];
+  const kakao = [
+    "pf.kakao.com/_xmbekxl",
+    "",
+    "",
+    "",
+    "",
+    "pf.kakao.com/_xlhBxixj/98428373",
+  ];
   const insta = [
     "www.instagram.com/lawdians_official/",
     "www.instagram.com/miapet.kr/?hl=ko",
     "www.instagram.com/gru.krwg/",
     "",
     "www.instagram.com/mirinecare/",
-    "",
+    "www.instagram.com/zzinbu_official/",
   ];
   const facebook = [
     "www.facebook.com/Lawdians/",
@@ -69,7 +76,7 @@ export default function Business() {
     "www.facebook.com/Gru2021",
     "",
     "",
-    "",
+    "www.facebook.com/profile.php?id=100089426176220",
   ];
   const youtube = [
     "www.youtube.com/channel/UCsGBQPD4GhXbDI1Z84Izz6A/featured",
@@ -77,7 +84,7 @@ export default function Business() {
     "www.youtube.com/@krwg4685",
     "",
     "",
-    "",
+    "www.youtube.com/@zzinbu",
   ];
   const naver = [
     "blog.naver.com/ruvbmk80",
@@ -85,9 +92,9 @@ export default function Business() {
     "blog.naver.com/nettongrung",
     "",
     "blog.naver.com/mirinaecare",
-    "",
+    "blog.naver.com/zzinbu",
   ];
-  const band = ["", "", "", "", "band.us/@mirinecare", ""];
+  const band = ["", "", "", "", "band.us/@mirinecare", "band.us/page/90035703"];
   const homepath = [
     "www.lawdians.com",
     "miapet.kr",

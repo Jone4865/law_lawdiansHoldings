@@ -216,3 +216,12 @@
 .Toastify__bounce-exit--bottom-right {
   animation-name: Toastify__bounceOut;
 }
+
+.notice_black {
+  color: black;
+  font-size: 18px;
+  margin-top: 5px;
+  @include view("mobile") {
+    font-size: 12px;
+  }
+}

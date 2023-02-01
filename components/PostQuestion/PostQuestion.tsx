@@ -116,8 +116,12 @@ export default function PostQuestion() {
           }}
           className={cx("input_content")}
         />
-        {content.length > 0 && content.length < 20 && (
+        {content.length > 0 && content.length < 20 ? (
           <span className={cx("notice")}>내용을 20글자 이상 작성해주세요.</span>
+        ) : (
+          <span className={cx("notice_black")}>
+            작성해주신 이메일을 통해 빠른 시일 내로 답변 드리겠습니다.
+          </span>
         )}
       </div>
       <div className={cx("btn_wrap")}>

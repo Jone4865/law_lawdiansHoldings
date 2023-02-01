@@ -33,11 +33,15 @@ export default function Service({ isPc }: Props) {
       가상 자산 블록체인 지갑 서비스입니다.
     </>,
     <>
-      <span>&apos;두리안&apos;</span>은 다양한 물건을
+      <span>&apos;두리안&apos;</span>은 블록체인 분산원장
       <br />
-      보다 싸게 구매 가능한
+      기술이 적용된 포인트로
       <br />
-      지갑 쇼핑몰 서비스입니다.
+      다양한 물건을 보다
+      <br />
+      저렴하게 구매 가능한
+      <br />
+      쇼핑몰 서비스입니다.
     </>,
     <>
       <span>&apos;미리내검진&apos;</span>은 건강검진을
@@ -47,11 +51,15 @@ export default function Service({ isPc }: Props) {
       검진 예약 서비스입니다.
     </>,
     <>
-      <span>&apos;찐부&apos;</span>는 내 실 소유의
+      <span>&apos;찐부&apos;</span>는 내 소유의 자산을
       <br />
-      매물만 확인 또는 홍보 가능한
+      소유자인증 제도를 통해
       <br />
-      부동산 정보 커뮤니티 사이트입니다.
+      홍보가 가능한 허위매물없는
+      <br />
+      부동산 정보 커뮤니티
+      <br />
+      사이트입니다.
     </>,
   ];
   const links = [

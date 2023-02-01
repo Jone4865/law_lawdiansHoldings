@@ -32,20 +32,24 @@ export default function Greetings() {
                 <div className={cx("bold")}>로디언즈홀딩스</div>는 2016년에
                 설립하여&nbsp;
                 <div className={cx("bold")}>
-                  &apos;시스템 개발&apos; 및 &apos;운영 관리 시스템&apos;
+                  &apos;블록체인 시스템 개발&apos;
                 </div>
-                을 자체적으로 개발, 운영해왔으며,
-                <br />
+                <div>&nbsp;및&nbsp;</div>
+              </div>
+              <div className={cx("bold")}>
+                &apos;운영 관리 시스템&apos;을 자체적으로 개발, 운영해왔으며,
               </div>
               <div className={cx("line_one")}>
                 <div className={cx("bold")}>
                   &apos;블록체인 R&D 2회 선정&apos;
                 </div>
                 의 이력을 통해&nbsp;
+              </div>
+              <div className={cx("line_one")}>
                 <div className={cx("bold")}>
-                  블록체인에 대한 이해도가 높은 기업
+                  국내 최고의 블록체인기술을 보유한 기업
                 </div>
-                입니다.
+                <div>입니다.</div>
               </div>
             </>
           ) : (

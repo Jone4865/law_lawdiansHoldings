@@ -8,10 +8,10 @@ const cx = className.bind(styles);
 export default function Introduce() {
   const years = [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016];
   const testimonial = [
+    "청년친화강소기업 선정",
+    "서울지방중소기업청 우수기업표창",
     "정보보호 관리체계 인증",
     "대한민국 국회 표창",
-    "서울지방중소기업청 우수기업표창",
-    "청년친화강소기업 선정",
   ];
   const contents = [
     <div key={1} className={cx("content")}>
@@ -99,13 +99,7 @@ export default function Introduce() {
         </div>
         <div className={cx("bottom_wrap")}>
           <div className={cx("bottom")}>
-            <div className={cx("title")}>
-              로디언즈홀딩스
-              <div className={cx("mobile_title")}>
-                <br />
-              </div>
-              자격 및 인증서
-            </div>
+            <div className={cx("title")}>로디언즈홀딩스의 발자취</div>
             <div className={cx("content_container")}>
               <div className={cx("year")}>
                 {years.map((year) => (
