@@ -29,7 +29,7 @@ export default function Greetings() {
           {pc ? (
             <>
               <div className={cx("line_one")}>
-                <div className={cx("bold")}>로디언즈 홀딩스</div>는 2016년에
+                <div className={cx("bold")}>로디언즈홀딩스</div>는 2016년에
                 설립하여&nbsp;
                 <div className={cx("bold")}>
                   &apos;시스템 개발&apos; 및 &apos;운영 관리 시스템&apos;
@@ -54,7 +54,7 @@ export default function Greetings() {
               <div className={cx("top_center")}>
                 <div className={cx("line_one")}>안녕하십니까?</div>
                 <div className={cx("line_two")}>
-                  <p className={cx("blue")}>로디언즈 홀딩스</p>를
+                  <p className={cx("blue")}>로디언즈홀딩스</p>를
                 </div>
                 <p className={cx("line_three")}>방문해주셔서 감사합니다.</p>
               </div>
@@ -70,7 +70,7 @@ export default function Greetings() {
               <div className={cx("top_center")}>
                 <div className={cx("line_one")}>안녕하십니까?</div>
                 <div className={cx("line_two")}>
-                  <p className={cx("blue")}>로디언즈 홀딩스</p>를
+                  <p className={cx("blue")}>로디언즈홀딩스</p>를
                 </div>
                 <p className={cx("line_three")}>방문해주셔서 감사합니다.</p>
               </div>
@@ -103,7 +103,7 @@ export default function Greetings() {
             다르지 않다고 생각합니다.
             <br />
             <br />
-            로디언즈 홀딩스의 전 임직원은
+            로디언즈홀딩스의 전 임직원은
             <br />
             세상을 더 좋게 바꾸는 것을 목표로
             <div className={cx("mobile")}>
@@ -115,7 +115,7 @@ export default function Greetings() {
             감사합니다.
           </div>
           <div className={cx("sign")}>
-            (주) 로디언즈 홀딩스
+            (주) 로디언즈홀딩스
             <div className={cx("sign_bold")}> 대표이사 윤창기</div>
           </div>
         </div>

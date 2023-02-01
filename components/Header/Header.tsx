@@ -75,6 +75,10 @@ export default function Header({ setModalState }: Props) {
                   }}
                 >
                   <p
+                    onMouseLeave={() => {
+                      setCompanyView(false);
+                      setCommunityView(false);
+                    }}
                     onClick={() => router.push(`${path[idx]}`)}
                     className={cx(
                       `${
@@ -97,6 +101,10 @@ export default function Header({ setModalState }: Props) {
                 </div>
                 {button === "COMPANY" && companyView && (
                   <div
+                    onMouseEnter={() => {
+                      setCompanyView(true);
+                      setCommunityView(false);
+                    }}
                     onMouseLeave={() => {
                       setCompanyView(false);
                     }}
@@ -120,6 +128,10 @@ export default function Header({ setModalState }: Props) {
                 )}
                 {button === "COMMUNITY" && communityView && (
                   <div
+                    onMouseEnter={() => {
+                      setCommunityView(true);
+                      setCompanyView(false);
+                    }}
                     onMouseLeave={() => {
                       setCommunityView(false);
                     }}

@@ -100,7 +100,7 @@ export default function Introduce() {
         <div className={cx("bottom_wrap")}>
           <div className={cx("bottom")}>
             <div className={cx("title")}>
-              로디언즈 홀딩스
+              로디언즈홀딩스
               <div className={cx("mobile_title")}>
                 <br />
               </div>
@@ -123,7 +123,7 @@ export default function Introduce() {
       </div>
       <div className={cx("testimonial_container")}>
         <div className={cx("testimonial_part_title")}>
-          로디언즈 홀딩스
+          로디언즈홀딩스
           <br className={cx("mobile")} /> 인증 & 수상 이력
         </div>
         <div className={cx("testimonial_bottom")}>
