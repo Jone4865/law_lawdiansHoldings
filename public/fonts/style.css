@@ -1,4 +1,23 @@
 @font-face {
   font-family: "PretendardVariable";
-  src: url("PretendardVariable.ttf") format("opentype");
+  src: url("./PretendardVariable.ttf") format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PretendardVariable";
+  src: url("./PretendardVariable.ttf") format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "PretendardVariable";
+  src: url("./PretendardVariable.ttf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "PretendardVariable";
+  src: url("./PretendardVariable.ttf") format("opentype");
+  font-weight: 600;
 }

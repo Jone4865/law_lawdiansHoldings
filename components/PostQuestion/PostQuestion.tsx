@@ -29,6 +29,9 @@ export default function PostQuestion() {
     } else {
       setPhoneCheck(false);
     }
+    if (isNaN(+cellPhone)) {
+      setCellPhone("");
+    }
   }, [cellPhone]);
 
   useEffect(() => {

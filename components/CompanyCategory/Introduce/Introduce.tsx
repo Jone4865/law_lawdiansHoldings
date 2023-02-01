@@ -124,8 +124,7 @@ export default function Introduce() {
       <div className={cx("testimonial_container")}>
         <div className={cx("testimonial_part_title")}>
           로디언즈 홀딩스
-          <br className={cx("mobile")} />
-          인증 & 수상 이력
+          <br className={cx("mobile")} /> 인증 & 수상 이력
         </div>
         <div className={cx("testimonial_bottom")}>
           <div className={cx("testimonial_wrap")}>

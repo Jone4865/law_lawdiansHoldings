@@ -25,6 +25,7 @@
   position: relative;
   width: 328.3px;
   height: 56.3px;
+  cursor: pointer;
   @include view("very_small") {
     width: 30vw;
     height: 3.9vw;

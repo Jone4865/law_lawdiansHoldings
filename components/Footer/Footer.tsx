@@ -25,7 +25,7 @@ export default function Footer() {
             </div>
           </div>
           <p className={cx("reserved")}>
-            ©LAWDIANSHOLDINS All rights reserved.
+            ©LAWDIANSHOLDINGS 2023 All rights reserved.
           </p>
         </div>
       </div>

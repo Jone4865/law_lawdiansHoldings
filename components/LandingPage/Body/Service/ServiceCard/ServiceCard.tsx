@@ -23,26 +23,27 @@ export default function ServiceCard({
   isPc,
 }: Props) {
   return (
-    <div
-      className={cx("img")}
-      style={{
-        backgroundImage: `url(/img/Service/bg${bg}${isPc ? "" : "_m"}.png)`,
-      }}
-    >
-      <div className={cx("wrap")}>
-        <div className={cx("blockchain")}>
-          {blockchain && (
-            <Image
-              width={41}
-              height={45}
-              src="/img/Service/블록체인.png"
-              alt="블록체인"
-            />
-          )}
-        </div>
-        <h1 className={cx("title")}>{title}</h1>
-        <div className={cx("content_wrap")}>{content}</div>
-        <Link target="_blank" href={`https://${link}`}>
+    <Link target="_blank" href={`https://${link}`}>
+      <div
+        className={cx("img")}
+        style={{
+          backgroundImage: `url(/img/Service/bg${bg}${isPc ? "" : "_m"}.png)`,
+        }}
+      >
+        <div className={cx("wrap")}>
+          <div className={cx("blockchain")}>
+            {blockchain && (
+              <Image
+                width={41}
+                height={45}
+                src="/img/Service/블록체인.png"
+                alt="블록체인"
+              />
+            )}
+          </div>
+          <h1 className={cx("title")}>{title}</h1>
+          <div className={cx("content_wrap")}>{content}</div>
+
           <div className={cx("btn")}>
             <span className={cx("homepage")}>HOMEPAGE</span>
             <Image
@@ -52,8 +53,8 @@ export default function ServiceCard({
               height={isPc ? 16 : 11}
             />
           </div>
-        </Link>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }

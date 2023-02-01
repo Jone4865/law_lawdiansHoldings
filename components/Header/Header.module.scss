@@ -166,6 +166,13 @@
   }
 }
 
+.active {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 0.3px solid gray;
+}
+
 .active:hover {
   cursor: pointer;
   font-weight: bold;
@@ -222,5 +229,9 @@
 }
 
 .hover_white:hover {
+  font-weight: bold;
+}
+
+.bold {
   font-weight: bold;
 }

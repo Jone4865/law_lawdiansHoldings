@@ -34,7 +34,7 @@
   }
   @include view("mobile") {
     background-image: none;
-    font-size: 2.7vw;
+    font-size: 3.2vw;
     padding: 0;
     align-items: center;
   }
@@ -282,7 +282,7 @@
 .testimonial_bottom {
   width: 100vw;
   overflow: scroll;
-  padding: 0 13.5vw;
+  justify-content: center;
   display: flex;
   @include view("mobile") {
     padding: 0;

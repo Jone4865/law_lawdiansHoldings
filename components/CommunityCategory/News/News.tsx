@@ -42,6 +42,7 @@ export default function News() {
 
   useEffect(() => {
     getData();
+    window.scrollTo(0, 0);
   }, [page]);
 
   let num = 0;

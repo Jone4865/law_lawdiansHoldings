@@ -2,7 +2,7 @@
 
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 1025px;
   background-color: #efefef;
   word-break: keep-all;
   @include view("very_small") {

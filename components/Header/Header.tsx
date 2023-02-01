@@ -3,6 +3,7 @@ import router from "next/router";
 import styles from "./Header.module.scss";
 import className from "classnames/bind";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const cx = className.bind(styles);
 
@@ -11,6 +12,7 @@ type Props = {
 };
 
 export default function Header({ setModalState }: Props) {
+  const router = useRouter();
   const [scrollY, setScrollY] = useState(false);
   const [companyView, setCompanyView] = useState(false);
   const [communityView, setCommunityView] = useState(false);
@@ -36,6 +38,7 @@ export default function Header({ setModalState }: Props) {
       });
     })();
   }, []);
+  const now = router.pathname.split("/")[1].toUpperCase();
 
   return (
     <div className={!scrollY ? styles.header_black : styles.header_white}>
@@ -58,7 +61,11 @@ export default function Header({ setModalState }: Props) {
               >
                 <div
                   key={button}
-                  className={styles.header_hover}
+                  className={cx(
+                    `header_hover`,
+                    now === button ? "bold" : "",
+                    now === "" && button === "HOME" && "bold"
+                  )}
                   onMouseEnter={() => {
                     button === "COMPANY"
                       ? setCompanyView(true)
@@ -101,9 +108,10 @@ export default function Header({ setModalState }: Props) {
                         <div
                           key={idx}
                           className={cx("active")}
-                          onClick={() =>
-                            router.push(`/company/${companyPath[idx]}`)
-                          }
+                          onClick={() => {
+                            router.push(`/company/${companyPath[idx]}`);
+                            setCompanyView(false);
+                          }}
                         >
                           {item}
                         </div>
@@ -124,9 +132,10 @@ export default function Header({ setModalState }: Props) {
                         <div
                           key={idx}
                           className={cx("active")}
-                          onClick={() =>
-                            router.push(`/community/${communityPath[idx]}`)
-                          }
+                          onClick={() => {
+                            router.push(`/community/${communityPath[idx]}`);
+                            setCommunityView(false);
+                          }}
                         >
                           {item}
                         </div>
