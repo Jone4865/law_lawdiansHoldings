@@ -61,7 +61,11 @@ export default function ComponentTop({ category, title }: Props) {
   return (
     <div className={cx("container")}>
       <div className={cx("image_wrap")}>
-        <Image fill alt="탑 이미지" src={`/img/ComponentTop/${category}.png`} />
+        <Image
+          fill
+          alt="탑 이미지"
+          src={`/img/ComponentTop/${category.toLowerCase()}.png`}
+        />
       </div>
       <div className={cx(pc ? "center" : "none")}>
         <Image
