@@ -52,7 +52,7 @@ export default function NewsPart({ isPc }: Props) {
             width={isPc ? 35 : 25}
             height={isPc ? 35 : 25}
             alt="버튼 검은색"
-            src="/img/Body/btn_black.png"
+            src="/img/body/btn_black.png"
             onClick={() => router.push("/community/news")}
           />
         </div>

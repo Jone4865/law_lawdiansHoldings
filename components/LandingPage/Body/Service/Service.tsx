@@ -72,7 +72,7 @@ export default function Service({ isPc }: Props) {
             width={isPc ? 35 : 25}
             height={isPc ? 35 : 25}
             alt="버튼 흰색"
-            src="/img/Body/btn_white.png"
+            src="/img/body/btn_white.png"
             onClick={() => router.push("/business")}
           />
         </div>
