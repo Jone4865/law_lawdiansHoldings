@@ -12,21 +12,20 @@
   gap: 35px;
   justify-content: center;
   @include view("small") {
-    flex-wrap: nowrap;
     overflow-x: scroll;
     justify-content: flex-start;
     padding: 0 50px;
   }
   @include view("very_small") {
-    flex-wrap: nowrap;
     overflow-x: scroll;
     justify-content: flex-start;
     padding: 0 50px;
+    display: flex;
   }
   @include view("mobile") {
-    flex-wrap: nowrap;
     overflow-x: scroll;
     justify-content: flex-start;
     padding: 0 25px;
+    display: flex;
   }
 }

@@ -57,14 +57,16 @@ export default function ComponentTop({ category, title }: Props) {
   const companyPath = ["greetings", "introduce", "history", "BICI", "location"];
   const moreDropDown = ["언론보도", "문의"];
   const morePath = ["news", "inquiry"];
-
   return (
     <div className={cx("container")}>
       <div className={cx("image_wrap")}>
         <Image
+          className={cx("bg")}
           fill
           alt="탑 이미지"
-          src={`/img/ComponentTop/${category.toLowerCase()}.png`}
+          src={`/img/ComponentTop/${
+            pc ? category.toLowerCase() : `${category.toLowerCase()}_m`
+          }.png`}
         />
       </div>
       <div className={cx(pc ? "center" : "none")}>
@@ -101,7 +103,9 @@ export default function ComponentTop({ category, title }: Props) {
                     className={cx("active")}
                     onClick={() => {
                       item !== "BUSINESS"
-                        ? setCateName(item)
+                        ? item === "COMMUNITY"
+                          ? router.push(`/${item.toLowerCase()}/news`)
+                          : router.push(`/${item.toLowerCase()}/greetings`)
                         : router.push("/business");
                       setCateName(item);
                     }}

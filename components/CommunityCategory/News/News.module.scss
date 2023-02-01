@@ -11,7 +11,7 @@
 .news_wrap {
   display: flex;
   width: 73vw;
-  padding-bottom: 60px;
+  padding: 60px 0;
   justify-content: space-between;
   border-bottom: solid 0.5px #c5c5c5;
   color: #a1a1a1;
@@ -120,6 +120,10 @@
 
 .sources {
   margin-right: 80px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  justify-content: center;
   @include view("small") {
     margin-right: 15px;
   }
@@ -128,6 +132,7 @@
   }
   @include view("mobile") {
     margin-right: 13px;
+    width: 65px;
   }
 }
 
