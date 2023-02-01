@@ -71,6 +71,7 @@ export default function ComponentTop({ category, title }: Props) {
       </div>
       <div className={cx(pc ? "center" : "none")}>
         <Image
+          onClick={() => router.push("/")}
           width={13.8}
           height={16.5}
           alt="홈 아이콘"

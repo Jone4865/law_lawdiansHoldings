@@ -33,7 +33,7 @@ export default function Footer() {
         <div className={cx("right_wrap")}>
           <span className={cx("title")}>고객센터</span>
           <span className={cx("content")}>
-            <a href="tel:010-2900-1491">010-2900-1491</a>
+            <a href="tel:02-1833-8604">02-1833-8604</a>
           </span>
           <span className={cx("email")}>lawdiholdings@naver.com</span>
         </div>

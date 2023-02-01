@@ -102,7 +102,6 @@ export default function Header({ setModalState }: Props) {
                     }}
                     className={cx(`${button}_dropdown_container`)}
                   >
-                    <div className={cx(`${button}_mask`)} />
                     <div className={cx("dropdown_content_wrap")}>
                       {companyDropDown.map((item, idx) => (
                         <div
@@ -126,7 +125,6 @@ export default function Header({ setModalState }: Props) {
                     }}
                     className={cx(`${button}_dropdown_container`)}
                   >
-                    <div className={cx(`${button}_mask`)} />
                     <div className={cx("dropdown_content_wrap")}>
                       {communityDropDown.map((item, idx) => (
                         <div

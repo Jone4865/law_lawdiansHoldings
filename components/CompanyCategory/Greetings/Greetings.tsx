@@ -116,7 +116,7 @@ export default function Greetings() {
           </div>
           <div className={cx("sign")}>
             (주) 로디언즈 홀딩스
-            <div className={cx("sign_bold")}> 대표 윤창기 올림</div>
+            <div className={cx("sign_bold")}> 대표이사 윤창기</div>
           </div>
         </div>
       </div>
