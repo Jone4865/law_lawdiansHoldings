@@ -10,7 +10,7 @@ export const KakaoMap = () => {
   useEffect(() => {
     let container = document.getElementById("map");
     let options = {
-      center: new window.kakao.maps.LatLng(37.49002452705099, 126.99288769),
+      center: new window.kakao.maps.LatLng(37.4900245272, 126.99288769),
       level: 2,
     };
 
