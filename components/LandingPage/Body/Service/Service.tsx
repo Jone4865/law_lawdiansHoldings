@@ -55,7 +55,7 @@ export default function Service({ isPc }: Props) {
       <br />
       소유자인증 제도를 통해
       <br />
-      홍보가 가능한 허위매물없는
+      홍보가 가능한 허위매물 없는
       <br />
       부동산 정보 커뮤니티
       <br />

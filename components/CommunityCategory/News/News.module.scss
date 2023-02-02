@@ -89,6 +89,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  word-break: keep-all;
   @include view("mobile") {
     margin: 7px 0 4px auto;
   }

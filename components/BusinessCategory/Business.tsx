@@ -38,8 +38,8 @@ export default function Business() {
       암호화폐 지갑 서비스 입니다.
     </span>,
     <span key={10}>
-      &apos;두리안&apos;은 다양한 물건을 보다 싸게 구매 가능한 지갑 쇼핑몰
-      서비스입니다.
+      &apos;두리안&apos;은 블록체인 분산원장 기술이 적용된 포인트로 다양한
+      물건을 보다 저렴하게 구매 가능한 쇼핑몰 서비스입니다.
     </span>,
     <span key={11}>
       &apos;미리내검진&apos;은 자신의 위치를 기반으로 보다 가까운 곳에서
@@ -47,8 +47,8 @@ export default function Business() {
       서비스입니다.
     </span>,
     <span key={12}>
-      &apos;찐부&apos;는 실소유의 매물들을 확인 또는 홍보 가능한 정보 커뮤니티
-      사이트입니다.
+      &apos;찐부&apos;는 내 소유의 자산을 소유자인증 제도를 통해 홍보가 가능한
+      허위매물 없는 부동산 정보 커뮤니티 사이트입니다.
     </span>,
   ];
   const imgname = ["lawdians", "miapet", "gru", "durian", "mirinae", "jjinbu"];
