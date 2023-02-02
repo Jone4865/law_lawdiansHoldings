@@ -12,8 +12,8 @@
     display: none;
   }
   @include view("mobile") {
-    height: 375px;
-    font-size: 9px;
+    width: 100vw;
+    height: auto;
   }
 }
 
@@ -23,8 +23,7 @@
   height: 100%;
   @include view("mobile") {
     display: flex;
-    align-content: center;
-    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -41,9 +40,18 @@
     width: 1920px;
   }
   @include view("mobile") {
-    width: 2607px;
+    height: 155vw;
     background-image: url("/img/body/bg2_m.png");
+    position: relative;
   }
+}
+
+.bg2 {
+  width: 100%;
+  height: 233vw;
+  background-image: url("/img/body/bg2_2.png");
+  background-size: 100% 100%;
+  position: relative;
 }
 
 .text_wrap {
@@ -61,10 +69,7 @@
     width: 1920px;
   }
   @include view("mobile") {
-    width: 2607px;
-    padding-top: 30px;
-    align-items: flex-start;
-    padding-left: 25px;
+    display: none;
   }
 }
 
@@ -94,30 +99,21 @@
   }
 }
 
-.mobile_wrap {
+.btn {
+  position: absolute;
+  bottom: 36px;
+  width: 326px;
+  height: 32px;
+  display: flex;
+  background-color: #232323;
+  font-size: 12px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
   display: none;
   @include view("mobile") {
     display: block;
   }
-}
-
-.mobile_bg {
-  width: 2285px;
-  height: 11px;
-  background-image: url("/img/body/history_line.png");
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  margin-left: 75px;
-  margin-bottom: 30px;
-}
-
-.mobile_text_wrap {
-  min-width: 2520px;
-  height: 11px;
-  position: absolute;
-  margin-left: 75px;
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
 }

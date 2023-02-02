@@ -22,9 +22,10 @@ export default function Footer() {
             <p>(주)로디언즈홀딩스 | 대표이사 윤창기 </p>
           </div>
           <div className={cx("flex")}>
-            <div>서울특별시 서초구 서초대로 25길 53 | 우편번호 06586&nbsp;</div>
+            <div>서울특별시 서초구 서초대로 25길 53 | 우편번호 06586 </div>
             <div>
-              <span className={cx("pc")}>|&nbsp;</span>사업자번호 544-81-02278
+              <span className={cx("pc")}></span>
+              <span>사업자번호 544-81-02278</span>
             </div>
           </div>
           <p className={cx("reserved")}>

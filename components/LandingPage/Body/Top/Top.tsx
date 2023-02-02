@@ -28,7 +28,7 @@ export default function Top() {
         <div className={cx("text_wrap")}>
           <h1 className={cx("title")}>
             <span>LAWDIANS</span>
-            <span>HOLDINGS</span>
+            <span> HOLDINGS</span>
           </h1>
           <div>
             <div className={cx("content")}>

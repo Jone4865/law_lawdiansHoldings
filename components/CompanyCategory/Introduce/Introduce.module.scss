@@ -240,12 +240,13 @@
   justify-content: center;
   @include view("mobile") {
     display: flex;
+    margin: 20px 0;
   }
 }
 
 .mobile_top {
-  width: 63vw;
-  height: 95vw;
+  width: 100vw;
+  height: 93vw;
   background-image: url("/img/Introduce/bg1_m.png");
   background-size: 100% 100%;
 }

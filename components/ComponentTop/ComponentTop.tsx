@@ -198,7 +198,8 @@ export default function ComponentTop({ category, title }: Props) {
                 </div>
                 <div className={cx("flex")}>
                   <div className={cx("bold")}>
-                    &apos;시스템 개발&apos; 및 &apos;운영 관리 시스템&apos;
+                    &apos;블록체인 시스템 개발&apos; 및 &apos;운영 관리
+                    시스템&apos;
                   </div>
                   <div>을</div>
                   <br />
@@ -214,7 +215,7 @@ export default function ComponentTop({ category, title }: Props) {
                 </div>
                 <div className={cx("flex")}>
                   <div className={cx("bold")}>
-                    블록체인에 대한 이해도가 높은 기업
+                    국내 최고의 블록체인기술을 보유한 기업
                   </div>
                   <div>입니다.</div>
                 </div>

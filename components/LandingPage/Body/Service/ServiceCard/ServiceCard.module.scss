@@ -68,13 +68,12 @@
   @include view("mobile") {
     font-size: 25px;
     margin-top: 0;
-    margin-bottom: 132px;
+    margin-bottom: 110px;
   }
 }
 
 .content_wrap {
   font-size: 18px;
-
   height: 130px;
   span {
     font-weight: bold;
@@ -85,6 +84,7 @@
   @include view("mobile") {
     font-size: 15px;
     margin-bottom: 20px;
+    height: 80px;
   }
 }
 

@@ -180,7 +180,7 @@
 .flex {
   display: flex;
   margin-bottom: 20px;
-  font-weight: 500;
+  font-weight: 600;
   @include view("mobile") {
     flex-direction: column;
     margin-bottom: 10px;
@@ -188,7 +188,11 @@
 }
 
 .pc {
-  @include view("mobile") {
-    display: none;
+  &::before {
+    content: "|";
+    margin: 0 5px;
+    @include view("mobile") {
+      display: none;
+    }
   }
 }

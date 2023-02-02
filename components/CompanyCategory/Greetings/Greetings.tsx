@@ -36,8 +36,9 @@ export default function Greetings() {
                 </div>
                 <div>&nbsp;및&nbsp;</div>
               </div>
-              <div className={cx("bold")}>
-                &apos;운영 관리 시스템&apos;을 자체적으로 개발, 운영해왔으며,
+              <div className={cx("line_one")}>
+                <div className={cx("bold")}>&apos;운영 관리 시스템&apos;</div>
+                <div>을 자체적으로 개발, 운영해왔으며,</div>
               </div>
               <div className={cx("line_one")}>
                 <div className={cx("bold")}>
