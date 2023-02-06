@@ -76,7 +76,7 @@ export default function Introduce() {
             <div className={cx("top_top")} />
             <div className={cx("top_center")}>
               <div className={cx("line_one")}>
-                <p className={cx("bold")}>로디언즈</p>는
+                <p className={cx("bold")}>로디언즈홀딩스</p>는
                 <p className={cx("blue")}> 고도의 블록체인 기술</p>과
               </div>
               <div className={cx("line_two")}>
