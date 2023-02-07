@@ -16,6 +16,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <meta
+          name="naver-site-verification"
+          content="5f24168dbafe2b2c50a338f8ebfd50eeea3a877e"
+        />
         <title>로디언즈 홀딩스</title>
         <meta name="Keywords" content="LawdiansHoldings" />
         <meta name="Keywords" content="LawdiansHoldings" />

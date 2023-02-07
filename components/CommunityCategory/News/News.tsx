@@ -29,9 +29,9 @@ export default function News() {
   async function getData() {
     try {
       const response = await axios.get(
-        `https://api.lawdians.com:54000/v1.0/api/news?filter=1&search=&take=5&skip=${
-          (page - 1) * 5
-        }`
+        `${
+          process.env.NEXT_PUBLIC_NEWS_GET
+        }/news?filter=1&search=&take=5&skip=${(page - 1) * 5}`
       );
       setNews(response.data.news);
       setTotal(Math.ceil(response.data.totalCount / 5));
