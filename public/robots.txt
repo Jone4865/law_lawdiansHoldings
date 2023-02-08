@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: http://www.lawdiansholdings.com/
+
+# Sitemaps
+Sitemap: http://www.lawdiansholdings.com/sitemap.xml
