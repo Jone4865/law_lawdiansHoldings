@@ -17,8 +17,8 @@ export default function Header({ setModalState }: Props) {
   const [companyView, setCompanyView] = useState(false);
   const [communityView, setCommunityView] = useState(false);
 
-  const Buttons = ["HOME", "COMPANY", "BUSINESS", "COMMUNITY"];
-  const path = ["/", "/company/greetings", "/business", "/community/news"];
+  const Buttons = ["HOME", "COMPANY", "TEAMS", "BUSINESS", "COMMUNITY"];
+  const path = ["/", "/company/greetings", "", "/business", "/community/news"];
 
   const companyDropDown = [
     "인사말",
@@ -79,7 +79,11 @@ export default function Header({ setModalState }: Props) {
                       setCompanyView(false);
                       setCommunityView(false);
                     }}
-                    onClick={() => router.push(`${path[idx]}`)}
+                    onClick={() => {
+                      path[idx] !== ""
+                        ? router.push(`${path[idx]}`)
+                        : alert("준비중입니다.");
+                    }}
                     className={cx(
                       `${
                         !scrollY

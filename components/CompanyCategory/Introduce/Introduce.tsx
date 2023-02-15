@@ -69,7 +69,7 @@ export default function Introduce() {
   ];
   return (
     <div className={cx("container")}>
-      <ComponentTop category="COMPANY" title="INTRODUCE" />
+      <ComponentTop category="COMPANY" title="INTRODUCTION" />
       <div className={cx("wrap")}>
         <div className={cx("top_wrap")}>
           <div className={cx("top")}>

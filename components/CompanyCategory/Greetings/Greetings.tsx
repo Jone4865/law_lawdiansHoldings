@@ -31,13 +31,13 @@ export default function Greetings() {
               <div className={cx("line_one")}>
                 <div className={cx("bold")}>로디언즈홀딩스</div>는 2016년에
                 설립하여&nbsp;
-                <div className={cx("bold")}>
-                  &apos;블록체인 시스템 개발&apos;
-                </div>
+                <div className={cx("bold")}>&apos;플랫폼 시스템 개발&apos;</div>
                 <div>&nbsp;및&nbsp;</div>
               </div>
               <div className={cx("line_one")}>
-                <div className={cx("bold")}>&apos;운영 관리 시스템&apos;</div>
+                <div className={cx("bold")}>
+                  &apos;IT 운영 관리 시스템&apos;
+                </div>
                 <div>을 자체적으로 개발, 운영해왔으며,</div>
               </div>
               <div className={cx("line_one")}>

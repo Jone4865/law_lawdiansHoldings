@@ -15,7 +15,7 @@ function Side({ modal, setModalState }: Props) {
   const [commuMore, setCommuMore] = useState(false);
 
   const router = useRouter();
-  const Buttons = ["HOME", "COMPANY", "BUSINESS", "COMMUNITY"];
+  const Buttons = ["HOME", "COMPANY", "TEAMS", "BUSINESS", "COMMUNITY"];
 
   useEffect(() => {
     const htmlEle = document?.getElementsByTagName("html").item(0);
@@ -41,6 +41,8 @@ function Side({ modal, setModalState }: Props) {
     } else if (button === "BUSINESS") {
       router.push("/business");
       setModalState(false);
+    } else if (button === "TEAMS") {
+      alert("준비중입니다.");
     } else {
       setCommuMore(!commuMore);
     }
