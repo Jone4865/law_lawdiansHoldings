@@ -32,7 +32,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="Keywords" content="두리안" />
         <meta name="Keywords" content="찐부" />
         <meta property="og:url" content={process.env.NEXT_PUBLIC_SURVICE_URL} />
-        <meta property="og:title" content="로디언즈 홀딩스" />
+        <meta
+          property="og:title"
+          content="로디언즈 홀딩스 | 세상을 바꾸는 비전과 기술의 현실화"
+        />
         <meta
           property="og:description"
           content="세상을 바꾸는 비전과 기술의 현실화, 로디언즈 홀딩스"
