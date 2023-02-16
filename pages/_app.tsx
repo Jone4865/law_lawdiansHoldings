@@ -20,9 +20,17 @@ export default function App({ Component, pageProps }: AppProps) {
           name="naver-site-verification"
           content="5f24168dbafe2b2c50a338f8ebfd50eeea3a877e"
         />
-        <title>로디언즈 홀딩스</title>
+        <title>로디언즈 홀딩스 | 세상을 바꾸는 비전과 기술의 현실화</title>
         <meta name="Keywords" content="LawdiansHoldings" />
         <meta name="Keywords" content="LawdiansHoldings" />
+        <meta name="Keywords" content="로디언즈" />
+        <meta name="Keywords" content="로디언즈 홀딩스" />
+        <meta name="Keywords" content="블록체인 STO" />
+        <meta name="Keywords" content="정보보호관리체계" />
+        <meta name="Keywords" content="기술혁신중소기업" />
+        <meta name="Keywords" content="그루" />
+        <meta name="Keywords" content="두리안" />
+        <meta name="Keywords" content="찐부" />
         <meta property="og:url" content={process.env.NEXT_PUBLIC_SURVICE_URL} />
         <meta property="og:title" content="로디언즈 홀딩스" />
         <meta
@@ -31,7 +39,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta
           name="description"
-          content="세상을 바꾸는 비전과 기술의 현실화, 로디언즈 홀딩스"
+          content="국내 최고의 블록체인기술 보유, 플랫폼 개발 및 운영, 안전하고 신뢰할 수 있는 플랫폼 서비스 제공"
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
