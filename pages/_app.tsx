@@ -29,6 +29,10 @@ export default function App({ Component, pageProps }: AppProps) {
           property="og:description"
           content="세상을 바꾸는 비전과 기술의 현실화, 로디언즈 홀딩스"
         />
+        <meta
+          name="description"
+          content="세상을 바꾸는 비전과 기술의 현실화, 로디언즈 홀딩스"
+        />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           property="og:article:author"
