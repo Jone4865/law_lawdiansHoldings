@@ -38,7 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta
           property="og:description"
-          content="세상을 바꾸는 비전과 기술의 현실화, 로디언즈 홀딩스"
+          content="국내 최고의 블록체인기술 보유, 플랫폼 개발 및 운영, 안전하고 신뢰할 수 있는 플랫폼 서비스 제공"
         />
         <meta
           name="description"
