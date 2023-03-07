@@ -7,7 +7,7 @@ import "../styles/globals.css";
 import Side from "../components/Side/Side";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const AppKey = `http://dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_APP_KEY}`;
+  const AppKey = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_APP_KEY}`;
   const [modal, setModal] = useState(false);
 
   const setModalState = (modal: boolean) => {
