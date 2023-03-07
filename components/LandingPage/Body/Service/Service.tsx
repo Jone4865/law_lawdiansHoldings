@@ -86,7 +86,7 @@ export default function Service({ isPc }: Props) {
         </div>
       </div>
       <div className={cx("img_wrap")}>
-        {titles.map((title, idx) => (
+        {titles?.map((title, idx) => (
           <div key={idx} className={cx("hover")}>
             <ServiceCard
               key={title}

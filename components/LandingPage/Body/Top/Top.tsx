@@ -1,6 +1,5 @@
 import styles from "./Top.module.scss";
 import className from "classnames/bind";
-import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
 const cx = className.bind(styles);
