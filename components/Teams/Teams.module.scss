@@ -268,7 +268,7 @@
 .dropdown_mask {
   position: absolute;
   width: 100px;
-  height: 167px;
+  height: 285px;
   background-color: rgba(0, 0, 0, 0.651);
   top: 30px;
   right: 22px;
@@ -276,11 +276,14 @@
   border-radius: 8px;
   text-align: center;
   color: #fff;
+  padding: 0 11px;
 }
 
 .dropdown_btn {
   margin: 5px 0;
   cursor: pointer;
+  padding: 6px 0;
+  border-bottom: solid 1px #ffffff51;
   &:hover {
     font-weight: bold;
     -webkit-animation: shake 0.5s;

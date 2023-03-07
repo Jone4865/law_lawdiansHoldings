@@ -91,6 +91,7 @@ function Teams() {
             {Btns.map((item) => (
               <Link key={item} to={item} spy={true} smooth={true} offset={-30}>
                 <div
+                  style={{ border: item === "홍보" ? "none" : "" }}
                   onClick={() => {
                     setNowAble(item);
                     setDropDownVisible(false);
