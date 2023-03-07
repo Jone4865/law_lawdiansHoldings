@@ -42,7 +42,7 @@ function Side({ modal, setModalState }: Props) {
       router.push("/business");
       setModalState(false);
     } else if (button === "TEAMS") {
-      alert("준비중입니다.");
+      router.push("/teams");
     } else {
       setCommuMore(!commuMore);
     }

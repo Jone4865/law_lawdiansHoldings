@@ -1,0 +1,300 @@
+@import "../../public/scss/style.scss";
+
+.top {
+  width: 100%;
+  height: 51vw;
+  background-image: url("/img/Teams/bg1.jpg");
+  background-size: 100% 35vw;
+  padding: 23px 0 60px 60px;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include view("mobile") {
+    display: none;
+  }
+}
+
+.word {
+  width: 41vw;
+  height: 10.5vw;
+  background-image: url("/img/Teams/word.png");
+  background-size: 100% 100%;
+  @include view("very_small") {
+    width: 250px;
+    height: 64px;
+  }
+}
+
+.ment {
+  width: 430px;
+  height: 360px;
+  background-image: url("/img/Teams/bg2.jpg");
+  background-size: 331px 361px;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 23px;
+  margin-left: 21vw;
+  color: #000;
+  @include view("middle") {
+    margin-left: 10vw;
+    width: 300px;
+    height: 230px;
+    font-size: 15px;
+  }
+  @include view("small") {
+    margin-left: 10vw;
+    width: 300px;
+    height: 230px;
+    font-size: 15px;
+  }
+  @include view("very_small") {
+    margin-left: 10vw;
+    width: 300px;
+    height: 230px;
+    font-size: 15px;
+  }
+}
+
+.blue {
+  color: #392dff;
+}
+
+.flex {
+  display: flex;
+}
+
+.title_wrap {
+  width: 100%;
+  height: 260px;
+  background-color: #eee;
+  color: #000;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include view("mobile") {
+    font-size: 13px;
+    height: 116px;
+  }
+}
+
+.title {
+  width: 530px;
+  height: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include view("mobile") {
+    height: 48px;
+    width: 240px;
+  }
+}
+
+.title_ment {
+  width: 100%;
+  text-align: center;
+}
+
+.quote_up {
+  width: 40.8px;
+  height: 32.3px;
+  background-image: url("/img/icon/quote.png");
+  background-size: 100% 100%;
+  @include view("mobile") {
+    width: 18.6px;
+    height: 14.8px;
+  }
+}
+
+.quote_down {
+  width: 40.8px;
+  height: 32.3px;
+  background-image: url("/img/icon/quote.png");
+  background-size: 100% 100%;
+  transform: rotate(180deg);
+  display: flex;
+  @include view("mobile") {
+    width: 18.6px;
+    height: 14.8px;
+  }
+}
+
+.quote_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bottom {
+  position: relative;
+  width: 100%;
+  padding: 0 0 130px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  @include view("mobile") {
+    padding: 20px 0 70px 25px;
+    align-items: flex-start;
+  }
+}
+
+.btns_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 600;
+  background-color: #fff;
+  height: 180px;
+  color: #000;
+  @include view("very_small") {
+    display: none;
+  }
+  @include view("mobile") {
+    display: none;
+  }
+}
+
+.btns_wrap {
+  position: absolute;
+  display: flex;
+  padding-top: 75px;
+}
+
+.btn {
+  width: 8vw;
+  border-bottom: 9px solid #d8d8d8;
+  text-align: center;
+  padding-bottom: 23px;
+  cursor: pointer;
+}
+
+.btn_able {
+  width: 8vw;
+  border-bottom: 9px solid #392dff;
+  text-align: center;
+  padding-bottom: 23px;
+  font-weight: 800;
+}
+
+.lawfamily {
+  position: absolute;
+  width: 658px;
+  height: 392px;
+  background-image: url("/img/Teams/lawfamily.png");
+  background-size: 100% 100%;
+  left: 171px;
+  top: 0;
+  z-index: 0;
+  @include view("small") {
+    width: 300px;
+    height: 130px;
+    left: 24px;
+  }
+  @include view("very_small") {
+    width: 300px;
+    height: 130px;
+    left: 24px;
+    top: 20px;
+  }
+  @include view("mobile") {
+    width: 200px;
+    height: 118px;
+    left: 24px;
+    top: 20px;
+  }
+}
+
+.dropdown_container {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  color: #000;
+  font-size: 11px;
+  font-weight: bold;
+  border-bottom: solid 1px #d4d4d4;
+  justify-content: flex-end;
+  padding-right: 45px;
+  display: none;
+  position: relative;
+  @include view("very_samll") {
+    display: flex;
+  }
+  @include view("mobile") {
+    display: flex;
+  }
+}
+
+.dropdown_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow {
+  width: 8.5px;
+  height: 4.2px;
+  background-image: url("/img/icon/downBtn.png");
+  background-size: 100% 100%;
+  margin-left: 16px;
+}
+
+.mobile_img {
+  background-image: url("/img/Teams/bg_m.png");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 75.1vw;
+  display: none;
+  @include view("mobile") {
+    display: block;
+  }
+}
+
+.dropdown_mask {
+  position: absolute;
+  width: 100px;
+  height: 167px;
+  background-color: rgba(0, 0, 0, 0.651);
+  top: 30px;
+  right: 22px;
+  z-index: 1;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+}
+
+.dropdown_btn {
+  margin: 5px 0;
+  cursor: pointer;
+  &:hover {
+    font-weight: bold;
+    -webkit-animation: shake 0.5s;
+    animation: shake 0.5s;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: none;
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../../../public/scss/style.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  @include view("small") {
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+  @include view("very_small") {
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+  @include view("mobile") {
+    flex-direction: row;
+    margin-bottom: 21px;
+  }
+}
+
+.wrap {
+  background-size: 100% 100%;
+  width: 12.5vw;
+  height: 12.5vw;
+  margin: 0 auto;
+  min-width: 98px;
+  min-height: 98px;
+  @include view("small") {
+    margin-right: 15px;
+    width: 15vw;
+    height: 15vw;
+  }
+  @include view("very_small") {
+    margin-right: 15px;
+    width: 15vw;
+    height: 15vw;
+  }
+  @include view("mobile") {
+    margin-right: 15px;
+  }
+}

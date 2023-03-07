@@ -45,7 +45,7 @@ export default function ComponentTop({ category, title }: Props) {
     nowMore === "inquiry" && setMoreName("문의");
   }, []);
 
-  const cateDropDown = ["COMPANY", "BUSINESS", "COMMUNITY"];
+  const cateDropDown = ["COMPANY", "BUSINESS", "COMMUNITY", "TEAMS"];
 
   const companyDropDown = [
     "인사말",
@@ -54,9 +54,11 @@ export default function ComponentTop({ category, title }: Props) {
     "BI/CI",
     "찾아오시는 길",
   ];
+
   const companyPath = ["greetings", "introduce", "history", "BICI", "location"];
   const moreDropDown = ["언론보도", "문의"];
   const morePath = ["news", "inquiry"];
+
   return (
     <div className={cx("container")}>
       <div className={cx("image_wrap")}>
@@ -106,6 +108,8 @@ export default function ComponentTop({ category, title }: Props) {
                       item !== "BUSINESS"
                         ? item === "COMMUNITY"
                           ? router.push(`/${item.toLowerCase()}/news`)
+                          : item === "TEAMS"
+                          ? router.push(`/${item.toLowerCase()}`)
                           : router.push(`/${item.toLowerCase()}/greetings`)
                         : router.push("/business");
                       setCateName(item);
@@ -118,7 +122,7 @@ export default function ComponentTop({ category, title }: Props) {
             </div>
           )}
         </div>
-        {cateName !== "BUSINESS" && (
+        {cateName !== "BUSINESS" && cateName !== "TEAMS" && (
           <div
             className={cx("category")}
             onClick={() => setMoreView((prev) => !prev)}

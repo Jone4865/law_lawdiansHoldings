@@ -18,7 +18,13 @@ export default function Header({ setModalState }: Props) {
   const [communityView, setCommunityView] = useState(false);
 
   const Buttons = ["HOME", "COMPANY", "TEAMS", "BUSINESS", "COMMUNITY"];
-  const path = ["/", "/company/greetings", "", "/business", "/community/news"];
+  const path = [
+    "/",
+    "/company/greetings",
+    "/teams",
+    "/business",
+    "/community/news",
+  ];
 
   const companyDropDown = [
     "인사말",
@@ -28,9 +34,9 @@ export default function Header({ setModalState }: Props) {
     "찾아오시는 길",
   ];
   const companyPath = ["greetings", "introduce", "history", "BICI", "location"];
-
   const communityPath = ["news", "inquiry"];
   const communityDropDown = ["언론보도", "문의"];
+
   useEffect(() => {
     (() => {
       window.addEventListener("scroll", () => {
@@ -38,6 +44,7 @@ export default function Header({ setModalState }: Props) {
       });
     })();
   }, []);
+
   const now = router.pathname.split("/")[1].toUpperCase();
 
   return (
@@ -80,9 +87,7 @@ export default function Header({ setModalState }: Props) {
                       setCommunityView(false);
                     }}
                     onClick={() => {
-                      path[idx] !== ""
-                        ? router.push(`${path[idx]}`)
-                        : alert("준비중입니다.");
+                      path[idx] !== "" ? router.push(`${path[idx]}`) : "";
                     }}
                     className={cx(
                       `${

@@ -1,0 +1,129 @@
+@import "../../../public/scss/style.scss";
+
+.name_wrap {
+  display: flex;
+  justify-content: center;
+  color: #000;
+  font-size: 27px;
+  margin: 26px 0 15px;
+  @include view("small") {
+    justify-content: flex-start;
+    margin: 5px 0;
+  }
+  @include view("very_small") {
+    justify-content: flex-start;
+    margin: 5px 0;
+  }
+  @include view("mobile") {
+    justify-content: flex-start;
+    margin: 5px 0;
+    font-size: 12.5px;
+  }
+}
+
+.nickname {
+  margin-right: 3.5px;
+  font-weight: bold;
+}
+
+.name {
+  font-size: 19px;
+  color: #777;
+  margin-top: 0.4vw;
+  @include view("mobile") {
+    font-size: 10px;
+    margin-top: 0.4px;
+  }
+}
+
+.pipe {
+  height: 36px;
+  width: 2px;
+  background-color: #000;
+  margin: 0 11.5px;
+  @include view("mobile") {
+    height: 16px;
+  }
+}
+
+.position {
+  font-size: 23px;
+  @include view("mobile") {
+    font-size: 11px;
+    margin-top: 1.3px;
+  }
+}
+
+.bottom_wrap {
+  color: #6e6e6e;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 80px;
+  height: 151px;
+  display: flex;
+  justify-content: center;
+  @include view("small") {
+    height: 0;
+    justify-content: flex-start;
+  }
+  @include view("very_small") {
+    height: 0;
+    justify-content: flex-start;
+  }
+  @include view("mobile") {
+    height: 0;
+    justify-content: flex-start;
+    font-size: 11px;
+  }
+}
+
+.part_wrap {
+  display: flex;
+  color: #000;
+  font-size: 30px;
+  justify-content: center;
+  margin-bottom: 70px;
+  margin-top: 10vw;
+  font-weight: bold;
+  @include view("mobile") {
+    font-size: 14px;
+    margin-bottom: 40px;
+    margin-top: 11vw;
+  }
+}
+
+.partKo {
+}
+
+.partEn {
+  font-size: 23px;
+  color: #606060;
+  margin-top: 8px;
+  margin-left: 8px;
+  font-weight: normal;
+  @include view("mobile") {
+    font-size: 12px;
+    margin-top: 2px;
+  }
+}
+
+.line_wrap {
+  display: flex;
+  column-gap: 5.8vw;
+  // justify-content: center;
+  @include view("small") {
+    min-width: 600px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  @include view("very_small") {
+    min-width: 600px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  @include view("mobile") {
+    min-width: 300px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
