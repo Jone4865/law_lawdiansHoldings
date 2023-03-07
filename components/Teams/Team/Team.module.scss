@@ -110,7 +110,7 @@
 .line_wrap {
   display: flex;
   column-gap: 5.8vw;
-  // justify-content: center;
+  justify-content: center;
   @include view("small") {
     min-width: 600px;
     align-items: flex-start;
