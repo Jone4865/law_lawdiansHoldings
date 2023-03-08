@@ -120,19 +120,19 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
         <p className={cx("nickname")}>징베</p>
         <p className={cx("name")}>조은흠</p>
         <div className={cx("pipe")} />
-        <p className={cx("position")}>연구원</p>
+        <p className={cx("position")}>대리</p>
       </div>,
       <div key={17} className={cx("name_wrap")}>
         <p className={cx("nickname")}>키드</p>
         <p className={cx("name")}>최재형</p>
         <div className={cx("pipe")} />
-        <p className={cx("position")}>연구원</p>
+        <p className={cx("position")}>대리</p>
       </div>,
       <div key={18} className={cx("name_wrap")}>
         <p className={cx("nickname")}>타마</p>
         <p className={cx("name")}>박종현</p>
         <div className={cx("pipe")} />
-        <p className={cx("position")}>연구원</p>
+        <p className={cx("position")}>대리</p>
       </div>,
     ],
     인프라: [
@@ -215,12 +215,6 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
         <div className={cx("pipe")} />
         <p className={cx("position")}>경영지원 차장</p>
       </div>,
-      <div key={31} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>비비</p>
-        <p className={cx("name")}>문하늘</p>
-        <div className={cx("pipe")} />
-        <p className={cx("position")}>경영지원 인턴</p>
-      </div>,
       <div key={32} className={cx("name_wrap")}>
         <p className={cx("nickname")}>히나</p>
         <p className={cx("name")}>박주은</p>
@@ -259,19 +253,19 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
         <p className={cx("nickname")}>카포네</p>
         <p className={cx("name")}>길민종</p>
         <div className={cx("pipe")} />
-        <p className={cx("position")}>연구원</p>
+        <p className={cx("position")}>사원</p>
       </div>,
       <div key={38} className={cx("name_wrap")}>
         <p className={cx("nickname")}>라분</p>
         <p className={cx("name")}>강용호</p>
         <div className={cx("pipe")} />
-        <p className={cx("position")}>연구원</p>
+        <p className={cx("position")}>사원</p>
       </div>,
       <div key={39} className={cx("name_wrap")}>
         <p className={cx("nickname")}>티치</p>
         <p className={cx("name")}>채종원</p>
         <div className={cx("pipe")} />
-        <p className={cx("position")}>연구원</p>
+        <p className={cx("position")}>사원</p>
       </div>,
     ],
     홍보: [
