@@ -75,26 +75,7 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
         <p className={cx("position")}>대외협력 대리</p>
       </div>,
     ],
-    기획: [
-      <div key={10} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>쵸파</p>
-        <p className={cx("name")}>장지원</p>
-        <div className={cx("pipe")} />
-        <p className={cx("position")}>실장</p>
-      </div>,
-      <div key={11} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>버기</p>
-        <p className={cx("name")}>이현구</p>
-        <div className={cx("pipe")} />
-        <p className={cx("position")}>전략기획 실장</p>
-      </div>,
-      <div key={12} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>모건</p>
-        <p className={cx("name")}>김진동</p>
-        <div className={cx("pipe")} />
-        <p className={cx("position")}>대외협력 실장</p>
-      </div>,
-    ],
+
     디자인: [
       <div key={13} className={cx("name_wrap")}>
         <p className={cx("nickname")}>상디</p>
@@ -107,6 +88,12 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
         <p className={cx("name")}>고윤</p>
         <div className={cx("pipe")} />
         <p className={cx("position")}>사원</p>
+      </div>,
+      <div key={86} className={cx("name_wrap")}>
+        <p className={cx("nickname")}>이조</p>
+        <p className={cx("name")}>김수지</p>
+        <div className={cx("pipe")} />
+        <p className={cx("position")}>인턴</p>
       </div>,
     ],
     개발: [
@@ -175,6 +162,33 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
         <p className={cx("position")}>차장</p>
       </div>,
     ],
+
+    기획: [
+      <div key={33} className={cx("name_wrap")}>
+        <p className={cx("nickname")}>아론</p>
+        <p className={cx("name")}>이창준</p>
+        <div className={cx("pipe")} />
+        <p className={cx("position")}>상무</p>
+      </div>,
+      <div key={34} className={cx("name_wrap")}>
+        <p className={cx("nickname")}>루치</p>
+        <p className={cx("name")}>심동욱</p>
+        <div className={cx("pipe")} />
+        <p className={cx("position")}>COO</p>
+      </div>,
+      <div key={35} className={cx("name_wrap")}>
+        <p className={cx("nickname")}>카야</p>
+        <p className={cx("name")}>홍지영</p>
+        <div className={cx("pipe")} />
+        <p className={cx("position")}>사원</p>
+      </div>,
+      <div key={36} className={cx("name_wrap")}>
+        <p className={cx("nickname")}>비스타</p>
+        <p className={cx("name")}>김수연</p>
+        <div className={cx("pipe")} />
+        <p className={cx("position")}>사원</p>
+      </div>,
+    ],
   };
 
   const NamesTwo: Data = {
@@ -223,29 +237,23 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
       </div>,
     ],
     기획: [
-      <div key={33} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>아론</p>
-        <p className={cx("name")}>이창준</p>
+      <div key={10} className={cx("name_wrap")}>
+        <p className={cx("nickname")}>쵸파</p>
+        <p className={cx("name")}>장지원</p>
         <div className={cx("pipe")} />
-        <p className={cx("position")}>상무</p>
+        <p className={cx("position")}>실장</p>
       </div>,
-      <div key={34} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>루치</p>
-        <p className={cx("name")}>심동욱</p>
+      <div key={11} className={cx("name_wrap")}>
+        <p className={cx("nickname")}>버기</p>
+        <p className={cx("name")}>이현구</p>
         <div className={cx("pipe")} />
-        <p className={cx("position")}>COO</p>
+        <p className={cx("position")}>전략기획 실장</p>
       </div>,
-      <div key={35} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>카야</p>
-        <p className={cx("name")}>홍지영</p>
+      <div key={12} className={cx("name_wrap")}>
+        <p className={cx("nickname")}>모건</p>
+        <p className={cx("name")}>김진동</p>
         <div className={cx("pipe")} />
-        <p className={cx("position")}>사원</p>
-      </div>,
-      <div key={36} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>비스타</p>
-        <p className={cx("name")}>김수연</p>
-        <div className={cx("pipe")} />
-        <p className={cx("position")}>사원</p>
+        <p className={cx("position")}>대외협력 실장</p>
       </div>,
     ],
     개발: [
@@ -351,25 +359,32 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
       </div>,
     ],
     기획: [
-      <div key={52} className={cx("bottom_wrap")}>
-        - 경력 25년
+      <div key={76} className={cx("bottom_wrap")}>
+        - 경력 13년
         <br />
-        - 홍보 / 광고학(석사)마케팅 전문
+        - 패션 브랜드 유통 기획
         <br />
-        - PM (前 싸이더스 본부장)
-        <br />
-        - 투자전략기획 <br />
-        (前 인터불고 건설 본부장)
+        - 패션 브랜드 유통 영업 / 관리
+        <br />- 골프 IT 플랫폼 기획
       </div>,
-      <div key={53} className={cx("bottom_wrap")}>
-        - 경력 16년
+      <div key={77} className={cx("bottom_wrap")}>
+        - 경력 5년 <br />
+        - 컴퓨터 공학, 정보처리 기사
         <br />
-        - 부일종합건설 (대표)
-        <br />- 시행 / 시공 PROJECT
+        - 앱 비즈니스 모델 설계, UX/UI설계
+        <br />- 성균관대 정보통신대학 빅데이터학과 석사
       </div>,
-      <div key={54} className={cx("bottom_wrap")}>
-        - 경력 10년
-        <br />- 금융기획 및 금융유동화전문
+      <div key={78} className={cx("bottom_wrap")}>
+        - 서비스 운영 기획
+        <br />
+        - 도쿄외전 일한 통역
+        <br />
+        - appstone 미술작품 번역
+        <br />- 신세계 본점 통역
+      </div>,
+      <div key={79} className={cx("bottom_wrap")}>
+        - 서비스 운영 기획
+        <br />- 사업 기획
       </div>,
     ],
     디자인: [
@@ -386,6 +401,9 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
         <br />
         - 호흡유도 디바이스 디자인 출원
         <br />- Web / Mobile / Graphic Design
+      </div>,
+      <div key={56} className={cx("bottom_wrap")}>
+        - Web / Mobile / App Design
       </div>,
     ],
     개발: [
@@ -513,32 +531,25 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
       </div>,
     ],
     기획: [
-      <div key={76} className={cx("bottom_wrap")}>
-        - 경력 13년
+      <div key={52} className={cx("bottom_wrap")}>
+        - 경력 25년
         <br />
-        - 패션 브랜드 유통 기획
+        - 홍보 / 광고학(석사)마케팅 전문
         <br />
-        - 패션 브랜드 유통 영업 / 관리
-        <br />- 골프 IT 플랫폼 기획
+        - PM (前 싸이더스 본부장)
+        <br />
+        - 투자전략기획 <br />
+        (前 인터불고 건설 본부장)
       </div>,
-      <div key={77} className={cx("bottom_wrap")}>
-        - 경력 5년 <br />
-        - 컴퓨터 공학, 정보처리 기사
+      <div key={53} className={cx("bottom_wrap")}>
+        - 경력 16년
         <br />
-        - 앱 비즈니스 모델 설계, UX/UI설계
-        <br />- 성균관대 정보통신대학 빅데이터학과 석사
+        - 부일종합건설 (대표)
+        <br />- 시행 / 시공 PROJECT
       </div>,
-      <div key={78} className={cx("bottom_wrap")}>
-        - 서비스 운영 기획
-        <br />
-        - 도쿄외전 일한 통역
-        <br />
-        - appstone 미술작품 번역
-        <br />- 신세계 본점 통역
-      </div>,
-      <div key={79} className={cx("bottom_wrap")}>
-        - 서비스 운영 기획
-        <br />- 사업 기획
+      <div key={54} className={cx("bottom_wrap")}>
+        - 경력 10년
+        <br />- 금융기획 및 금융유동화전문
       </div>,
     ],
     개발: [
