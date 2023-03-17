@@ -93,7 +93,7 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
         <p className={cx("nickname")}>이조</p>
         <p className={cx("name")}>김수지</p>
         <div className={cx("pipe")} />
-        <p className={cx("position")}>인턴</p>
+        <p className={cx("position")}>사원</p>
       </div>,
     ],
     개발: [
@@ -233,7 +233,7 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
         <p className={cx("nickname")}>히나</p>
         <p className={cx("name")}>박주은</p>
         <div className={cx("pipe")} />
-        <p className={cx("position")}>경영지원 인턴</p>
+        <p className={cx("position")}>경영지원 사원</p>
       </div>,
     ],
     기획: [
