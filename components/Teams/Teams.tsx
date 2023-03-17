@@ -128,7 +128,7 @@ function Teams() {
           partKo={Btns[4]}
           partEn={BtnsSubName[3]}
           lineTwo
-          lineOneCount={3}
+          lineOneCount={4}
         />
         <div id="디자인" />
         <Team partKo={Btns[5]} partEn={BtnsSubName[4]} />
