@@ -16,9 +16,9 @@ export default function Top() {
           </h1>
           <div>
             <div className={cx("content")}>
-              <span className={cx("bold")}>세상</span>을 바꾸는{" "}
+              <span className={cx("bold")}>세상</span>을 바꾸는
               <span className={cx("bold")}>비전</span>의 현실화
-              <br /> <span className={cx("bold")}>세상</span>을 바꾸는{" "}
+              <br /> <span className={cx("bold")}>세상</span>을 바꾸는
               <span className={cx("bold")}>기술</span>의 현실화
             </div>
           </div>
