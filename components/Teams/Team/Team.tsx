@@ -480,7 +480,7 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
   const ContentsTwo: Data = {
     고문: [
       <div key={67} className={cx("bottom_wrap")}>
-        - 現 법무법인 한울(성남사우소)
+        - 現 법무법인 한울
         <br />
         - 現 분당차병원의학연구윤리심의위원
         <br />
