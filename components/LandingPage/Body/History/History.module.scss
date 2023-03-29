@@ -1,7 +1,7 @@
 @import "public/scss/style.scss";
 
 .container {
-  width: 100%;
+  width: 100vw;
   height: 1028px;
   color: #000;
   font-size: 13px;
@@ -19,11 +19,12 @@
 
 .wrap {
   position: relative;
-  width: 100%;
+  width: 1920px;
   height: 100%;
   @include view("mobile") {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 }
 
