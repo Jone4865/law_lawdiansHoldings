@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./History.module.scss";
 import className from "classnames/bind";
 const cx = className.bind(styles);
 
-export default function History() {
+type Props = {
+  isPc: boolean;
+};
+
+export default function History({ isPc }: Props) {
   const [click, setClick] = useState(false);
+  useEffect(() => {
+    if (isPc) {
+      setClick(false);
+    }
+  }, [isPc]);
   return (
     <div className={cx("container")}>
       <div className={cx("wrap")}>

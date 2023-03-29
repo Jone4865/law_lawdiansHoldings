@@ -43,6 +43,7 @@ function Side({ modal, setModalState }: Props) {
       setModalState(false);
     } else if (button === "TEAMS") {
       router.push("/teams");
+      setModalState(false);
     } else {
       setCommuMore(!commuMore);
     }

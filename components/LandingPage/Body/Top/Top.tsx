@@ -1,23 +1,8 @@
 import styles from "./Top.module.scss";
 import className from "classnames/bind";
-import { useMediaQuery } from "react-responsive";
-import { useEffect, useState } from "react";
 const cx = className.bind(styles);
 
 export default function Top() {
-  const [mobile, setMobile] = useState<boolean>();
-  const isMobile = useMediaQuery({
-    query: "(min-width: 0px) and (max-width: 780px)",
-  });
-
-  useEffect(() => {
-    if (isMobile) {
-      setMobile(true);
-    } else {
-      setMobile(false);
-    }
-  }, [isMobile]);
-
   return (
     <div className={cx("container")}>
       <div className={cx("bg_wrap")}>
