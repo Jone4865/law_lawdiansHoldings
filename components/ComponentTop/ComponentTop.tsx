@@ -19,10 +19,24 @@ export default function ComponentTop({ category, title }: Props) {
   const [cateView, setCateView] = useState(false);
   const [moreName, setMoreName] = useState("");
   const [moreView, setMoreView] = useState(false);
+  const [pc, setPc] = useState(true);
 
   const nowMore = router.pathname.split(`/${category.toLowerCase()}/`)[1];
 
-  const [pc, setPc] = useState(true);
+  const cateDropDown = ["COMPANY", "BUSINESS", "COMMUNITY", "TEAMS"];
+
+  const companyDropDown = [
+    "인사말",
+    "회사소개",
+    "회사연혁",
+    "BI/CI",
+    "찾아오시는 길",
+  ];
+
+  const companyPath = ["greetings", "introduce", "history", "BICI", "location"];
+  const moreDropDown = ["언론보도", "문의"];
+  const morePath = ["news", "inquiry"];
+
   const isPc = useMediaQuery({
     query: "(min-width: 759px) and (max-width: 1920px)",
   });
@@ -44,20 +58,6 @@ export default function ComponentTop({ category, title }: Props) {
     nowMore === "news" && setMoreName("언론보도");
     nowMore === "inquiry" && setMoreName("문의");
   }, []);
-
-  const cateDropDown = ["COMPANY", "BUSINESS", "COMMUNITY", "TEAMS"];
-
-  const companyDropDown = [
-    "인사말",
-    "회사소개",
-    "회사연혁",
-    "BI/CI",
-    "찾아오시는 길",
-  ];
-
-  const companyPath = ["greetings", "introduce", "history", "BICI", "location"];
-  const moreDropDown = ["언론보도", "문의"];
-  const morePath = ["news", "inquiry"];
 
   return (
     <div className={cx("container")}>

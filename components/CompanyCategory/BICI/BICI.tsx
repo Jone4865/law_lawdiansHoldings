@@ -1,7 +1,5 @@
-import router from "next/router";
 import styles from "./BICI.module.scss";
 import className from "classnames/bind";
-import Image from "next/image";
 import ComponentTop from "../../ComponentTop/ComponentTop";
 import Footer from "../../Footer/Footer";
 

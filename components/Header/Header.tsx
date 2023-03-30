@@ -17,6 +17,8 @@ export default function Header({ setModalState }: Props) {
   const [companyView, setCompanyView] = useState(false);
   const [communityView, setCommunityView] = useState(false);
 
+  const now = router.pathname.split("/")[1].toUpperCase();
+
   const Buttons = ["HOME", "COMPANY", "TEAMS", "BUSINESS", "COMMUNITY"];
   const path = [
     "/",
@@ -44,8 +46,6 @@ export default function Header({ setModalState }: Props) {
       });
     })();
   }, []);
-
-  const now = router.pathname.split("/")[1].toUpperCase();
 
   return (
     <div className={!scrollY ? styles.header_black : styles.header_white}>

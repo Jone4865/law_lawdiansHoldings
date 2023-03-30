@@ -9,30 +9,8 @@ const cx = className.bind(styles);
 
 export default function History() {
   const [small, setPc] = useState(false);
-  const isSmall = useMediaQuery({
-    query: "(min-width: 0) and (max-width: 1029px)",
-  });
-
-  useEffect(() => {
-    if (isSmall) {
-      setPc(true);
-    } else {
-      setPc(false);
-    }
-  }, [isSmall]);
-
   const [mobile, setMobile] = useState(false);
-  const isMobile = useMediaQuery({
-    query: "(min-width: 0) and (max-width: 760px)",
-  });
 
-  useEffect(() => {
-    if (isMobile) {
-      setMobile(true);
-    } else {
-      setMobile(false);
-    }
-  }, [isMobile]);
   const year = [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016];
   const titles = [
     "청년친화 강소기업",
@@ -44,6 +22,7 @@ export default function History() {
     "사회적 기업가 육성 사업 선정",
     "로디언즈의 시작",
   ];
+
   const contents = [
     <div key={1} className={cx("small_right")}>
       <div className={cx("content_year")}>
@@ -125,6 +104,31 @@ export default function History() {
       </div>
     </div>,
   ];
+
+  const isSmall = useMediaQuery({
+    query: "(min-width: 0) and (max-width: 1029px)",
+  });
+
+  const isMobile = useMediaQuery({
+    query: "(min-width: 0) and (max-width: 760px)",
+  });
+
+  useEffect(() => {
+    if (isSmall) {
+      setPc(true);
+    } else {
+      setPc(false);
+    }
+  }, [isSmall]);
+
+  useEffect(() => {
+    if (isMobile) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  }, [isMobile]);
+
   return (
     <div className={cx("container")}>
       {mobile && (

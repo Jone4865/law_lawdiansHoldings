@@ -23,25 +23,6 @@ export default function PostQuestion() {
   );
   const cellPhoneRegex = new RegExp(/^(01[016789]{1})[0-9]{3,4}[0-9]{4}$/);
 
-  useEffect(() => {
-    if (phoneRegex.test(cellPhone) || cellPhoneRegex.test(cellPhone)) {
-      setPhoneCheck(true);
-    } else {
-      setPhoneCheck(false);
-    }
-    if (isNaN(+cellPhone)) {
-      setCellPhone("");
-    }
-  }, [cellPhone]);
-
-  useEffect(() => {
-    if (emailRegex.test(email) && content.length > 20 && phoneCheck) {
-      setDisable(false);
-    } else {
-      setDisable(true);
-    }
-  }, [email, phoneCheck, content]);
-
   const postQuestion = async () => {
     const post = await (
       await fetch("/api/postQuestion", {
@@ -69,6 +50,25 @@ export default function PostQuestion() {
   const onSubmitHandle = () => {
     postQuestion();
   };
+
+  useEffect(() => {
+    if (phoneRegex.test(cellPhone) || cellPhoneRegex.test(cellPhone)) {
+      setPhoneCheck(true);
+    } else {
+      setPhoneCheck(false);
+    }
+    if (isNaN(+cellPhone)) {
+      setCellPhone("");
+    }
+  }, [cellPhone]);
+
+  useEffect(() => {
+    if (emailRegex.test(email) && content.length > 20 && phoneCheck) {
+      setDisable(false);
+    } else {
+      setDisable(true);
+    }
+  }, [email, phoneCheck, content]);
 
   return (
     <form

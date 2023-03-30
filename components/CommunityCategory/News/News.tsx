@@ -24,8 +24,10 @@ type Data = {
 export default function News() {
   const [news, setNews] = useState<Data[]>();
   const [total, setTotal] = useState<number>(0);
-  const pages = [];
   const [page, setPage] = useState(1);
+
+  const pages = [];
+
   async function getData() {
     try {
       const response = await axios.get(

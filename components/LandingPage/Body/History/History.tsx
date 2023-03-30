@@ -9,11 +9,13 @@ type Props = {
 
 export default function History({ isPc }: Props) {
   const [click, setClick] = useState(false);
+
   useEffect(() => {
     if (isPc) {
       setClick(false);
     }
   }, [isPc]);
+
   return (
     <div className={cx("container")}>
       <div className={cx("wrap")}>

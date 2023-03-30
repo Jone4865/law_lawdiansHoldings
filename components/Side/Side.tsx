@@ -17,19 +17,6 @@ function Side({ modal, setModalState }: Props) {
   const router = useRouter();
   const Buttons = ["HOME", "COMPANY", "TEAMS", "BUSINESS", "COMMUNITY"];
 
-  useEffect(() => {
-    const htmlEle = document?.getElementsByTagName("html").item(0);
-    if (modal) {
-      if (htmlEle) {
-        htmlEle.style.overflow = "hidden";
-      }
-    } else {
-      if (htmlEle) {
-        htmlEle.style.overflow = "unset";
-      }
-    }
-  }, [modal]);
-
   const clickHandle = (button: string) => {
     setCommuMore(false);
     setCompanyMore(false);
@@ -48,6 +35,20 @@ function Side({ modal, setModalState }: Props) {
       setCommuMore(!commuMore);
     }
   };
+
+  useEffect(() => {
+    const htmlEle = document?.getElementsByTagName("html").item(0);
+    if (modal) {
+      if (htmlEle) {
+        htmlEle.style.overflow = "hidden";
+      }
+    } else {
+      if (htmlEle) {
+        htmlEle.style.overflow = "unset";
+      }
+    }
+  }, [modal]);
+
   return (
     <div
       className={`${!modal ? styles.side_none : ""} ${styles.side_contain}`}

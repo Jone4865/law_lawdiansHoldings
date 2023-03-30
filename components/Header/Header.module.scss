@@ -131,6 +131,8 @@
   padding-top: 180px;
   margin-top: -60px;
   font-weight: normal;
+
+  white-space: nowrap;
   @include view("very_small") {
     height: 120px;
     padding-top: 165px;
