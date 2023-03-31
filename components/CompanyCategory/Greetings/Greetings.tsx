@@ -4,6 +4,7 @@ import className from "classnames/bind";
 import ComponentTop from "../../ComponentTop/ComponentTop";
 import Footer from "../../Footer/Footer";
 import { useMediaQuery } from "react-responsive";
+import Image from "next/image";
 
 const cx = className.bind(styles);
 
@@ -70,6 +71,11 @@ export default function Greetings() {
           )}
         </div>
         <div className={cx("top_wrap")}>
+          <Image
+            alt="인사말 배경"
+            src={pc ? "/img/Greetings/bg.webp" : "/img/Greetings/bg_m.webp"}
+            fill
+          />
           {pc && (
             <div className={cx("top")}>
               <div className={cx("top_top")} />

@@ -2,6 +2,7 @@ import styles from "./Introduce.module.scss";
 import className from "classnames/bind";
 import ComponentTop from "../../ComponentTop/ComponentTop";
 import Footer from "../../Footer/Footer";
+import Image from "next/image";
 
 const cx = className.bind(styles);
 
@@ -71,6 +72,13 @@ export default function Introduce() {
     <div className={cx("container")}>
       <ComponentTop category="COMPANY" title="INTRODUCTION" />
       <div className={cx("wrap")}>
+        <Image
+          alt="회사소개 이미지"
+          src={"/img/Introduce/bg.webp"}
+          fill
+          priority
+          className={cx("pc_image")}
+        />
         <div className={cx("top_wrap")}>
           <div className={cx("top")}>
             <div className={cx("top_top")} />
@@ -92,7 +100,14 @@ export default function Introduce() {
               </div>
             </div>
             <div className={cx("mobile_top_wrap")}>
-              <div className={cx("mobile_top")} />
+              <div className={cx("mobile_top")}>
+                <Image
+                  alt="회사소개 이미지 모바일"
+                  src={"/img/Introduce/bg1_m.webp"}
+                  fill
+                  priority
+                />
+              </div>
             </div>
             <div className={cx("top_bottom")} />
           </div>

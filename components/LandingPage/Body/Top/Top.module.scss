@@ -1,7 +1,7 @@
 @import "public/scss/style.scss";
 
 .container {
-  height: 100vh;
+  height: 52vw;
   width: 100vw;
   display: flex;
   font-size: 39px;
@@ -16,6 +16,7 @@
   }
   @include view("mobile") {
     font-size: 18px;
+    margin-top: 70px;
   }
 }
 

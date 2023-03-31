@@ -1,12 +1,18 @@
 import styles from "./Top.module.scss";
 import className from "classnames/bind";
+import Image from "next/image";
 const cx = className.bind(styles);
 
 export default function Top() {
   return (
     <div className={cx("container")}>
       <div className={cx("bg_wrap")}>
-        <div className={cx("bg")} />
+        <Image
+          alt="랜딩페이지 탑 이미지"
+          src={"/img/body/bg1.png"}
+          fill
+          priority
+        />
       </div>
       <div className={cx("text_container")}>
         <div className={cx("text_wrap")}>

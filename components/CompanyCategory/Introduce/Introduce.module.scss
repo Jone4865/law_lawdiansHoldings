@@ -4,8 +4,6 @@
   position: relative;
   width: 100%;
   min-height: 135vw;
-  background-image: url("/img/Introduce/bg.webp");
-  background-size: 100% 100%;
   background-color: #fff;
   color: #000;
   font-size: 30px;
@@ -33,7 +31,6 @@
     padding-left: 4vw;
   }
   @include view("mobile") {
-    background-image: none;
     font-size: 3.2vw;
     padding: 0;
     align-items: center;
@@ -234,6 +231,7 @@
 }
 
 .mobile_top_wrap {
+  position: relative;
   display: none;
   margin: 26px auto 33px auto;
   width: 100%;
@@ -247,8 +245,8 @@
 .mobile_top {
   width: 100vw;
   height: 93vw;
-  background-image: url("/img/Introduce/bg1_m.webp");
-  background-size: 100% 100%;
+  // background-image: url("/img/Introduce/bg1_m.webp");
+  // background-size: 100% 100%;
 }
 
 .mobile_bottom {
@@ -342,5 +340,11 @@
   display: none;
   @include view("mobile") {
     display: block;
+  }
+}
+
+.pc_image {
+  @include view("mobile") {
+    display: none;
   }
 }
