@@ -176,6 +176,7 @@ export default function Header({ setModalState }: Props) {
             width={20}
             height={16}
             alt="헤더 삼단바 아이콘"
+            priority
           />
         </div>
       </div>

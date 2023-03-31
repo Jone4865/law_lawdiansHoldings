@@ -69,6 +69,7 @@ export default function ComponentTop({ category, title }: Props) {
           src={`/img/ComponentTop/${
             pc ? category.toLowerCase() : `${category.toLowerCase()}_m`
           }.png`}
+          priority
         />
       </div>
       <div className={cx(pc ? "center" : "none")}>
@@ -78,6 +79,7 @@ export default function ComponentTop({ category, title }: Props) {
           height={16.5}
           alt="홈 아이콘"
           src="/img/ComponentTop/home.png"
+          priority
         />
         <div
           onClick={() => setCateView((prev) => !prev)}
@@ -90,6 +92,7 @@ export default function ComponentTop({ category, title }: Props) {
             alt="아래 버튼"
             width={10}
             height={7}
+            priority
           />
           {cateView && (
             <div
@@ -134,6 +137,7 @@ export default function ComponentTop({ category, title }: Props) {
               alt="아래 버튼"
               width={10}
               height={7}
+              priority
             />
             {moreView && (
               <div

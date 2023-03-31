@@ -18,6 +18,7 @@ export default function History({ isPc }: Props) {
 
   return (
     <div className={cx("container")}>
+      <div className={cx("logo")}></div>
       <div className={cx("wrap")}>
         <div className={cx(!click ? "bg" : "bg2")} />
         <div className={cx("text_wrap")}>
@@ -28,6 +29,8 @@ export default function History({ isPc }: Props) {
             <span>2023</span>
           </div>
         </div>
+      </div>
+      <div className={cx("btn_wrap")}>
         <button className={cx("btn")} onClick={() => setClick((prev) => !prev)}>
           {!click ? "더보기" : "접기"}
         </button>
