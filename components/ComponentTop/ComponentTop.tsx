@@ -23,7 +23,7 @@ export default function ComponentTop({ category, title }: Props) {
 
   const nowMore = router.pathname.split(`/${category.toLowerCase()}/`)[1];
 
-  const cateDropDown = ["COMPANY", "BUSINESS", "COMMUNITY", "TEAMS"];
+  const cateDropDown = ["COMPANY", "TEAMS", "BUSINESS", "COMMUNITY"];
 
   const companyDropDown = [
     "인사말",
