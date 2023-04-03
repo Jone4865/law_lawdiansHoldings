@@ -75,6 +75,8 @@ export default function Greetings() {
             alt="인사말 배경"
             src={pc ? "/img/Greetings/bg.webp" : "/img/Greetings/bg_m.webp"}
             fill
+            priority
+            loading="eager"
           />
           {pc && (
             <div className={cx("top")}>

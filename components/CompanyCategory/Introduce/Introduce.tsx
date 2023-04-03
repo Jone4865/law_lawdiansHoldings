@@ -78,6 +78,7 @@ export default function Introduce() {
           fill
           priority
           className={cx("pc_image")}
+          loading="eager"
         />
         <div className={cx("top_wrap")}>
           <div className={cx("top")}>
@@ -106,6 +107,7 @@ export default function Introduce() {
                   src={"/img/Introduce/bg1_m.webp"}
                   fill
                   priority
+                  loading="eager"
                 />
               </div>
             </div>

@@ -12,6 +12,7 @@ export default function Top() {
           src={"/img/body/bg1.png"}
           fill
           priority
+          loading="eager"
         />
       </div>
       <div className={cx("text_container")}>
