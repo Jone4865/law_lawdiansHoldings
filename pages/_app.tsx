@@ -22,7 +22,6 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <title>로디언즈 홀딩스 | 세상을 바꾸는 비전과 기술의 현실화</title>
         <meta name="Keywords" content="LawdiansHoldings" />
-        <meta name="Keywords" content="LawdiansHoldings" />
         <meta name="Keywords" content="로디언즈" />
         <meta name="Keywords" content="로디언즈 홀딩스" />
         <meta name="Keywords" content="블록체인 STO" />
