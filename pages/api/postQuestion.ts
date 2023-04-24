@@ -38,6 +38,5 @@ export default function postQuestion(
       }
     });
   }
-  console.log(req.body);
   res.status(200).json({ status: res.statusCode.toString() });
 }

@@ -3,6 +3,7 @@ import className from "classnames/bind";
 import Image from "next/image";
 import ServiceCard from "./ServiceCard/ServiceCard";
 import router from "next/router";
+import { useMediaQuery } from "react-responsive";
 
 const cx = className.bind(styles);
 
@@ -10,7 +11,7 @@ type Props = {
   isPc: boolean;
 };
 
-export default function Service({ isPc }: Props) {
+export default function Service() {
   const titles = ["로디언즈", "미아펫", "그루", "두리안", "미리내검진", "찐부"];
   const content = [
     <>
@@ -70,6 +71,10 @@ export default function Service({ isPc }: Props) {
     "www.mirinecare.com",
     "www.zzinbu.com",
   ];
+  const isPc = useMediaQuery({
+    query: "(min-width: 1520px) and (max-width: 10000px)",
+  });
+
   return (
     <div className={cx("container")}>
       <div className={cx("title_wrap")}>
@@ -95,7 +100,6 @@ export default function Service({ isPc }: Props) {
               content={content[idx]}
               bg={idx + 1}
               link={links[idx]}
-              isPc={isPc}
             />
           </div>
         ))}

@@ -24,18 +24,17 @@
 
 .logo_wrap {
   position: relative;
-  width: 328.3px;
-  height: 56.3px;
+  width: 328.5px;
+  height: 56.7px;
   cursor: pointer;
+
   @include view("very_small") {
-    width: 30vw;
-    height: 3.9vw;
-    max-width: 243px;
-    max-height: 35px;
+    width: 192.5px;
+    height: 33px;
   }
   @include view("mobile") {
-    width: 163.5px;
-    height: 28px;
+    width: 192.5px;
+    height: 33px;
   }
 }
 

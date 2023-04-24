@@ -53,7 +53,6 @@ export default function Business() {
   ];
   const imgname = ["lawdians", "miapet", "gru", "durian", "mirinae", "jjinbu"];
   const blockchane = [true, true, true, true, false, false];
-  const btncolor = ["white", "black", "white", "white", "black", "white"];
   const kakao = [
     "pf.kakao.com/_xmbekxl",
     "",
@@ -112,7 +111,6 @@ export default function Business() {
             key={idx}
             imgName={imgname[idx]}
             blockchain={blockchane[idx]}
-            btnColor={btncolor[idx]}
             title={item}
             sub_title={sub_title[idx]}
             content={content[idx]}
@@ -123,6 +121,7 @@ export default function Business() {
             naver={naver[idx]}
             band={band[idx]}
             homepath={homepath[idx]}
+            bgNum={idx + 1}
           />
         ))}
       </div>

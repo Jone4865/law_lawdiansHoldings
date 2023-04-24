@@ -9,10 +9,10 @@
   flex-direction: column;
   position: relative;
   @include view("small") {
-    font-size: 18px;
+    font-size: 24px;
   }
   @include view("very_small") {
-    font-size: 18px;
+    font-size: 22px;
   }
   @include view("mobile") {
     font-size: 18px;
@@ -62,7 +62,7 @@
 
 .title {
   font-size: 70px;
-  margin-bottom: 20px;
+  margin-bottom: 1vw;
   @include view("small") {
     font-size: 35px;
   }

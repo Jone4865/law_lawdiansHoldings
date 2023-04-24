@@ -18,10 +18,13 @@ export default function History({ isPc }: Props) {
   }, [isPc]);
 
   return (
-    <div className={cx("container")}>
+    <div
+      style={{ height: isPc ? "52vw" : click ? "960px" : "480px" }}
+      className={cx("container")}
+    >
       <div className={cx("logo")} />
       <div className={cx("wrap")}>
-        <div className={cx(!click ? "bg" : "bg2")}>
+        <div className={cx("bg")}>
           {isPc ? (
             <Image
               alt="랜딩페이지 pc 히스토리"
@@ -32,7 +35,7 @@ export default function History({ isPc }: Props) {
           ) : (
             <Image
               alt="랜딩페이지 모바일 히스토리"
-              src={!click ? "/img/body/bg2_m.png" : "/img/body/bg2_2.png"}
+              src={"/img/body/bg2_2.png"}
               fill
               priority
             />

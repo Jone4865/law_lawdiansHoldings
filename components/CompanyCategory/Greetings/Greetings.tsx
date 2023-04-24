@@ -12,7 +12,7 @@ export default function Greetings() {
   const [pc, setPc] = useState(true);
 
   const isPc = useMediaQuery({
-    query: "(min-width: 759px) and (max-width: 1920px)",
+    query: "(min-width: 759px) and (max-width: 10000px)",
   });
 
   useEffect(() => {

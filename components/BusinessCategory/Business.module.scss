@@ -11,17 +11,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 35px;
   justify-content: center;
-  @include view("small") {
-    overflow-x: scroll;
-    justify-content: flex-start;
-    padding: 0 50px;
-  }
-  @include view("very_small") {
-    overflow-x: scroll;
-    justify-content: flex-start;
-    padding: 0 50px;
-    display: flex;
-  }
+
   @include view("mobile") {
     overflow-x: scroll;
     justify-content: flex-start;

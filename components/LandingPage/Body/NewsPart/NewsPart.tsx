@@ -13,13 +13,8 @@ type Props = {
 };
 
 type Data = {
-  createdAt: string;
-  hits: number;
-  no: number;
-  sources: string;
-  summary: string;
-  thumbnailUrl: string;
-  time: any;
+  id: number;
+  sum: string;
   title: string;
   url: string;
 };
@@ -27,11 +22,9 @@ type Data = {
 export default function NewsPart({ isPc }: Props) {
   const [news, setNews] = useState<Data[]>();
 
-  async function getData() {
+  async function getNews() {
     try {
-      const response = await axios.get(
-        `${process.env.NEXT_PUBLIC_NEWS_GET}/news?filter=1&search=&take=3&skip=`
-      );
+      const response = await axios.get(`/api/getNews?page=1&limit=3`);
       setNews(response.data.news);
     } catch (error) {
       console.error(error);
@@ -39,7 +32,7 @@ export default function NewsPart({ isPc }: Props) {
   }
 
   useEffect(() => {
-    getData();
+    getNews();
   }, []);
 
   return (
@@ -60,15 +53,15 @@ export default function NewsPart({ isPc }: Props) {
       <div className={cx("news_container")}>
         {news?.map((item, idx) => (
           <Link key={idx} target="_blank" href={item.url}>
-            <div key={item.no} className={cx("news_wrap")}>
+            <div key={item.id} className={cx("news_wrap")}>
               <div
                 className={cx("news_image")}
                 style={{
-                  backgroundImage: `url(${item.thumbnailUrl})`,
+                  backgroundImage: `url(/img/news/${item.id}.png)`,
                 }}
               />
               <div className={cx("news_title")}>{item.title}</div>
-              <div className={cx("news_content")}>{item.summary}</div>
+              <div className={cx("news_content")}>{item.sum}</div>
             </div>
           </Link>
         ))}

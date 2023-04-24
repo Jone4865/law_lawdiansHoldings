@@ -17,7 +17,11 @@ export default function Introduce() {
   const contents = [
     <div key={1} className={cx("content")}>
       <div className={cx("mobile")}>2023</div>
-      <span>청년친화 강소기업 선정</span>
+      <span>
+        청년친화 강소기업 선정
+        <br />
+        토큰증권 STO 국회세미나 개최
+      </span>
     </div>,
     <div key={2} className={cx("content")}>
       <div className={cx("mobile")}>2022</div>

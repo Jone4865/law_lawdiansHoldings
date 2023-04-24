@@ -14,7 +14,7 @@ const cx = className.bind(styles);
 export default function Body() {
   const [pc, setPc] = useState(true);
   const isPc = useMediaQuery({
-    query: "(min-width: 759px) and (max-width: 1920px)",
+    query: "(min-width: 759px) and (max-width: 10000px)",
   });
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function Body() {
     <div className={cx("container")}>
       <Top />
       <History isPc={pc} />
-      <Service isPc={pc} />
+      <Service />
       <NewsPart isPc={pc} />
       <Contect />
       <Footer />

@@ -2,218 +2,190 @@
 
 .container {
   color: #000;
-  width: 444px;
-  padding-bottom: 80px;
-  @include view("mobile") {
-    width: 190px;
-    padding-bottom: 35px;
+  width: 190px;
+  padding-bottom: 35px;
+
+  @include view("pc") {
+    width: 444px;
+    padding-bottom: 80px;
   }
 }
 
 .top {
-  width: 444px;
-  height: 459px;
+  width: 190px;
+  height: 196px;
+  margin-bottom: 17px;
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
   background-size: 100% 100%;
   background-position: center;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  align-items: flex-end;
-  margin-bottom: 30px;
-  @include view("mobile") {
-    width: 190px;
-    height: 196px;
-    margin-bottom: 17px;
-    padding: 13px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+  @include view("pc") {
+    width: 444px;
+    height: 459px;
+    padding: 20px;
+    margin-bottom: 30px;
   }
 }
 
 .center {
   width: 100%;
-  padding-right: 20px;
   word-break: keep-all;
-  @include view("mobile") {
-    padding: 5px;
+  padding: 5px;
+  @include view("pc") {
+    padding-right: 20px;
   }
 }
 
 .blockchain {
-  width: 65px;
-  height: 70px;
+  width: 33px;
+  height: 34px;
   background-size: 100% 100%;
   background-image: url("/img/icon/블록체인.png");
-  @include view("mobile") {
-    width: 33px;
-    height: 34px;
+  @include view("pc") {
+    width: 65px;
+    height: 70px;
   }
 }
 
-.btn_white {
-  width: 180px;
-  height: 55px;
+.btn {
+  width: 91px;
+  height: 28px;
+  font-size: 11px;
   border: solid 2px #fff;
   color: #fff;
-  font-size: 22px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   cursor: pointer;
-  @include view("mobile") {
-    width: 91px;
-    height: 28px;
-    font-size: 11px;
-  }
-}
-
-.btn_black {
-  width: 180px;
-  height: 55px;
-  border: solid 2px #000;
-  color: #000;
-  font-size: 22px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  cursor: pointer;
-  @include view("mobile") {
-    width: 91px;
-    height: 28px;
-    font-size: 11px;
+  @include view("pc") {
+    font-size: 22px;
+    width: 180px;
+    height: 55px;
   }
 }
 
 .title {
-  font-size: 35px;
   font-weight: bold;
-  @include view("mobile") {
-    font-size: 20px;
+  font-size: 20px;
+  @include view("pc") {
+    font-size: 35px;
   }
 }
 
 .sub_title {
-  font-size: 25px;
-  height: 60px;
-  margin: 12px auto 16px 0;
-  @include view("mobile") {
-    font-size: 15px;
-    margin: 4px auto 5px 0;
-    height: 36px;
+  font-size: 15px;
+  margin: 4px auto 5px 0;
+  height: 36px;
+  @include view("pc") {
+    font-size: 25px;
+    height: 60px;
+    margin: 12px auto 16px 0;
   }
 }
 
 .content {
-  font-size: 18px;
+  font-size: 12px;
+  height: 78px;
   color: #a1a1a1;
-  height: 90px;
   text-overflow: ellipsis;
   line-height: 1.3;
-  @include view("mobile") {
-    font-size: 12px;
-    height: 78px;
+  @include view("pc") {
+    font-size: 18px;
+    height: 90px;
   }
 }
 
 .kakao {
-  width: 41.4px;
-  height: 41.4px;
   background-image: url("/img/BusinessCard/kakao.png");
   background-size: 100% 100%;
-  margin-right: 16.6px;
+  width: 29px;
+  height: 29px;
+  margin-right: 11px;
   cursor: pointer;
-  @include view("mobile") {
-    width: 29px;
-    height: 29px;
-    margin-right: 11px;
+  @include view("pc") {
+    width: 41.4px;
+    height: 41.4px;
+    margin-right: 16.6px;
   }
 }
 
 .insta {
-  width: 41.4px;
-  height: 41.4px;
   background-image: url("/img/BusinessCard/insta.png");
   background-size: 100% 100%;
-  margin-right: 16.6px;
+  width: 29px;
+  height: 29px;
+  margin-right: 11px;
   cursor: pointer;
-  @include view("mobile") {
-    width: 29px;
-    height: 29px;
-    margin-right: 11px;
+  @include view("pc") {
+    width: 41.4px;
+    height: 41.4px;
+    margin-right: 16.6px;
   }
 }
 
 .facebook {
-  width: 41.4px;
-  height: 41.4px;
   background-image: url("/img/BusinessCard/facebook.png");
   background-size: 100% 100%;
-  margin-right: 16.6px;
+  width: 29px;
+  height: 29px;
+  margin-right: 11px;
   cursor: pointer;
-  @include view("mobile") {
-    width: 29px;
-    height: 29px;
-    margin-right: 11px;
+  @include view("pc") {
+    width: 41.4px;
+    height: 41.4px;
+    margin-right: 16.6px;
   }
 }
 
 .youtube {
-  width: 41.4px;
-  height: 41.4px;
   background-image: url("/img/BusinessCard/youtube.png");
   background-size: 100% 100%;
-  margin-right: 16.6px;
+  width: 29px;
+  height: 29px;
+  margin-right: 11px;
   cursor: pointer;
-  @include view("mobile") {
-    width: 29px;
-    height: 29px;
-    margin-right: 11px;
+  @include view("pc") {
+    width: 41.4px;
+    height: 41.4px;
+    margin-right: 16.6px;
   }
 }
 
 .naver {
-  width: 41.4px;
-  height: 41.4px;
   background-image: url("/img/BusinessCard/naver.png");
   background-size: 100% 100%;
-  margin-right: 16.6px;
+  width: 29px;
+  height: 29px;
+  margin-right: 11px;
   cursor: pointer;
-  @include view("mobile") {
-    width: 29px;
-    height: 29px;
-    margin-right: 11px;
+  @include view("pc") {
+    width: 41.4px;
+    height: 41.4px;
+    margin-right: 16.6px;
   }
 }
 
 .band {
-  width: 41.4px;
-  height: 41.4px;
   background-image: url("/img/BusinessCard/band.png");
   background-size: 100% 100%;
-  margin-right: 16.6px;
+  width: 29px;
+  height: 29px;
+  margin-right: 11px;
   cursor: pointer;
-  @include view("mobile") {
-    width: 29px;
-    height: 29px;
-    margin-right: 11px;
+  @include view("pc") {
+    width: 41.4px;
+    height: 41.4px;
+    margin-right: 16.6px;
   }
 }
 
 .icon_wrap {
   display: flex;
   margin-top: 21px;
-}
-
-.black {
-  width: 9px;
-  height: 16px;
-  background-image: url("/img/Service/arrow_black.png");
-  background-size: 100% 100%;
-  @include view("mobile") {
-    width: 3.9px;
-    height: 7.9px;
-  }
 }
 
 .white {
@@ -225,4 +197,20 @@
     width: 3.9px;
     height: 7.9px;
   }
+}
+
+.service_icon {
+  position: relative;
+  width: 33px;
+  height: 33px;
+  @include view("pc") {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.card_bottom_wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }

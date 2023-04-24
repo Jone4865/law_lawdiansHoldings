@@ -38,7 +38,7 @@ export default function ComponentTop({ category, title }: Props) {
   const morePath = ["news", "inquiry"];
 
   const isPc = useMediaQuery({
-    query: "(min-width: 759px) and (max-width: 1920px)",
+    query: "(min-width: 759px) and (max-width: 10000px)",
   });
 
   useEffect(() => {
@@ -67,8 +67,10 @@ export default function ComponentTop({ category, title }: Props) {
           fill
           alt="탑 이미지"
           src={`/img/ComponentTop/${
-            pc ? category.toLowerCase() : `${category.toLowerCase()}_m`
-          }.png`}
+            pc
+              ? `${category.toLowerCase()}.webp`
+              : `${category.toLowerCase()}_m.png`
+          }`}
           priority
         />
       </div>
@@ -80,6 +82,7 @@ export default function ComponentTop({ category, title }: Props) {
           alt="홈 아이콘"
           src="/img/ComponentTop/home.png"
           priority
+          style={{ cursor: "pointer" }}
         />
         <div
           onClick={() => setCateView((prev) => !prev)}

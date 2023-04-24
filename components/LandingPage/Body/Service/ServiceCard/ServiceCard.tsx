@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import className from "classnames/bind";
 import styles from "./ServiceCard.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { useMediaQuery } from "react-responsive";
 const cx = className.bind(styles);
 
 type Props = {
@@ -11,7 +12,6 @@ type Props = {
   content: React.ReactNode;
   bg: number;
   link: string;
-  isPc: boolean;
 };
 
 export default function ServiceCard({
@@ -20,8 +20,10 @@ export default function ServiceCard({
   content,
   bg,
   link,
-  isPc,
 }: Props) {
+  const isPc = useMediaQuery({
+    query: "(min-width: 1520px) and (max-width: 10000px)",
+  });
   return (
     <Link target="_blank" href={`https://${link}`}>
       <div
@@ -41,7 +43,15 @@ export default function ServiceCard({
               />
             )}
           </div>
-          <h1 className={cx("title")}>{title}</h1>
+          <h1 className={cx("title")}>
+            <Image
+              alt="서비스 이미지 아이콘"
+              src={`/img/ServiceIcon/${title}.webp`}
+              width={!isPc ? 50 : 63}
+              height={!isPc ? 50 : 63}
+            />
+            <div>{title}</div>
+          </h1>
           <div className={cx("content_wrap")}>{content}</div>
 
           <div className={cx("btn")}>

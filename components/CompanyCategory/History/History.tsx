@@ -27,8 +27,12 @@ export default function History() {
     <div key={1} className={cx("small_right")}>
       <div className={cx("content_year")}>
         <div>2023.01</div>
+        <div>2023.04</div>
       </div>
-      <div className={cx("etc")}>청년친화 강소기업 선정</div>
+      <div className={cx("etc")}>
+        <div>청년친화 강소기업 선정</div>
+        <div>토큰증권 STO 국회세미나 개최</div>
+      </div>
     </div>,
     <div key={2} className={cx("small_right")}>
       <div className={cx("content_year")}>
@@ -174,7 +178,9 @@ export default function History() {
               <div
                 className={cx(
                   "small_wrap",
-                  idx === 2
+                  idx === 1
+                    ? "small_2022"
+                    : idx === 2
                     ? "small_2021"
                     : idx === 3
                     ? "small_2020"

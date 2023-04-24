@@ -92,7 +92,9 @@
   padding: 10px 10px;
   margin-top: 30px;
   outline: none;
-  resize: none;
+  &::placeholder {
+    font-family: "PretendardVariable";
+  }
   @include view("mobile") {
     height: 143px;
     margin-top: 10px;

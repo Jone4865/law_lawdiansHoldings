@@ -1,15 +1,13 @@
-import router from "next/router";
 import styles from "./BusinessCard.module.scss";
 import className from "classnames/bind";
-import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 const cx = className.bind(styles);
 
 type Props = {
   imgName: string;
   blockchain: boolean;
-  btnColor: string;
   title: string;
   sub_title: React.ReactNode;
   content: React.ReactNode;
@@ -20,12 +18,12 @@ type Props = {
   naver: string;
   band: string;
   homepath: string;
+  bgNum: number;
 };
 
 export default function BusinessCard({
   imgName,
   blockchain,
-  btnColor,
   title,
   sub_title,
   content,
@@ -36,22 +34,33 @@ export default function BusinessCard({
   naver,
   band,
   homepath,
+  bgNum,
 }: Props) {
+  console.log(title, imgName);
   return (
     <div className={cx("container")}>
       <div
         className={cx("top")}
         style={{
-          backgroundImage: `url(/img/BusinessCard/${imgName}.png)`,
+          backgroundImage: `url(/img/Service/bg${bgNum}_m.png)`,
         }}
       >
-        {blockchain ? <div className={cx("blockchain")} /> : <div />}
-        <Link target="_blank" href={`https://${homepath}`}>
-          <div className={cx(`btn_${btnColor}`)}>
-            <span className={cx("homepage")}>HOMEPAGE</span>
-            <div className={cx(btnColor)} />
-          </div>
-        </Link>
+        <div className={cx("service_icon")}>
+          <Image
+            alt="서비스 이미지 아이콘"
+            src={`/img/ServiceIcon/${title}.webp`}
+            fill
+          />
+        </div>
+        <div className={cx("card_bottom_wrap")}>
+          {blockchain ? <div className={cx("blockchain")} /> : <div />}
+          <Link target="_blank" href={`https://${homepath}`}>
+            <div className={cx(`btn`)}>
+              <span className={cx("homepage")}>HOMEPAGE</span>
+              <div className={cx("white")} />
+            </div>
+          </Link>
+        </div>
       </div>
       <div className={cx("center")}>
         <p className={cx("title")}>{title}</p>
