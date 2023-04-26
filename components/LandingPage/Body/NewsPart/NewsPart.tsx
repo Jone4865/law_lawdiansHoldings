@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import router from "next/router";
 import className from "classnames/bind";
 import styles from "./NewsPart.module.scss";
@@ -35,6 +35,30 @@ export default function NewsPart() {
     getNews();
   }, []);
 
+  //스크롤기능
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const containerRef = useRef<any>(null);
+
+  const handleMouseDown = (e: any) => {
+    setIsDragging(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e: any) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    containerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
   return (
     <div className={cx("container")}>
       <div className={cx("title_wrap")}>
@@ -50,7 +74,14 @@ export default function NewsPart() {
           />
         </div>
       </div>
-      <div className={cx("news_container")}>
+      <div
+        ref={containerRef}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+        className={cx("news_container")}
+      >
         {news?.map((item, idx) => (
           <Link key={idx} target="_blank" href={item.url}>
             <div key={item.id} className={cx("news_wrap")}>

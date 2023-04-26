@@ -4,6 +4,7 @@ import Image from "next/image";
 import ServiceCard from "./ServiceCard/ServiceCard";
 import router from "next/router";
 import { useMediaQuery } from "react-responsive";
+import { useRef, useState } from "react";
 
 const cx = className.bind(styles);
 
@@ -75,6 +76,30 @@ export default function Service() {
     query: "(min-width: 1520px) and (max-width: 10000px)",
   });
 
+  //스크롤기능
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const containerRef = useRef<any>(null);
+
+  const handleMouseDown = (e: any) => {
+    setIsDragging(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e: any) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    containerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
   return (
     <div className={cx("container")}>
       <div className={cx("title_wrap")}>
@@ -90,9 +115,16 @@ export default function Service() {
           />
         </div>
       </div>
-      <div className={cx("img_wrap")}>
+      <div
+        className={cx("img_wrap")}
+        ref={containerRef}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+      >
         {titles?.map((title, idx) => (
-          <div key={idx} className={cx("hover")}>
+          <div draggable key={idx} className={cx("hover")}>
             <ServiceCard
               key={title}
               blockchain={idx < 4 ? true : false}

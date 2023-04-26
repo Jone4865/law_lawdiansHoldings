@@ -3,6 +3,7 @@ import className from "classnames/bind";
 import ComponentTop from "../../ComponentTop/ComponentTop";
 import Footer from "../../Footer/Footer";
 import Image from "next/image";
+import { useRef, useState } from "react";
 
 const cx = className.bind(styles);
 
@@ -72,6 +73,30 @@ export default function Introduce() {
       </span>
     </div>,
   ];
+
+  //스크롤 기능
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const containerRef = useRef<any>(null);
+
+  const handleMouseDown = (e: any) => {
+    setIsDragging(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e: any) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    containerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
   return (
     <div className={cx("container")}>
       <ComponentTop category="COMPANY" title="INTRODUCTION" />
@@ -140,7 +165,14 @@ export default function Introduce() {
           로디언즈홀딩스
           <br className={cx("mobile")} /> 인증 & 수상 이력
         </div>
-        <div className={cx("testimonial_bottom")}>
+        <div
+          ref={containerRef}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          className={cx("testimonial_bottom")}
+        >
           <div className={cx("testimonial_wrap")}>
             {testimonial.map((item, idx) => (
               <div className={cx("testimonial")} key={idx}>

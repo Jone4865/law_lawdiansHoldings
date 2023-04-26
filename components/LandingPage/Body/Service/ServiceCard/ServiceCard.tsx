@@ -29,7 +29,7 @@ export default function ServiceCard({
     setPc(isPc);
   }, [isPc]);
   return (
-    <Link target="_blank" href={`https://${link}`}>
+    <Link draggable target="_blank" href={`https://${link}`}>
       <div
         className={cx("img")}
         style={{

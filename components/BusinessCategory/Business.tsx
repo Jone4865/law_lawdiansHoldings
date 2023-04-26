@@ -3,6 +3,7 @@ import className from "classnames/bind";
 import ComponentTop from "../ComponentTop/ComponentTop";
 import BusinessCard from "./BusinessCard/BusinessCard";
 import Footer from "../Footer/Footer";
+import { useRef, useState } from "react";
 
 const cx = className.bind(styles);
 
@@ -101,10 +102,41 @@ export default function Business() {
     "www.mirinecare.com",
     "www.zzinbu.com",
   ];
+
+  //스크롤 기능
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const containerRef = useRef<any>(null);
+
+  const handleMouseDown = (e: any) => {
+    setIsDragging(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e: any) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    containerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
   return (
     <div className={cx("container")}>
       <ComponentTop category="BUSINESS" title="BUSINESS" />
-      <div className={cx("wrap")}>
+      <div
+        ref={containerRef}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+        className={cx("wrap")}
+      >
         {title.map((item, idx) => (
           <BusinessCard
             key={idx}
