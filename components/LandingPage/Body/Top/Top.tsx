@@ -3,13 +3,17 @@ import className from "classnames/bind";
 import Image from "next/image";
 const cx = className.bind(styles);
 
-export default function Top() {
+type Props = {
+  isPc: boolean;
+};
+
+export default function Top({ isPc }: Props) {
   return (
     <div className={cx("container")}>
       <div className={cx("bg_wrap")}>
         <Image
           alt="랜딩페이지 탑 이미지"
-          src={"/img/body/bg1.png"}
+          src={`/img/body/bg1${isPc ? "" : "_m"}.png`}
           fill
           priority
           loading="eager"

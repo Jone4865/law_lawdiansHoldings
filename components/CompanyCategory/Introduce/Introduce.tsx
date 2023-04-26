@@ -82,7 +82,6 @@ export default function Introduce() {
           fill
           priority
           className={cx("pc_image")}
-          loading="eager"
         />
         <div className={cx("top_wrap")}>
           <div className={cx("top")}>

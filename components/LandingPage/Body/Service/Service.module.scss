@@ -53,8 +53,7 @@
 
 .img_wrap {
   width: 100vw;
-  // max-width: 1920px;
-  overflow-x: scroll;
+  overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
   background-color: transparent;

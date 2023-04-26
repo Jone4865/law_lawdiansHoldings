@@ -6,7 +6,6 @@ import Image from "next/image";
 const cx = className.bind(styles);
 
 type Props = {
-  imgName: string;
   blockchain: boolean;
   title: string;
   sub_title: React.ReactNode;
@@ -22,7 +21,6 @@ type Props = {
 };
 
 export default function BusinessCard({
-  imgName,
   blockchain,
   title,
   sub_title,
@@ -36,7 +34,6 @@ export default function BusinessCard({
   homepath,
   bgNum,
 }: Props) {
-  console.log(title, imgName);
   return (
     <div className={cx("container")}>
       <div

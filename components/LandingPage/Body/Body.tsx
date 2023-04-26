@@ -27,10 +27,10 @@ export default function Body() {
 
   return (
     <div className={cx("container")}>
-      <Top />
+      <Top isPc={pc} />
       <History isPc={pc} />
       <Service />
-      <NewsPart isPc={pc} />
+      <NewsPart />
       <Contect />
       <Footer />
     </div>

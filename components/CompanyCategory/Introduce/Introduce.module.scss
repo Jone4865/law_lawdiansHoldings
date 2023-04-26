@@ -245,8 +245,6 @@
 .mobile_top {
   width: 100vw;
   height: 93vw;
-  // background-image: url("/img/Introduce/bg1_m.webp");
-  // background-size: 100% 100%;
 }
 
 .mobile_bottom {
@@ -284,7 +282,7 @@
 
 .testimonial_bottom {
   width: 100vw;
-  overflow: scroll;
+  overflow: auto;
   justify-content: center;
   display: flex;
   @include view("mobile") {
@@ -317,7 +315,7 @@
   font-weight: bold;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-bottom: 70px;
   @include view("mobile") {
     font-size: 14px;

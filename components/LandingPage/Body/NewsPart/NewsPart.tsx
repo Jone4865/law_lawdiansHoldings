@@ -5,12 +5,9 @@ import styles from "./NewsPart.module.scss";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
+import { useMediaQuery } from "react-responsive";
 
 const cx = className.bind(styles);
-
-type Props = {
-  isPc: boolean;
-};
 
 type Data = {
   id: number;
@@ -19,7 +16,10 @@ type Data = {
   url: string;
 };
 
-export default function NewsPart({ isPc }: Props) {
+export default function NewsPart() {
+  const isPc = useMediaQuery({
+    query: "(min-width: 1520px) and (max-width: 10000px)",
+  });
   const [news, setNews] = useState<Data[]>();
 
   async function getNews() {

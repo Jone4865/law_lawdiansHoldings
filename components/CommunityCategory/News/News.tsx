@@ -70,7 +70,7 @@ export default function News() {
       <ComponentTop category="COMMUNITY" title="NEWS" />
       <div className={cx("wrap")}>
         {news?.map((item, idx) => (
-          <div key={data && data[idx]?.no} className={cx("news_wrap")}>
+          <div key={data ? data[idx]?.no : idx} className={cx("news_wrap")}>
             <div className={cx("left")}>
               <Link target="_blank" href={item.url}>
                 <div className={cx("title")}>{item.title}</div>

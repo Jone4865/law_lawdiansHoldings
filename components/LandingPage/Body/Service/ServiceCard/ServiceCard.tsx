@@ -24,6 +24,10 @@ export default function ServiceCard({
   const isPc = useMediaQuery({
     query: "(min-width: 1520px) and (max-width: 10000px)",
   });
+  const [pc, setPc] = useState(false);
+  useEffect(() => {
+    setPc(isPc);
+  }, [isPc]);
   return (
     <Link target="_blank" href={`https://${link}`}>
       <div
@@ -33,35 +37,38 @@ export default function ServiceCard({
         }}
       >
         <div className={cx("wrap")}>
-          <div className={cx("blockchain")}>
-            {blockchain && (
-              <Image
-                width={41}
-                height={45}
-                src="/img/Service/블록체인.png"
-                alt="블록체인"
-              />
-            )}
-          </div>
           <h1 className={cx("title")}>
-            <Image
-              alt="서비스 이미지 아이콘"
-              src={`/img/ServiceIcon/${title}.webp`}
-              width={!isPc ? 50 : 63}
-              height={!isPc ? 50 : 63}
-            />
-            <div>{title}</div>
+            <div className={cx("title_wrap")}>
+              <Image
+                alt="서비스 이미지 아이콘"
+                src={`/img/ServiceIcon/${title}.webp`}
+                width={!isPc ? 50 : 60}
+                height={!isPc ? 50 : 60}
+              />
+              <div className={cx("service_name")}>{title}</div>
+            </div>
+            <div className={cx("blockchain")}>
+              {blockchain && (
+                <Image
+                  width={41}
+                  height={45}
+                  src="/img/Service/블록체인.png"
+                  alt="블록체인"
+                />
+              )}
+            </div>
           </h1>
-          <div className={cx("content_wrap")}>{content}</div>
-
-          <div className={cx("btn")}>
-            <span className={cx("homepage")}>HOMEPAGE</span>
-            <Image
-              src="/img/Service/arrow.png"
-              alt="화살표"
-              width={isPc ? 9 : 7}
-              height={isPc ? 16 : 11}
-            />
+          <div className={cx("bottom_wrap")}>
+            <div className={cx("content_wrap")}>{content}</div>
+            <div className={cx("btn")}>
+              <span className={cx("homepage")}>HOMEPAGE</span>
+              <Image
+                src={pc ? "/img/Service/arrow.png" : "/img/body/btn_white.png"}
+                alt="화살표"
+                width={pc ? 9 : 31}
+                height={pc ? 16 : 31}
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -89,12 +89,6 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
         <div className={cx("pipe")} />
         <p className={cx("position")}>사원</p>
       </div>,
-      <div key={86} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>이조</p>
-        <p className={cx("name")}>김수지</p>
-        <div className={cx("pipe")} />
-        <p className={cx("position")}>사원</p>
-      </div>,
     ],
     개발: [
       <div key={15} className={cx("name_wrap")}>
@@ -401,9 +395,6 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
         <br />
         - 호흡유도 디바이스 디자인 출원
         <br />- Web / Mobile / Graphic Design
-      </div>,
-      <div key={56} className={cx("bottom_wrap")}>
-        - Web / Mobile / App Design
       </div>,
     ],
     개발: [

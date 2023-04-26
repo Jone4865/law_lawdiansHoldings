@@ -51,7 +51,6 @@ export default function Business() {
       허위매물 없는 부동산 정보 커뮤니티 사이트입니다.
     </span>,
   ];
-  const imgname = ["lawdians", "miapet", "gru", "durian", "mirinae", "jjinbu"];
   const blockchane = [true, true, true, true, false, false];
   const kakao = [
     "pf.kakao.com/_xmbekxl",
@@ -109,7 +108,6 @@ export default function Business() {
         {title.map((item, idx) => (
           <BusinessCard
             key={idx}
-            imgName={imgname[idx]}
             blockchain={blockchane[idx]}
             title={item}
             sub_title={sub_title[idx]}

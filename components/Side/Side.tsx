@@ -11,6 +11,9 @@ type Props = {
 };
 
 function Side({ modal, setModalState }: Props) {
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(600);
+
   const [companyMore, setCompanyMore] = useState(false);
   const [commuMore, setCommuMore] = useState(false);
 
@@ -49,6 +52,34 @@ function Side({ modal, setModalState }: Props) {
     }
   }, [modal]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window && window?.innerWidth);
+    };
+
+    window && window?.addEventListener("resize", handleResize);
+
+    return () => {
+      window && window?.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setHeight(window && window?.innerHeight);
+    };
+
+    window && window?.addEventListener("resize", handleResize);
+
+    return () => {
+      window && window?.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    setModalState(false);
+  }, [width]);
+
   return (
     <div
       className={`${!modal ? styles.side_none : ""} ${styles.side_contain}`}
@@ -62,16 +93,18 @@ function Side({ modal, setModalState }: Props) {
           event.stopPropagation();
         }}
       >
-        <div className={cx("exe_wrap")}>
+        <div
+          style={{ display: height < 600 ? "none" : "" }}
+          className={cx("exe_wrap")}
+        >
           <div className={cx("exe")} onClick={() => setModalState(false)} />
         </div>
         {Buttons.map((button) => (
-          <>
+          <div key={button}>
             <div
               onClick={() => {
                 clickHandle(button);
               }}
-              key={button}
               className={cx("side_hover")}
             >
               <span>{button}</span>
@@ -169,9 +202,12 @@ function Side({ modal, setModalState }: Props) {
                 </span>
               </div>
             )}
-          </>
+          </div>
         ))}
-        <div className={cx("symboll")} />
+        <div
+          style={{ display: height < 600 ? "none" : "" }}
+          className={cx("symboll")}
+        />
       </div>
     </div>
   );
