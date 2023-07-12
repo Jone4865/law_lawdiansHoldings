@@ -58,21 +58,16 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
         <p className={cx("position")}>대외협력 전무</p>
       </div>,
       <div key={7} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>가프</p>
-        <p className={cx("name")}>조호성</p>
-        <div className={cx("pipe")} />
-        <p className={cx("position")}>경영지원 실장</p>
-      </div>,
-      <div key={8} className={cx("name_wrap")}>
         <p className={cx("nickname")}>카이도</p>
         <p className={cx("name")}>변연섭</p>
         <div className={cx("pipe")} />
         <p className={cx("position")}>대외협력 과장</p>
       </div>,
-      <div key={9} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>남세현</p>
+      <div key={8} className={cx("name_wrap")}>
+        <p className={cx("nickname")}>류마</p>
+        <p className={cx("name")}>남세현</p>
         <div className={cx("pipe")} />
-        <p className={cx("position")}>대외협력 대리</p>
+        <p className={cx("position")}>대외협력 실장</p>
       </div>,
     ],
 
@@ -106,12 +101,6 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
       <div key={17} className={cx("name_wrap")}>
         <p className={cx("nickname")}>키드</p>
         <p className={cx("name")}>최재형</p>
-        <div className={cx("pipe")} />
-        <p className={cx("position")}>대리</p>
-      </div>,
-      <div key={18} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>타마</p>
-        <p className={cx("name")}>박종현</p>
         <div className={cx("pipe")} />
         <p className={cx("position")}>대리</p>
       </div>,
@@ -159,24 +148,18 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
 
     기획: [
       <div key={33} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>아론</p>
-        <p className={cx("name")}>이창준</p>
-        <div className={cx("pipe")} />
-        <p className={cx("position")}>상무</p>
-      </div>,
-      <div key={34} className={cx("name_wrap")}>
         <p className={cx("nickname")}>루치</p>
         <p className={cx("name")}>심동욱</p>
         <div className={cx("pipe")} />
         <p className={cx("position")}>COO</p>
       </div>,
-      <div key={35} className={cx("name_wrap")}>
+      <div key={34} className={cx("name_wrap")}>
         <p className={cx("nickname")}>카야</p>
         <p className={cx("name")}>홍지영</p>
         <div className={cx("pipe")} />
         <p className={cx("position")}>사원</p>
       </div>,
-      <div key={36} className={cx("name_wrap")}>
+      <div key={35} className={cx("name_wrap")}>
         <p className={cx("nickname")}>비스타</p>
         <p className={cx("name")}>김수연</p>
         <div className={cx("pipe")} />
@@ -223,43 +206,43 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
         <div className={cx("pipe")} />
         <p className={cx("position")}>경영지원 차장</p>
       </div>,
-      <div key={32} className={cx("name_wrap")}>
+      <div key={31} className={cx("name_wrap")}>
         <p className={cx("nickname")}>히나</p>
         <p className={cx("name")}>박주은</p>
+        <div className={cx("pipe")} />
+        <p className={cx("position")}>경영지원 사원</p>
+      </div>,
+      <div key={32} className={cx("name_wrap")}>
+        <p className={cx("nickname")}>메리</p>
+        <p className={cx("name")}>김효경</p>
         <div className={cx("pipe")} />
         <p className={cx("position")}>경영지원 사원</p>
       </div>,
     ],
     기획: [
       <div key={10} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>쵸파</p>
-        <p className={cx("name")}>장지원</p>
-        <div className={cx("pipe")} />
-        <p className={cx("position")}>실장</p>
-      </div>,
-      <div key={11} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>버기</p>
-        <p className={cx("name")}>이현구</p>
-        <div className={cx("pipe")} />
-        <p className={cx("position")}>전략기획 실장</p>
-      </div>,
-      <div key={12} className={cx("name_wrap")}>
         <p className={cx("nickname")}>모건</p>
         <p className={cx("name")}>김진동</p>
+        <div className={cx("pipe")} />
+        <p className={cx("position")}>대외협력 실장</p>
+      </div>,
+      <div key={11} className={cx("name_wrap")}>
+        <p className={cx("nickname")}>칼리파</p>
+        <p className={cx("name")}>장혜림</p>
         <div className={cx("pipe")} />
         <p className={cx("position")}>대외협력 실장</p>
       </div>,
     ],
     개발: [
       <div key={37} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>카포네</p>
-        <p className={cx("name")}>길민종</p>
+        <p className={cx("nickname")}>타마</p>
+        <p className={cx("name")}>박종현</p>
         <div className={cx("pipe")} />
-        <p className={cx("position")}>사원</p>
+        <p className={cx("position")}>대리</p>
       </div>,
       <div key={38} className={cx("name_wrap")}>
-        <p className={cx("nickname")}>라분</p>
-        <p className={cx("name")}>강용호</p>
+        <p className={cx("nickname")}>카포네</p>
+        <p className={cx("name")}>길민종</p>
         <div className={cx("pipe")} />
         <p className={cx("position")}>사원</p>
       </div>,
@@ -337,14 +320,6 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
         - 前 봄스킨대표
         <br />- 前 미가대표
       </div>,
-      <div key={49} className={cx("bottom_wrap")}>
-        - 학사 41기
-        <br />
-        - 前 정우C&P 영업부차장 외
-        <br />
-        영업 관리직 다수
-        <br />- 前 푸른 건설 실장(인력관리)
-      </div>,
       <div key={50} className={cx("bottom_wrap")}>
         - 상품권 운영 및 광주지부
       </div>,
@@ -354,21 +329,13 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
     ],
     기획: [
       <div key={76} className={cx("bottom_wrap")}>
-        - 경력 13년
-        <br />
-        - 패션 브랜드 유통 기획
-        <br />
-        - 패션 브랜드 유통 영업 / 관리
-        <br />- 골프 IT 플랫폼 기획
-      </div>,
-      <div key={77} className={cx("bottom_wrap")}>
         - 경력 5년 <br />
         - 컴퓨터 공학, 정보처리 기사
         <br />
         - 앱 비즈니스 모델 설계, UX/UI설계
         <br />- 성균관대 정보통신대학 빅데이터학과 석사
       </div>,
-      <div key={78} className={cx("bottom_wrap")}>
+      <div key={77} className={cx("bottom_wrap")}>
         - 서비스 운영 기획
         <br />
         - 도쿄외전 일한 통역
@@ -376,7 +343,7 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
         - appstone 미술작품 번역
         <br />- 신세계 본점 통역
       </div>,
-      <div key={79} className={cx("bottom_wrap")}>
+      <div key={78} className={cx("bottom_wrap")}>
         - 서비스 운영 기획
         <br />- 사업 기획
       </div>,
@@ -523,24 +490,14 @@ function Team({ partKo, partEn, lineTwo, lineOneCount }: Props) {
     ],
     기획: [
       <div key={52} className={cx("bottom_wrap")}>
-        - 경력 25년
-        <br />
-        - 홍보 / 광고학(석사)마케팅 전문
-        <br />
-        - PM (前 싸이더스 본부장)
-        <br />
-        - 투자전략기획 <br />
-        (前 인터불고 건설 본부장)
+        - 경력 10년
+        <br />- 금융기획 및 금융유동화 전문
       </div>,
       <div key={53} className={cx("bottom_wrap")}>
-        - 경력 16년
+        - 경력 8년
         <br />
-        - 부일종합건설 (대표)
-        <br />- 시행 / 시공 PROJECT
-      </div>,
-      <div key={54} className={cx("bottom_wrap")}>
-        - 경력 10년
-        <br />- 금융기획 및 금융유동화전문
+        - 前 외환은행
+        <br />- 금융 서비스 기획 / 운영 관리
       </div>,
     ],
     개발: [

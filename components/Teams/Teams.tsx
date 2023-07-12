@@ -121,7 +121,7 @@ function Teams() {
           partKo={Btns[3]}
           partEn={BtnsSubName[2]}
           lineTwo
-          lineOneCount={4}
+          lineOneCount={3}
         />
         <div id="기획" />
         <Team
@@ -137,7 +137,7 @@ function Teams() {
           partKo={Btns[6]}
           partEn={BtnsSubName[5]}
           lineTwo
-          lineOneCount={4}
+          lineOneCount={3}
         />
         <div id="인프라" />
         <Team partKo={Btns[7]} partEn={BtnsSubName[6]} />
